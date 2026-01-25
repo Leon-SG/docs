@@ -302,5 +302,10 @@
       "x": "https://x.com/stratlobal",
       "linkedin": "https://linkedin.com/company/stratlobal"
     }
+  },
+  "analytics": {
+    "ga4": {
+      "measurementId": "G-YK5SB959CT"
+    }
   }
 }
