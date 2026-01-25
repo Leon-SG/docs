@@ -62,6 +62,12 @@
         ]
       },
       {
+        "tab": "Inbox",
+        "pages": [
+          "inbox/untitled-page"
+        ]
+      },
+      {
         "tab": "API reference",
         "groups": [
           {
@@ -90,12 +96,6 @@
       },
       {
         "tab": "Features"
-      },
-      {
-        "tab": "Inbox",
-        "pages": [
-          "inbox/untitled-page"
-        ]
       }
     ]
   },
