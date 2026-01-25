@@ -79,7 +79,65 @@
           },
           {
             "group": "Trends",
-            "pages": []
+            "pages": [
+              "guides/trends/untitled-page",
+              "guides/trends/overview"
+            ]
+          },
+          {
+            "group": "Signals",
+            "pages": [
+              "guides/signals/overview",
+              "guides/signals/untitled-page"
+            ]
+          },
+          {
+            "group": "Investigations",
+            "pages": [
+              "guides/investigations/overview",
+              "guides/investigations/new-investigation"
+            ]
+          },
+          {
+            "group": "Products",
+            "pages": [
+              "guides/products/overview",
+              "guides/products/new-products"
+            ]
+          },
+          {
+            "group": "Registration",
+            "pages": [
+              "guides/registration/untitled-page",
+              "guides/registration/untitled-page-1"
+            ]
+          },
+          {
+            "group": "Press",
+            "pages": [
+              "guides/press/refine-article",
+              "guides/press/new-article",
+              "guides/press/overview"
+            ]
+          },
+          {
+            "group": "Map",
+            "pages": [
+              "guides/map/overview",
+              "guides/map/interactive-network-analysis"
+            ]
+          },
+          {
+            "group": "Settings",
+            "pages": [
+              "guides/settings/company-profile"
+            ]
+          },
+          {
+            "group": "Billings",
+            "pages": [
+              "guides/billings/untitled-page"
+            ]
           }
         ]
       },
