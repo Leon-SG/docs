@@ -1,25 +1,84 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "Strato",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
+    "primary": "#F97316",
+    "light": "#FB923C",
+    "dark": "#EA580C"
   },
   "favicon": "/favicon.svg",
+  "redirects": [
+    { "source": "/guides/ai-native-workflow/guide", "destination": "/guides/ai-native-workflow/index", "permanent": true },
+    { "source": "/guides/ai-native-workflow", "destination": "/guides/ai-native-workflow/index", "permanent": true },
+    { "source": "/guides/billings/untitled-page", "destination": "/guides/billings/index", "permanent": true },
+    { "source": "/guides/billings", "destination": "/guides/billings/index", "permanent": true },
+
+    { "source": "/guides/campaign/untitled-page", "destination": "/guides/campaign/index", "permanent": true },
+    { "source": "/guides/campaign", "destination": "/guides/campaign/index", "permanent": true },
+    { "source": "/guides/campaign/untitled-page-1", "destination": "/guides/campaign/email-templates", "permanent": true },
+    { "source": "/guides/campaign/untitled-page-2", "destination": "/guides/campaign/personalization-variables", "permanent": true },
+    { "source": "/guides/campaign/untitled-page-3", "destination": "/guides/campaign/preview-and-testing", "permanent": true },
+
+    { "source": "/guides/events/guide", "destination": "/guides/events/index", "permanent": true },
+    { "source": "/guides/events", "destination": "/guides/events/index", "permanent": true },
+    { "source": "/guides/events/untitled-page", "destination": "/guides/events/event-details", "permanent": true },
+    { "source": "/guides/events/untitled-page-1", "destination": "/guides/events/public-event-page-settings", "permanent": true },
+    { "source": "/guides/events/untitled-page-2", "destination": "/guides/events/public-page-and-registration", "permanent": true },
+
+    { "source": "/guides/investigations/overview", "destination": "/guides/investigations/index", "permanent": true },
+    { "source": "/guides/investigations", "destination": "/guides/investigations/index", "permanent": true },
+    { "source": "/guides/investigations/new-investigation", "destination": "/guides/investigations/create-investigation", "permanent": true },
+
+    { "source": "/guides/kol/overview", "destination": "/guides/kol/index", "permanent": true },
+    { "source": "/guides/kol", "destination": "/guides/kol/index", "permanent": true },
+    { "source": "/guides/kol/untitled-page", "destination": "/guides/kol/create-kol", "permanent": true },
+    { "source": "/guides/kol/untitled-page-1", "destination": "/guides/kol/import-kols-csv", "permanent": true },
+    { "source": "/guides/kol/untitled-page-2", "destination": "/guides/kol/kol-profile-and-insights", "permanent": true },
+    { "source": "/guides/kol/untitled-page-3", "destination": "/guides/kol/public-profile-page", "permanent": true },
+    { "source": "/guides/kol/untitled-page-4", "destination": "/guides/kol/digital-business-card-qr", "permanent": true },
+
+    { "source": "/guides/map/overview", "destination": "/guides/map/index", "permanent": true },
+    { "source": "/guides/map", "destination": "/guides/map/index", "permanent": true },
+
+    { "source": "/guides/press/overview", "destination": "/guides/press/index", "permanent": true },
+    { "source": "/guides/press", "destination": "/guides/press/index", "permanent": true },
+    { "source": "/guides/press/new-article", "destination": "/guides/press/create-article", "permanent": true },
+    { "source": "/guides/press/refine-article", "destination": "/guides/press/improve-article", "permanent": true },
+
+    { "source": "/guides/products/overview", "destination": "/guides/products/index", "permanent": true },
+    { "source": "/guides/products", "destination": "/guides/products/index", "permanent": true },
+    { "source": "/guides/products/new-products", "destination": "/guides/products/create-product", "permanent": true },
+
+    { "source": "/guides/registration/untitled-page", "destination": "/guides/registration/index", "permanent": true },
+    { "source": "/guides/registration", "destination": "/guides/registration/index", "permanent": true },
+    { "source": "/guides/registration/untitled-page-1", "destination": "/guides/registration/registration-details", "permanent": true },
+
+    { "source": "/guides/signals/overview", "destination": "/guides/signals/index", "permanent": true },
+    { "source": "/guides/signals", "destination": "/guides/signals/index", "permanent": true },
+    { "source": "/guides/signals/untitled-page", "destination": "/guides/signals/signal-details", "permanent": true },
+
+    { "source": "/guides/trends/overview", "destination": "/guides/trends/index", "permanent": true },
+    { "source": "/guides/trends", "destination": "/guides/trends/index", "permanent": true },
+    { "source": "/guides/trends/untitled-page", "destination": "/guides/trends/trend-details", "permanent": true }
+  ],
   "navigation": {
     "global": {
       "anchors": [
         {
           "anchor": "Documentation",
           "icon": "book-open-cover",
-          "href": "https://mintlify.com/docs"
+          "href": "/"
         },
         {
-          "anchor": "Blog",
-          "icon": "newspaper",
-          "href": "https://mintlify.com/blog"
+          "anchor": "Use Cases",
+          "icon": "route",
+          "href": "/use-cases"
+        },
+        {
+          "anchor": "Best Practices",
+          "icon": "graduation-cap",
+          "href": "/best-practices"
         }
       ]
     },
@@ -28,135 +87,181 @@
         "tab": "Guides",
         "groups": [
           {
-            "group": "Getting started",
+            "group": "Getting Started",
             "pages": [
               "index",
               "quickstart",
-              "development"
+              "glossary"
             ]
           },
           {
-            "group": "Inbox",
+            "group": "Use Cases",
             "pages": [
-              "inbox/untitled-page"
+              "use-cases/index",
+              "use-cases/kol-engagement-workflow",
+              "use-cases/event-management-lifecycle",
+              "use-cases/regulatory-signal-monitoring",
+              "use-cases/ai-powered-research"
+            ]
+          },
+          {
+            "group": "For Your Role",
+            "pages": [
+              "roles/for-medical-affairs",
+              "roles/for-marketing"
             ]
           },
           {
             "group": "AI Native Workflow",
             "pages": [
-              "guides/ai-native-workflow/guide"
+              "guides/ai-native-workflow/index"
             ]
           },
           {
             "group": "Events",
             "pages": [
-              "guides/events/guide",
-              "guides/events/untitled-page",
-              "guides/events/untitled-page-1",
-              "guides/events/untitled-page-2"
+              "guides/events/index",
+              "guides/events/event-details",
+              "guides/events/public-event-page-settings",
+              "guides/events/public-page-and-registration"
             ]
           },
           {
-            "group": "KOL",
+            "group": "KOL Management",
             "pages": [
-              "guides/kol/overview",
-              "guides/kol/untitled-page",
-              "guides/kol/untitled-page-1",
+              "guides/kol/index",
+              "guides/kol/create-kol",
+              "guides/kol/import-kols-csv",
+              "guides/kol/kol-profile-and-insights",
               "guides/kol/activity-monitoring",
-              "guides/kol/untitled-page-2",
-              "guides/kol/untitled-page-3",
-              "guides/kol/untitled-page-4"
+              "guides/kol/public-profile-page",
+              "guides/kol/digital-business-card-qr"
             ]
           },
           {
-            "group": "Campaign",
+            "group": "Campaigns",
             "pages": [
-              "guides/campaign/untitled-page-3",
-              "guides/campaign/untitled-page-2",
-              "guides/campaign/untitled-page-1",
-              "guides/campaign/untitled-page"
-            ]
-          },
-          {
-            "group": "Trends",
-            "pages": [
-              "guides/trends/untitled-page",
-              "guides/trends/overview"
+              "guides/campaign/index",
+              "guides/campaign/email-templates",
+              "guides/campaign/personalization-variables",
+              "guides/campaign/preview-and-testing"
             ]
           },
           {
             "group": "Signals",
             "pages": [
-              "guides/signals/overview",
-              "guides/signals/untitled-page"
+              "guides/signals/index",
+              "guides/signals/signal-details"
             ]
           },
           {
             "group": "Investigations",
             "pages": [
-              "guides/investigations/overview",
-              "guides/investigations/new-investigation"
+              "guides/investigations/index",
+              "guides/investigations/create-investigation"
             ]
           },
           {
             "group": "Products",
             "pages": [
-              "guides/products/overview",
-              "guides/products/new-products"
+              "guides/products/index",
+              "guides/products/create-product"
             ]
           },
           {
-            "group": "Registration",
+            "group": "Trends",
             "pages": [
-              "guides/registration/untitled-page",
-              "guides/registration/untitled-page-1"
+              "guides/trends/index",
+              "guides/trends/trend-details"
             ]
           },
           {
-            "group": "Press",
+            "group": "Press and Articles",
             "pages": [
-              "guides/press/refine-article",
-              "guides/press/new-article",
-              "guides/press/overview"
+              "guides/press/index",
+              "guides/press/create-article",
+              "guides/press/improve-article"
             ]
           },
           {
             "group": "Map",
             "pages": [
-              "guides/map/overview",
+              "guides/map/index",
               "guides/map/interactive-network-analysis"
             ]
           },
           {
-            "group": "Settings",
+            "group": "Registration",
             "pages": [
-              "guides/settings/company-profile"
+              "guides/registration/index",
+              "guides/registration/registration-details"
             ]
           },
           {
-            "group": "Billings",
+            "group": "Best Practices",
             "pages": [
-              "guides/billings/untitled-page"
+              "best-practices/index",
+              "best-practices/kol-tiering-methodology",
+              "best-practices/event-invitation-best-practices",
+              "best-practices/ai-prompt-tips"
+            ]
+          },
+          {
+            "group": "Settings and Billing",
+            "pages": [
+              "guides/settings/company-profile",
+              "guides/billings/index"
             ]
           }
         ]
       },
       {
-        "tab": "API reference",
+        "tab": "API Reference",
         "groups": [
           {
-            "group": "API documentation",
+            "group": "Overview",
             "pages": [
               "api-reference/introduction"
             ]
           },
           {
-            "group": "Endpoint examples",
+            "group": "KOLs",
             "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
+              "api-reference/kols/list",
+              "api-reference/kols/get",
+              "api-reference/kols/create"
+            ]
+          },
+          {
+            "group": "Events",
+            "pages": [
+              "api-reference/events/list",
+              "api-reference/events/create"
+            ]
+          },
+          {
+            "group": "Campaigns",
+            "pages": [
+              "api-reference/campaigns/list",
+              "api-reference/campaigns/create"
+            ]
+          },
+          {
+            "group": "Products",
+            "pages": [
+              "api-reference/products/list"
+            ]
+          },
+          {
+            "group": "Signals",
+            "pages": [
+              "api-reference/signals/list"
+            ]
+          },
+          {
+            "group": "Webhooks",
+            "pages": [
+              "api-reference/webhooks"
             ]
           }
         ]
@@ -171,13 +276,13 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hi@mintlify.com"
+        "href": "mailto:hello@getstrato.dev"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "label": "Open App",
+      "href": "https://app.getstrato.dev"
     }
   },
   "contextual": {
@@ -194,9 +299,8 @@
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "x": "https://x.com/stratlobal",
+      "linkedin": "https://linkedin.com/company/stratlobal"
     }
   }
 }

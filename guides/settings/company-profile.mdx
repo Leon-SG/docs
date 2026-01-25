@@ -1,26 +1,33 @@
 ---
-title: "Company Profile"
+title: "Company Profile (AI Context)"
+description: "Set company context (markets, certifications, competitors, brand voice) so AI features generate accurate investigations, articles, and signal analysis."
 ---
 
-![Image](/images/image-19.png)
+![Company profile settings page](/images/image-19.png)
 
-**1. Overview**
+## Why this matters
 
-The Company Profile is the foundational data layer of the Stratosphere platform. It defines your organization’s market identity, geographic footprint, and regulatory standing. This section is critical as it serves as the primary "contextual source" for all Large Language Model (LLM) functionalities, ensuring that every AI-generated report, investigation, and communication is accurately aligned with your specific brand voice and strategic objectives.
+Company Profile is the primary source of truth the platform uses to ground AI outputs in your brand, markets, and regulatory reality. Better profile data usually leads to more accurate investigations, articles, and signal relevance.
 
-**2. AI Integration and Strategic Impact**
+## Where to find it
 
-Information entered in this profile is utilized by the AI agents across the following modules:
+- Open `Settings` → `Company Profile`.
 
-- **Investigations**: The AI uses your company description and market position to tailor competitive analysis and opportunity scanning.
-- **Press & Article Generation**: AI-authored content automatically incorporates your brand voice, key achievements, and specific product contexts based on this profile.
-- **Regulatory Signal Correlation**: The system identifies relevant signals by cross-referencing global updates with your specified target markets and existing certifications.
+## How AI uses these fields
 
-**3. Configuration Modules**
+| Field | Used by | Why it matters |
+|---|---|---|
+| Company description | Investigations, Press | Sets domain context and brand voice |
+| Target markets | Signals, Investigations | Prioritizes jurisdictions and trends |
+| Regulatory certifications | Signals, Press | Adds compliance context and constraints |
+| Competitors | Investigations | Focuses monitoring and comparisons |
+| Achievements | Press | Adds credible proof points and milestones |
+
+## Recommended sections to fill
 
 - **Basic Information**
   - **Company Identity**: Capture the official Company Name, Industry, and Size.
-  - **Strategic Description**: This field is of paramount importance. The AI parses this narrative to understand your core mission and service offerings, using it to ground the context of all generated outputs.
+  - **Strategic Description**: Write 3–6 sentences that clearly explain what you build, for whom, and in which markets.
   - **Corporate Metadata**: Includes Website, Headquarters, and Founding Year to provide external-facing credibility in public profiles.
 - **Target Markets**
 
@@ -32,6 +39,6 @@ Information entered in this profile is utilized by the AI agents across the foll
   - **Key Competitors**: Identifying rival organizations allows the AI agents to focus their monitoring efforts during strategic investigations.
   - **Key Achievements**: Documenting significant milestones provides the AI with "proof points" to include in press releases and professional summaries.
 
-**4. Data Integrity and Profile Completion**
+## Tip
 
-The **Profile Completion** bar tracks the comprehensiveness of your organizational data. A 100% completion rate is recommended to ensure the highest degree of accuracy and personalization in AI-generated insights. Users must select **Save Changes** to commit updates to the system’s knowledge base.
+Aim for high profile completeness and always click **Save Changes**. Missing markets/certifications often leads to irrelevant signals and generic AI copy.

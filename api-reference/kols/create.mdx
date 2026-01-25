@@ -1,0 +1,190 @@
+---
+title: 'Create KOL'
+api: 'POST /v1/kols'
+description: 'Create a new KOL profile in your organization.'
+---
+
+## Request Body
+
+<ParamField body="full_name" type="string" required>
+  Full name of the KOL
+</ParamField>
+
+<ParamField body="title" type="string">
+  Professional title (e.g., "Chief of Cardiology")
+</ParamField>
+
+<ParamField body="institution" type="string">
+  Primary institution or hospital
+</ParamField>
+
+<ParamField body="department" type="string">
+  Department within the institution
+</ParamField>
+
+<ParamField body="specialties" type="array" required>
+  List of medical specialties
+</ParamField>
+
+<ParamField body="expertise_areas" type="array">
+  Specific areas of expertise
+</ParamField>
+
+<ParamField body="research_interests" type="array">
+  Research focus areas
+</ParamField>
+
+<ParamField body="tier" type="string" default="tier_3">
+  KOL tier classification. Options: `tier_1`, `tier_2`, `tier_3`
+</ParamField>
+
+<ParamField body="email" type="string">
+  Primary email address
+</ParamField>
+
+<ParamField body="phone" type="string">
+  Phone number
+</ParamField>
+
+<ParamField body="location" type="object">
+  <Expandable title="Location object">
+    <ParamField body="city" type="string">
+      City name
+    </ParamField>
+    <ParamField body="state" type="string">
+      State or province
+    </ParamField>
+    <ParamField body="country" type="string">
+      ISO 3166-1 alpha-2 country code
+    </ParamField>
+  </Expandable>
+</ParamField>
+
+<ParamField body="bio" type="string">
+  Professional biography
+</ParamField>
+
+<ParamField body="notes" type="string">
+  Internal notes (not visible to KOL)
+</ParamField>
+
+<ParamField body="tags" type="array">
+  Custom tags for organization
+</ParamField>
+
+<ParamField body="social" type="object">
+  <Expandable title="Social profiles">
+    <ParamField body="linkedin" type="string">
+      LinkedIn profile URL
+    </ParamField>
+    <ParamField body="twitter" type="string">
+      Twitter handle
+    </ParamField>
+  </Expandable>
+</ParamField>
+
+## Response
+
+Returns the created KOL object.
+
+<RequestExample>
+
+```bash cURL
+curl -X POST "https://api.getstrato.dev/v1/kols" \
+  -H "Authorization: Bearer sk_live_your_api_key" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "full_name": "Dr. Michael Rodriguez",
+    "title": "Director of Orthopedic Surgery",
+    "institution": "Johns Hopkins Hospital",
+    "department": "Orthopedics",
+    "specialties": ["orthopedic_surgery", "sports_medicine"],
+    "expertise_areas": ["knee_replacement", "robotic_surgery"],
+    "tier": "tier_2",
+    "email": "m.rodriguez@jhmi.edu",
+    "location": {
+      "city": "Baltimore",
+      "state": "MD",
+      "country": "US"
+    },
+    "tags": ["robotic_surgery", "potential_speaker"]
+  }'
+```
+
+```javascript Node.js
+const kol = await stratosphere.kols.create({
+  full_name: 'Dr. Michael Rodriguez',
+  title: 'Director of Orthopedic Surgery',
+  institution: 'Johns Hopkins Hospital',
+  department: 'Orthopedics',
+  specialties: ['orthopedic_surgery', 'sports_medicine'],
+  expertise_areas: ['knee_replacement', 'robotic_surgery'],
+  tier: 'tier_2',
+  email: 'm.rodriguez@jhmi.edu',
+  location: {
+    city: 'Baltimore',
+    state: 'MD',
+    country: 'US'
+  },
+  tags: ['robotic_surgery', 'potential_speaker']
+});
+```
+
+```python Python
+kol = stratosphere.kols.create(
+    full_name='Dr. Michael Rodriguez',
+    title='Director of Orthopedic Surgery',
+    institution='Johns Hopkins Hospital',
+    department='Orthopedics',
+    specialties=['orthopedic_surgery', 'sports_medicine'],
+    expertise_areas=['knee_replacement', 'robotic_surgery'],
+    tier='tier_2',
+    email='m.rodriguez@jhmi.edu',
+    location={
+        'city': 'Baltimore',
+        'state': 'MD',
+        'country': 'US'
+    },
+    tags=['robotic_surgery', 'potential_speaker']
+)
+```
+
+</RequestExample>
+
+<ResponseExample>
+
+```json Response
+{
+  "data": {
+    "id": "kol_mno456",
+    "full_name": "Dr. Michael Rodriguez",
+    "title": "Director of Orthopedic Surgery",
+    "institution": "Johns Hopkins Hospital",
+    "department": "Orthopedics",
+    "specialties": ["orthopedic_surgery", "sports_medicine"],
+    "expertise_areas": ["knee_replacement", "robotic_surgery"],
+    "tier": "tier_2",
+    "engagement_level": "low",
+    "email": "m.rodriguez@jhmi.edu",
+    "location": {
+      "city": "Baltimore",
+      "state": "MD",
+      "country": "US"
+    },
+    "tags": ["robotic_surgery", "potential_speaker"],
+    "event_count": 0,
+    "created_at": "2024-01-20T14:30:00Z",
+    "updated_at": "2024-01-20T14:30:00Z"
+  }
+}
+```
+
+</ResponseExample>
+
+## Errors
+
+| Code | Description |
+|------|-------------|
+| `400` | Invalid request body or missing required fields |
+| `409` | KOL with this email already exists |
+| `429` | KOL limit reached for your plan |

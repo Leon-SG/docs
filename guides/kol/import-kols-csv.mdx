@@ -1,0 +1,39 @@
+---
+title: "Import KOLs (CSV)"
+description: "Bulk import KOL profiles using a CSV template, including required fields, allowed formats, and tier/engagement mapping."
+---
+
+## What you can do
+
+- Import many KOLs at once from an existing spreadsheet or database.
+- Standardize fields via a template to avoid mapping issues.
+- Set tier and engagement level during import.
+
+## Steps
+
+1. Click **Download Template** and fill in your data.
+2. Validate formatting (required fields, multi-value fields).
+3. Upload the `.csv` and click **Import**.
+
+## Template preparation
+
+- **Required fields**: `full_name` and at least one `specialties` value.
+- **Optional fields**: e.g. `title`, `institution`, `email`, `linkedin_url`, `engagement_level`.
+- **Multiple values**: wrap in double quotes and separate with commas (e.g., `"Cardiology, Oncology"`).
+
+## Upload requirements
+
+- **File Format**: Only .csv files are supported.
+- **File Size Limit**: The maximum allowable file size is 5MB.
+- **Upload Methods**: Users can either drag and drop the file directly into the upload area or select **Browse Files** to locate the document on their local drive.
+
+## Tier and engagement mapping
+
+The system supports the bulk assignment of strategic classifications during the import process:
+
+- **Engagement Level**: Input "High", "Medium", or "Low" to set initial engagement states.
+- **Tiering**: Input "Tier_1", "Tier_2", or "Tier_3" to categorize the strategic importance of the imported KOLs.
+
+## Import
+
+Once the file is uploaded and validated, select the **Import** button to finalize the process. The system will process the records and add them to the primary KOL Management list. To exit the process without saving, select **Cancel**.

@@ -1,0 +1,171 @@
+---
+title: 'Get KOL'
+api: 'GET /v1/kols/{id}'
+description: 'Retrieve detailed information about a specific KOL.'
+---
+
+## Path Parameters
+
+<ParamField path="id" type="string" required>
+  The unique identifier of the KOL
+</ParamField>
+
+## Query Parameters
+
+<ParamField query="include" type="string">
+  Include related data. Options: `events`, `campaigns`, `interactions`, `publications` (comma-separated)
+</ParamField>
+
+## Response
+
+<ResponseField name="data" type="object">
+  <Expandable title="KOL object">
+    <ResponseField name="id" type="string">
+      Unique identifier
+    </ResponseField>
+    <ResponseField name="full_name" type="string">
+      Full name
+    </ResponseField>
+    <ResponseField name="title" type="string">
+      Professional title
+    </ResponseField>
+    <ResponseField name="institution" type="string">
+      Primary institution
+    </ResponseField>
+    <ResponseField name="department" type="string">
+      Department
+    </ResponseField>
+    <ResponseField name="bio" type="string">
+      Professional biography
+    </ResponseField>
+    <ResponseField name="specialties" type="array">
+      Medical specialties
+    </ResponseField>
+    <ResponseField name="expertise_areas" type="array">
+      Specific expertise areas
+    </ResponseField>
+    <ResponseField name="research_interests" type="array">
+      Research focus areas
+    </ResponseField>
+    <ResponseField name="tier" type="string">
+      KOL tier (tier_1, tier_2, tier_3)
+    </ResponseField>
+    <ResponseField name="engagement_level" type="string">
+      Engagement level (high, medium, low)
+    </ResponseField>
+    <ResponseField name="contact" type="object">
+      Contact information including email, phone, address
+    </ResponseField>
+    <ResponseField name="social" type="object">
+      Social media profiles (LinkedIn, Twitter, etc.)
+    </ResponseField>
+    <ResponseField name="metrics" type="object">
+      Engagement metrics and statistics
+    </ResponseField>
+    <ResponseField name="events" type="array">
+      Recent events (if included)
+    </ResponseField>
+    <ResponseField name="campaigns" type="array">
+      Campaign history (if included)
+    </ResponseField>
+    <ResponseField name="notes" type="string">
+      Internal notes
+    </ResponseField>
+    <ResponseField name="tags" type="array">
+      Custom tags
+    </ResponseField>
+    <ResponseField name="created_at" type="string">
+      Creation timestamp
+    </ResponseField>
+    <ResponseField name="updated_at" type="string">
+      Last update timestamp
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+<RequestExample>
+
+```bash cURL
+curl -X GET "https://api.getstrato.dev/v1/kols/kol_abc123?include=events,campaigns" \
+  -H "Authorization: Bearer sk_live_your_api_key"
+```
+
+```javascript Node.js
+const kol = await stratosphere.kols.get('kol_abc123', {
+  include: ['events', 'campaigns']
+});
+```
+
+```python Python
+kol = stratosphere.kols.get(
+    'kol_abc123',
+    include=['events', 'campaigns']
+)
+```
+
+</RequestExample>
+
+<ResponseExample>
+
+```json Response
+{
+  "data": {
+    "id": "kol_abc123",
+    "full_name": "Dr. Sarah Chen",
+    "title": "Chief of Cardiology",
+    "institution": "Stanford Medical Center",
+    "department": "Cardiovascular Medicine",
+    "bio": "Dr. Chen is a leading interventional cardiologist specializing in structural heart procedures...",
+    "specialties": ["interventional_cardiology", "structural_heart"],
+    "expertise_areas": ["TAVR", "MitraClip", "left_atrial_appendage"],
+    "research_interests": ["transcatheter valve replacement", "heart failure devices"],
+    "tier": "tier_1",
+    "engagement_level": "high",
+    "contact": {
+      "email": "s.chen@stanford.edu",
+      "phone": "+1-650-555-0123",
+      "address": {
+        "street": "300 Pasteur Drive",
+        "city": "Palo Alto",
+        "state": "CA",
+        "postal_code": "94305",
+        "country": "US"
+      }
+    },
+    "social": {
+      "linkedin": "https://linkedin.com/in/drsarahchen",
+      "twitter": "@DrSarahChen"
+    },
+    "metrics": {
+      "total_events": 12,
+      "total_campaigns": 8,
+      "email_open_rate": 0.85,
+      "response_rate": 0.72,
+      "h_index": 45,
+      "publications_count": 120
+    },
+    "events": [
+      {
+        "id": "evt_xyz789",
+        "name": "Q4 Cardiology Advisory Board",
+        "date": "2024-01-15",
+        "role": "speaker"
+      }
+    ],
+    "campaigns": [
+      {
+        "id": "cmp_def456",
+        "name": "TAVR Product Launch",
+        "sent_at": "2024-01-10",
+        "status": "opened"
+      }
+    ],
+    "notes": "Key opinion leader for structural heart. Prefers email contact.",
+    "tags": ["speaker", "advisory_board", "investigator"],
+    "created_at": "2023-06-01T08:00:00Z",
+    "updated_at": "2024-01-15T10:30:00Z"
+  }
+}
+```
+
+</ResponseExample>

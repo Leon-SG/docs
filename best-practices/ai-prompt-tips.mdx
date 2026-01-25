@@ -1,0 +1,266 @@
+---
+title: "AI Prompt Tips: Get Better Results from Stratosphere AI"
+description: "Effective prompt engineering techniques and templates to maximize the quality of AI-generated content in Stratosphere for KOL outreach, event communications, and research."
+---
+
+## Why Prompts Matter
+
+Stratosphere AI is powerful, but the quality of output depends on the quality of input. Better prompts lead to:
+
+- More relevant, specific content
+- Fewer rounds of editing
+- Content that matches your tone and brand
+- Actionable recommendations
+
+## Prompt Engineering Principles
+
+### 1. Be Specific, Not Vague
+
+| Vague Prompt | Specific Prompt |
+|-------------|-----------------|
+| "Write an email to a KOL" | "Write a formal invitation email to a Tier 1 cardiologist for our Q2 advisory board on TAVR innovations in Boston" |
+| "Create a report" | "Generate a competitive landscape analysis of robotic surgical systems in orthopedics, focusing on US market, past 2 years" |
+| "Draft a follow-up" | "Draft a thank-you email to Dr. Smith who attended our structural heart advisory board yesterday, referencing his input on valve durability" |
+
+### 2. Provide Context
+
+Include relevant background information:
+
+```
+Context: We are a medical device company specializing in structural heart
+devices. Our target KOLs are interventional cardiologists performing TAVR
+and TEER procedures.
+
+Task: Write an invitation email for our upcoming advisory board.
+```
+
+### 3. Specify the Output Format
+
+Tell the AI what you want:
+
+| Specification | Example |
+|--------------|---------|
+| Length | "Keep it under 200 words" |
+| Tone | "Professional but warm" |
+| Structure | "Use bullet points for key benefits" |
+| Audience | "Written for a busy clinician" |
+
+### 4. Use Examples (Few-Shot)
+
+Provide an example of what good output looks like:
+
+```
+Write an email similar to this style:
+
+"Dear Dr. Johnson,
+
+I hope this message finds you well. Your recent publication on bicuspid
+aortic valve management caught our attention, and I wanted to reach out
+regarding an opportunity to share your expertise..."
+
+Now write a similar email for Dr. Chen, referencing her work on TEER outcomes.
+```
+
+## Slash Commands Reference
+
+Stratosphere AI supports slash commands for common tasks:
+
+### Outreach Commands
+
+| Command | Purpose | Example |
+|---------|---------|---------|
+| `/outreach product [product] to [specialty] KOLs` | Product introduction | `/outreach product TAVR system to interventional cardiologists` |
+| `/outreach cold to [specialty] KOLs` | Initial contact | `/outreach cold to cardiac surgeons` |
+| `/outreach followup` | Follow-up sequence | `/outreach followup` |
+
+### Event Commands
+
+| Command | Purpose | Example |
+|---------|---------|---------|
+| `/event remind [event name]` | Event reminder | `/event remind Q2 Advisory Board` |
+| `/event thankyou [event name]` | Post-event thank you | `/event thankyou Boston Symposium` |
+| `/event noshow [event name]` | No-show follow-up | `/event noshow Training Workshop` |
+
+### Campaign Commands
+
+| Command | Purpose | Example |
+|---------|---------|---------|
+| `/campaign newsletter to [audience]` | Newsletter draft | `/campaign newsletter to structural heart KOLs` |
+| `/campaign launch [product]` | Product launch sequence | `/campaign launch NextGen Valve` |
+
+### Discovery Commands
+
+| Command | Purpose | Example |
+|---------|---------|---------|
+| `/discover [count] [specialty] KOLs` | Find new KOLs | `/discover 20 electrophysiology KOLs` |
+
+## Prompt Templates by Use Case
+
+### KOL Outreach Email
+
+```
+Write a [formal/casual] email to [KOL name/type], a [specialty] at [institution].
+
+Purpose: [invitation/introduction/follow-up]
+Key message: [what you want to communicate]
+Call to action: [what you want them to do]
+Tone: [professional/warm/urgent]
+Length: [word count or "brief"]
+
+Context: [any relevant background]
+```
+
+**Example:**
+```
+Write a formal email to Dr. Sarah Chen, an interventional cardiologist at
+Cleveland Clinic.
+
+Purpose: Invitation to advisory board
+Key message: We value her expertise in TEER procedures and want her input
+on our next-generation device
+Call to action: Confirm availability for March 15 meeting in Boston
+Tone: Professional but warm
+Length: Under 200 words
+
+Context: She has published extensively on mitral valve repair outcomes and
+spoke at our last symposium.
+```
+
+### Event Communication
+
+```
+Write a [invitation/reminder/thank you] for [event name].
+
+Event details:
+- Type: [advisory board/conference/webinar]
+- Date: [date]
+- Location: [location or virtual]
+- Duration: [time commitment]
+
+Audience: [who is receiving this]
+Key benefits: [why they should attend/attended]
+Action required: [RSVP/no action/feedback request]
+```
+
+### Investigation/Research Query
+
+```
+Generate a [report type] on [topic].
+
+Scope:
+- Time period: [recent/past year/past 5 years]
+- Geography: [global/US/EU/APAC]
+- Focus areas: [specific aspects to cover]
+
+Output:
+- Depth: [executive summary/standard/comprehensive]
+- Key questions to answer: [list specific questions]
+- Deliverable format: [sections to include]
+```
+
+**Example:**
+```
+Generate a competitive landscape analysis on transcatheter mitral valve repair.
+
+Scope:
+- Time period: Past 2 years
+- Geography: US and EU markets
+- Focus areas: Market share, clinical outcomes, pricing, pipeline
+
+Output:
+- Depth: Standard (5-10 pages)
+- Key questions: Who are the top 3 players? What differentiates their
+  approaches? What are the unmet needs?
+- Sections: Executive summary, market overview, competitor profiles,
+  SWOT analysis, outlook
+```
+
+### Content Creation (Press/Articles)
+
+```
+Write a [article type] about [topic].
+
+Audience: [who will read this]
+Tone: [thought leadership/educational/promotional]
+Key points to cover: [bullet list]
+SEO keywords: [if applicable]
+Length: [word count]
+Call to action: [if applicable]
+```
+
+## Advanced Techniques
+
+### Chain of Thought
+
+For complex tasks, ask the AI to think step by step:
+
+```
+I need to plan outreach to 50 KOLs for our product launch.
+
+Please:
+1. First, suggest how to segment these KOLs by tier and specialty
+2. Then, recommend different messaging approaches for each segment
+3. Finally, draft a sample email for each segment
+```
+
+### Iterative Refinement
+
+Start broad, then narrow:
+
+```
+Round 1: "Draft an advisory board invitation for cardiologists"
+Round 2: "Make it more concise, under 150 words"
+Round 3: "Add a specific reference to the KOL's recent publication on TAVR"
+```
+
+### Role Assignment
+
+Tell the AI what perspective to take:
+
+```
+You are a Medical Affairs director at a structural heart device company.
+Write an email to a Tier 1 KOL inviting them to serve on your scientific
+advisory board.
+```
+
+## Common Mistakes and Fixes
+
+| Mistake | Problem | Fix |
+|---------|---------|-----|
+| Too vague | Generic output | Add specificity: who, what, when, why |
+| No context | Misaligned content | Provide background on your company, product, audience |
+| Too long | AI gets lost | Break into smaller requests |
+| Unclear output format | Wrong structure | Specify format, length, sections |
+| Expecting perfection | Frustration | Plan for editing and refinement |
+
+## Quality Checklist
+
+Before using AI-generated content, verify:
+
+- [ ] **Accuracy**: Are facts and claims correct?
+- [ ] **Tone**: Does it match your brand voice?
+- [ ] **Compliance**: Does it meet regulatory requirements?
+- [ ] **Personalization**: Is it appropriately customized?
+- [ ] **Call to action**: Is the next step clear?
+- [ ] **Length**: Is it appropriate for the channel?
+
+<Warning>
+Always review AI-generated content before sending externally, especially for regulatory or medical claims.
+</Warning>
+
+## Related Resources
+
+<CardGroup cols={2}>
+<Card title="AI Native Workflow" icon="wand-magic-sparkles" href="/guides/ai-native-workflow">
+  Complete guide to Stratosphere AI features.
+</Card>
+<Card title="Campaigns Overview" icon="envelope" href="/guides/campaign">
+  Using AI for email campaigns.
+</Card>
+<Card title="Create Investigation" icon="magnifying-glass" href="/guides/investigations/create-investigation">
+  AI-powered research reports.
+</Card>
+<Card title="KOL Engagement Workflow" icon="users" href="/use-cases/kol-engagement-workflow">
+  Using AI for KOL outreach.
+</Card>
+</CardGroup>

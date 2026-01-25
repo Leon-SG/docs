@@ -1,0 +1,202 @@
+---
+title: 'Webhooks'
+description: 'Receive real-time notifications when events occur in Stratosphere.'
+---
+
+## Overview
+
+Webhooks allow you to receive HTTP POST requests when specific events occur in your Stratosphere organization. Use webhooks to:
+
+- Sync KOL data to your CRM in real-time
+- Trigger workflows when campaigns are sent
+- Update external systems when event RSVPs change
+- Monitor regulatory signals as they arrive
+
+## Setting Up Webhooks
+
+### 1. Create a Webhook Endpoint
+
+Create an endpoint in your application that accepts POST requests:
+
+```javascript
+// Example Express.js endpoint
+app.post('/webhooks/stratosphere', (req, res) => {
+  const signature = req.headers['x-stratosphere-signature'];
+  const payload = req.body;
+
+  // Verify signature
+  if (!verifySignature(payload, signature)) {
+    return res.status(401).send('Invalid signature');
+  }
+
+  // Process the event
+  switch (payload.event) {
+    case 'kol.created':
+      handleKolCreated(payload.data);
+      break;
+    case 'campaign.sent':
+      handleCampaignSent(payload.data);
+      break;
+    // ... handle other events
+  }
+
+  res.status(200).send('OK');
+});
+```
+
+### 2. Register Your Webhook
+
+```bash
+curl -X POST "https://api.getstrato.dev/v1/webhooks" \
+  -H "Authorization: Bearer sk_live_your_api_key" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "url": "https://your-app.com/webhooks/stratosphere",
+    "events": ["kol.created", "kol.updated", "campaign.sent"],
+    "secret": "your_webhook_secret"
+  }'
+```
+
+## Webhook Events
+
+### KOL Events
+
+| Event | Description |
+|-------|-------------|
+| `kol.created` | A new KOL was added |
+| `kol.updated` | A KOL profile was updated |
+| `kol.archived` | A KOL was archived |
+| `kol.tier_changed` | A KOL's tier was changed |
+
+### Event Events
+
+| Event | Description |
+|-------|-------------|
+| `event.created` | A new event was created |
+| `event.updated` | An event was updated |
+| `event.cancelled` | An event was cancelled |
+| `event.attendee_added` | An attendee was added |
+| `event.rsvp_updated` | An RSVP status changed |
+
+### Campaign Events
+
+| Event | Description |
+|-------|-------------|
+| `campaign.created` | A new campaign was created |
+| `campaign.sent` | A campaign was sent |
+| `campaign.email_opened` | A recipient opened an email |
+| `campaign.link_clicked` | A recipient clicked a link |
+
+### Signal Events
+
+| Event | Description |
+|-------|-------------|
+| `signal.new` | A new regulatory signal was detected |
+| `signal.high_impact` | A high/critical impact signal was detected |
+
+## Webhook Payload
+
+All webhook payloads follow this structure:
+
+```json
+{
+  "id": "wh_evt_abc123",
+  "event": "kol.created",
+  "created_at": "2024-01-20T14:30:00Z",
+  "data": {
+    "id": "kol_xyz789",
+    "full_name": "Dr. Sarah Chen",
+    "tier": "tier_1",
+    // ... event-specific data
+  },
+  "organization_id": "org_abc123"
+}
+```
+
+## Verifying Signatures
+
+Stratosphere signs all webhook payloads using HMAC-SHA256. Verify signatures to ensure requests are authentic:
+
+```javascript
+const crypto = require('crypto');
+
+function verifySignature(payload, signature) {
+  const expectedSignature = crypto
+    .createHmac('sha256', process.env.WEBHOOK_SECRET)
+    .update(JSON.stringify(payload))
+    .digest('hex');
+
+  return crypto.timingSafeEqual(
+    Buffer.from(signature),
+    Buffer.from(expectedSignature)
+  );
+}
+```
+
+```python
+import hmac
+import hashlib
+
+def verify_signature(payload: str, signature: str) -> bool:
+    expected = hmac.new(
+        key=WEBHOOK_SECRET.encode(),
+        msg=payload.encode(),
+        digestmod=hashlib.sha256
+    ).hexdigest()
+    return hmac.compare_digest(expected, signature)
+```
+
+## Retry Policy
+
+If your endpoint returns a non-2xx status code, Stratosphere will retry the webhook:
+
+| Attempt | Delay |
+|---------|-------|
+| 1st retry | 1 minute |
+| 2nd retry | 5 minutes |
+| 3rd retry | 30 minutes |
+| 4th retry | 2 hours |
+| 5th retry | 24 hours |
+
+After 5 failed attempts, the webhook will be marked as failed and you'll receive an email notification.
+
+## Managing Webhooks
+
+### List Webhooks
+
+```bash
+curl -X GET "https://api.getstrato.dev/v1/webhooks" \
+  -H "Authorization: Bearer sk_live_your_api_key"
+```
+
+### Update Webhook
+
+```bash
+curl -X PATCH "https://api.getstrato.dev/v1/webhooks/wh_abc123" \
+  -H "Authorization: Bearer sk_live_your_api_key" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "events": ["kol.created", "kol.updated", "signal.high_impact"],
+    "enabled": true
+  }'
+```
+
+### Delete Webhook
+
+```bash
+curl -X DELETE "https://api.getstrato.dev/v1/webhooks/wh_abc123" \
+  -H "Authorization: Bearer sk_live_your_api_key"
+```
+
+## Testing Webhooks
+
+Use the webhook test endpoint to send a test event:
+
+```bash
+curl -X POST "https://api.getstrato.dev/v1/webhooks/wh_abc123/test" \
+  -H "Authorization: Bearer sk_live_your_api_key" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "event": "kol.created"
+  }'
+```

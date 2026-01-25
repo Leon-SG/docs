@@ -1,0 +1,140 @@
+---
+title: 'List Events'
+api: 'GET /v1/events'
+description: 'Retrieve a paginated list of events in your organization.'
+---
+
+## Query Parameters
+
+<ParamField query="page" type="integer" default="1">
+  Page number
+</ParamField>
+
+<ParamField query="per_page" type="integer" default="20">
+  Results per page (max 100)
+</ParamField>
+
+<ParamField query="status" type="string">
+  Filter by status. Options: `draft`, `scheduled`, `active`, `completed`, `cancelled`
+</ParamField>
+
+<ParamField query="event_type" type="string">
+  Filter by event type. Options: `advisory_board`, `speaker_program`, `conference`, `workshop`, `webinar`, `dinner`, `other`
+</ParamField>
+
+<ParamField query="time" type="string">
+  Filter by time. Options: `upcoming`, `past`, `today`, `this_week`, `this_month`
+</ParamField>
+
+<ParamField query="start_date" type="string">
+  Filter events starting after this date (ISO 8601)
+</ParamField>
+
+<ParamField query="end_date" type="string">
+  Filter events ending before this date (ISO 8601)
+</ParamField>
+
+<ParamField query="search" type="string">
+  Search by event name or description
+</ParamField>
+
+## Response
+
+<ResponseField name="data" type="array">
+  <Expandable title="Event object">
+    <ResponseField name="id" type="string">
+      Unique identifier
+    </ResponseField>
+    <ResponseField name="name" type="string">
+      Event name
+    </ResponseField>
+    <ResponseField name="description" type="string">
+      Event description
+    </ResponseField>
+    <ResponseField name="event_type" type="string">
+      Type of event
+    </ResponseField>
+    <ResponseField name="status" type="string">
+      Current status
+    </ResponseField>
+    <ResponseField name="start_date" type="string">
+      Start date and time (ISO 8601)
+    </ResponseField>
+    <ResponseField name="end_date" type="string">
+      End date and time (ISO 8601)
+    </ResponseField>
+    <ResponseField name="location" type="object">
+      Event location details
+    </ResponseField>
+    <ResponseField name="attendee_count" type="integer">
+      Number of attendees
+    </ResponseField>
+    <ResponseField name="rsvp_stats" type="object">
+      RSVP statistics (confirmed, pending, declined)
+    </ResponseField>
+    <ResponseField name="created_at" type="string">
+      Creation timestamp
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+<RequestExample>
+
+```bash cURL
+curl -X GET "https://api.getstrato.dev/v1/events?status=scheduled&time=upcoming" \
+  -H "Authorization: Bearer sk_live_your_api_key"
+```
+
+```javascript Node.js
+const events = await stratosphere.events.list({
+  status: 'scheduled',
+  time: 'upcoming'
+});
+```
+
+```python Python
+events = stratosphere.events.list(
+    status='scheduled',
+    time='upcoming'
+)
+```
+
+</RequestExample>
+
+<ResponseExample>
+
+```json Response
+{
+  "data": [
+    {
+      "id": "evt_xyz789",
+      "name": "Q1 Cardiology Advisory Board",
+      "description": "Quarterly advisory board meeting with key cardiology KOLs",
+      "event_type": "advisory_board",
+      "status": "scheduled",
+      "start_date": "2024-03-15T09:00:00Z",
+      "end_date": "2024-03-15T17:00:00Z",
+      "location": {
+        "type": "in_person",
+        "venue": "The Ritz-Carlton",
+        "city": "San Francisco",
+        "country": "US"
+      },
+      "attendee_count": 12,
+      "rsvp_stats": {
+        "confirmed": 8,
+        "pending": 3,
+        "declined": 1
+      },
+      "created_at": "2024-01-10T08:00:00Z"
+    }
+  ],
+  "meta": {
+    "page": 1,
+    "per_page": 20,
+    "total": 5
+  }
+}
+```
+
+</ResponseExample>

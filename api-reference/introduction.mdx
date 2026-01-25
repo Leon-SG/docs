@@ -1,33 +1,169 @@
 ---
-title: 'Introduction'
-description: 'Example section for showcasing API endpoints'
+title: 'API Introduction'
+description: 'Build integrations with the Stratosphere API to automate KOL management, events, campaigns, and regulatory workflows.'
 ---
 
-<Note>
-  If you're not looking to build API reference documentation, you can delete
-  this section by removing the api-reference folder.
-</Note>
+## Overview
 
-## Welcome
+The Stratosphere API enables you to programmatically access and manage your medical device commercial operations data. Use it to:
 
-There are two ways to build API documentation: [OpenAPI](https://mintlify.com/docs/api-playground/openapi/setup) and [MDX components](https://mintlify.com/docs/api-playground/mdx/configuration). For the starter kit, we are using the following OpenAPI specification.
+- **Sync KOL data** with your CRM or internal systems
+- **Automate event workflows** and attendee management
+- **Trigger campaigns** based on external events
+- **Monitor regulatory signals** and integrate with compliance tools
+- **Export analytics** for business intelligence
 
-<Card
-  title="Plant Store Endpoints"
-  icon="leaf"
-  href="https://github.com/mintlify/starter/blob/main/api-reference/openapi.json"
->
-  View the OpenAPI specification file
-</Card>
+## Base URL
+
+All API requests should be made to:
+
+```
+https://api.getstrato.dev/v1
+```
 
 ## Authentication
 
-All API endpoints are authenticated using Bearer tokens and picked up from the specification file.
+The Stratosphere API uses API keys for authentication. Include your API key in the `Authorization` header:
+
+```bash
+curl -X GET "https://api.getstrato.dev/v1/kols" \
+  -H "Authorization: Bearer sk_live_your_api_key" \
+  -H "Content-Type: application/json"
+```
+
+<Warning>
+Keep your API keys secure. Do not expose them in client-side code or public repositories.
+</Warning>
+
+### Obtaining API Keys
+
+1. Go to **Settings** → **API Keys** in your Stratosphere dashboard
+2. Click **Create API Key**
+3. Copy the key immediately (it won't be shown again)
+4. Set appropriate scopes for your use case
+
+### API Key Scopes
+
+| Scope | Description |
+|-------|-------------|
+| `kols:read` | Read KOL profiles and insights |
+| `kols:write` | Create and update KOL records |
+| `events:read` | Read events and attendees |
+| `events:write` | Create and manage events |
+| `campaigns:read` | Read campaign data and analytics |
+| `campaigns:write` | Create and send campaigns |
+| `signals:read` | Read regulatory signals |
+| `products:read` | Read product catalog |
+| `products:write` | Manage products |
+
+## Rate Limits
+
+API requests are rate-limited based on your subscription plan:
+
+| Plan | Requests per minute | Requests per day |
+|------|---------------------|------------------|
+| Starter | 60 | 10,000 |
+| Professional | 300 | 100,000 |
+| Enterprise | 1,000 | Unlimited |
+
+Rate limit headers are included in every response:
+
+```
+X-RateLimit-Limit: 60
+X-RateLimit-Remaining: 45
+X-RateLimit-Reset: 1699900000
+```
+
+## Response Format
+
+All responses are returned in JSON format with consistent structure:
+
+### Success Response
 
 ```json
-"security": [
-  {
-    "bearerAuth": []
+{
+  "data": { ... },
+  "meta": {
+    "page": 1,
+    "per_page": 20,
+    "total": 150
   }
-]
+}
 ```
+
+### Error Response
+
+```json
+{
+  "error": {
+    "code": "invalid_request",
+    "message": "The 'email' field is required",
+    "details": {
+      "field": "email",
+      "reason": "missing"
+    }
+  }
+}
+```
+
+### HTTP Status Codes
+
+| Code | Description |
+|------|-------------|
+| `200` | Success |
+| `201` | Created |
+| `400` | Bad Request - Invalid parameters |
+| `401` | Unauthorized - Invalid or missing API key |
+| `403` | Forbidden - Insufficient permissions |
+| `404` | Not Found |
+| `429` | Too Many Requests - Rate limited |
+| `500` | Internal Server Error |
+
+## Pagination
+
+List endpoints support pagination with these parameters:
+
+| Parameter | Default | Description |
+|-----------|---------|-------------|
+| `page` | 1 | Page number |
+| `per_page` | 20 | Items per page (max 100) |
+| `sort` | varies | Sort field |
+| `order` | `desc` | Sort order (`asc` or `desc`) |
+
+## Filtering
+
+Most list endpoints support filtering:
+
+```bash
+GET /v1/kols?tier=tier_1&specialty=cardiology&engagement_level=high
+```
+
+Array filters use comma-separated values:
+
+```bash
+GET /v1/events?status=scheduled,active&event_type=advisory_board
+```
+
+## Webhooks
+
+Stratosphere can send real-time notifications to your server when events occur. See the [Webhooks documentation](/api-reference/webhooks) for setup instructions.
+
+## SDKs & Libraries
+
+<CardGroup cols={2}>
+
+<Card title="Node.js SDK" icon="node-js" href="/api-reference/sdks/nodejs">
+  Official Node.js client library
+</Card>
+
+<Card title="Python SDK" icon="python" href="/api-reference/sdks/python">
+  Official Python client library
+</Card>
+
+</CardGroup>
+
+## Need Help?
+
+- **API Status**: Check [status.getstrato.dev](https://status.getstrato.dev) for uptime
+- **Support**: Email [api-support@getstrato.dev](mailto:api-support@getstrato.dev)
+- **Changelog**: See [API Changelog](/api-reference/changelog) for updates

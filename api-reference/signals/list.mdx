@@ -1,0 +1,174 @@
+---
+title: 'List Signals'
+api: 'GET /v1/signals'
+description: 'Retrieve regulatory and industry signals with AI-powered analysis.'
+---
+
+## Query Parameters
+
+<ParamField query="page" type="integer" default="1">
+  Page number
+</ParamField>
+
+<ParamField query="per_page" type="integer" default="20">
+  Results per page (max 100)
+</ParamField>
+
+<ParamField query="source" type="string">
+  Filter by source. Options: `fda`, `ema`, `nmpa`, `pmda`, `tga`, `health_canada`, `mhra`, `industry`
+</ParamField>
+
+<ParamField query="impact" type="string">
+  Filter by impact level. Options: `critical`, `high`, `medium`, `low`
+</ParamField>
+
+<ParamField query="sentiment" type="string">
+  Filter by sentiment. Options: `positive`, `neutral`, `negative`
+</ParamField>
+
+<ParamField query="product_id" type="string">
+  Filter signals relevant to a specific product
+</ParamField>
+
+<ParamField query="is_bookmarked" type="boolean">
+  Filter bookmarked signals only
+</ParamField>
+
+<ParamField query="is_read" type="boolean">
+  Filter by read/unread status
+</ParamField>
+
+<ParamField query="search" type="string">
+  Full-text search in title and content
+</ParamField>
+
+<ParamField query="published_after" type="string">
+  Filter signals published after this date (ISO 8601)
+</ParamField>
+
+## Response
+
+<ResponseField name="data" type="array">
+  <Expandable title="Signal object">
+    <ResponseField name="id" type="string">
+      Unique identifier
+    </ResponseField>
+    <ResponseField name="title" type="string">
+      Signal title
+    </ResponseField>
+    <ResponseField name="url" type="string">
+      Source URL
+    </ResponseField>
+    <ResponseField name="source" type="object">
+      Source details (name, country, region)
+    </ResponseField>
+    <ResponseField name="content" type="string">
+      Full content text
+    </ResponseField>
+    <ResponseField name="ai_summary" type="string">
+      AI-generated summary
+    </ResponseField>
+    <ResponseField name="impact" type="object">
+      <Expandable title="Impact assessment">
+        <ResponseField name="level" type="string">
+          Impact level (critical, high, medium, low)
+        </ResponseField>
+        <ResponseField name="score" type="number">
+          Impact score (0-100)
+        </ResponseField>
+        <ResponseField name="categories" type="array">
+          Affected categories
+        </ResponseField>
+      </Expandable>
+    </ResponseField>
+    <ResponseField name="sentiment" type="string">
+      Sentiment (positive, neutral, negative)
+    </ResponseField>
+    <ResponseField name="product_relevance" type="array">
+      Relevant products with relevance type
+    </ResponseField>
+    <ResponseField name="is_read" type="boolean">
+      Read status
+    </ResponseField>
+    <ResponseField name="is_bookmarked" type="boolean">
+      Bookmark status
+    </ResponseField>
+    <ResponseField name="published_at" type="string">
+      Publication timestamp
+    </ResponseField>
+    <ResponseField name="fetched_at" type="string">
+      Fetch timestamp
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+<RequestExample>
+
+```bash cURL
+curl -X GET "https://api.getstrato.dev/v1/signals?source=fda&impact=high&per_page=10" \
+  -H "Authorization: Bearer sk_live_your_api_key"
+```
+
+```javascript Node.js
+const signals = await stratosphere.signals.list({
+  source: 'fda',
+  impact: 'high',
+  per_page: 10
+});
+```
+
+```python Python
+signals = stratosphere.signals.list(
+    source='fda',
+    impact='high',
+    per_page=10
+)
+```
+
+</RequestExample>
+
+<ResponseExample>
+
+```json Response
+{
+  "data": [
+    {
+      "id": "sig_abc123",
+      "title": "FDA Issues Updated Guidance on AI/ML-Based Medical Devices",
+      "url": "https://www.fda.gov/medical-devices/...",
+      "source": {
+        "name": "FDA",
+        "country": "US",
+        "region": "North America"
+      },
+      "ai_summary": "The FDA has released updated guidance clarifying the regulatory pathway for AI/ML-based medical devices, emphasizing the importance of continuous learning algorithms and predetermined change control plans.",
+      "impact": {
+        "level": "high",
+        "score": 85,
+        "categories": ["regulatory", "ai_ml", "software"]
+      },
+      "sentiment": "neutral",
+      "product_relevance": [
+        {
+          "product_id": "prod_xyz789",
+          "product_name": "CardioAI Diagnostic System",
+          "relevance_type": "direct",
+          "relevance_score": 0.92
+        }
+      ],
+      "is_read": false,
+      "is_bookmarked": false,
+      "published_at": "2024-01-18T16:00:00Z",
+      "fetched_at": "2024-01-18T18:30:00Z"
+    }
+  ],
+  "meta": {
+    "page": 1,
+    "per_page": 10,
+    "total": 23,
+    "unread_count": 8
+  }
+}
+```
+
+</ResponseExample>

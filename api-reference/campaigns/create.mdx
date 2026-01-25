@@ -1,0 +1,156 @@
+---
+title: 'Create Campaign'
+api: 'POST /v1/campaigns'
+description: 'Create a new email campaign.'
+---
+
+## Request Body
+
+<ParamField body="name" type="string" required>
+  Campaign name
+</ParamField>
+
+<ParamField body="description" type="string">
+  Campaign description
+</ParamField>
+
+<ParamField body="type" type="string" required>
+  Campaign type. Options: `product_update`, `event_invitation`, `new_product_launch`, `newsletter`, `custom`
+</ParamField>
+
+<ParamField body="audience" type="object" required>
+  <Expandable title="Audience selection">
+    <ParamField body="kol_ids" type="array">
+      Specific KOL IDs to target
+    </ParamField>
+    <ParamField body="filters" type="object">
+      Dynamic audience filters (tier, specialty, tags)
+    </ParamField>
+    <ParamField body="external_contacts" type="array">
+      External email addresses
+    </ParamField>
+  </Expandable>
+</ParamField>
+
+<ParamField body="email" type="object" required>
+  <Expandable title="Email content">
+    <ParamField body="subject" type="string" required>
+      Email subject line
+    </ParamField>
+    <ParamField body="from_name" type="string">
+      Sender name
+    </ParamField>
+    <ParamField body="reply_to" type="string">
+      Reply-to address
+    </ParamField>
+    <ParamField body="body_html" type="string" required>
+      HTML email body
+    </ParamField>
+    <ParamField body="body_text" type="string">
+      Plain text fallback
+    </ParamField>
+  </Expandable>
+</ParamField>
+
+<ParamField body="products" type="array">
+  Product IDs to link to this campaign
+</ParamField>
+
+<ParamField body="schedule" type="object">
+  <Expandable title="Schedule settings">
+    <ParamField body="type" type="string" default="immediate">
+      Options: `immediate`, `scheduled`, `recurring`
+    </ParamField>
+    <ParamField body="send_at" type="string">
+      Scheduled send time (ISO 8601)
+    </ParamField>
+  </Expandable>
+</ParamField>
+
+## Personalization Variables
+
+Use these variables in your email content:
+
+| Variable | Description |
+|----------|-------------|
+| `{{full_name}}` | Recipient's full name |
+| `{{first_name}}` | Recipient's first name |
+| `{{title}}` | Professional title |
+| `{{institution}}` | Institution name |
+| `{{specialty}}` | Primary specialty |
+
+<RequestExample>
+
+```bash cURL
+curl -X POST "https://api.getstrato.dev/v1/campaigns" \
+  -H "Authorization: Bearer sk_live_your_api_key" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "name": "Q1 Product Newsletter",
+    "type": "newsletter",
+    "audience": {
+      "filters": {
+        "tier": ["tier_1", "tier_2"],
+        "specialty": ["cardiology"]
+      }
+    },
+    "email": {
+      "subject": "Stratosphere Q1 Update: New Features for {{specialty}}",
+      "from_name": "Stratosphere Medical",
+      "body_html": "<h1>Hello {{first_name}},</h1><p>Here are the latest updates...</p>"
+    },
+    "schedule": {
+      "type": "scheduled",
+      "send_at": "2024-02-01T09:00:00Z"
+    }
+  }'
+```
+
+```javascript Node.js
+const campaign = await stratosphere.campaigns.create({
+  name: 'Q1 Product Newsletter',
+  type: 'newsletter',
+  audience: {
+    filters: {
+      tier: ['tier_1', 'tier_2'],
+      specialty: ['cardiology']
+    }
+  },
+  email: {
+    subject: 'Stratosphere Q1 Update: New Features for {{specialty}}',
+    from_name: 'Stratosphere Medical',
+    body_html: '<h1>Hello {{first_name}},</h1><p>Here are the latest updates...</p>'
+  },
+  schedule: {
+    type: 'scheduled',
+    send_at: '2024-02-01T09:00:00Z'
+  }
+});
+```
+
+</RequestExample>
+
+<ResponseExample>
+
+```json Response
+{
+  "data": {
+    "id": "cmp_new456",
+    "name": "Q1 Product Newsletter",
+    "type": "newsletter",
+    "status": "draft",
+    "audience_count": 45,
+    "email": {
+      "subject": "Stratosphere Q1 Update: New Features for {{specialty}}",
+      "from_name": "Stratosphere Medical"
+    },
+    "schedule": {
+      "type": "scheduled",
+      "send_at": "2024-02-01T09:00:00Z"
+    },
+    "created_at": "2024-01-20T14:30:00Z"
+  }
+}
+```
+
+</ResponseExample>

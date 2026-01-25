@@ -1,0 +1,165 @@
+---
+title: 'List KOLs'
+api: 'GET /v1/kols'
+description: 'Retrieve a paginated list of KOLs in your organization.'
+---
+
+## Query Parameters
+
+<ParamField query="page" type="integer" default="1">
+  Page number for pagination
+</ParamField>
+
+<ParamField query="per_page" type="integer" default="20">
+  Number of results per page (max 100)
+</ParamField>
+
+<ParamField query="tier" type="string">
+  Filter by KOL tier. Options: `tier_1`, `tier_2`, `tier_3`
+</ParamField>
+
+<ParamField query="specialty" type="string">
+  Filter by specialty (e.g., `cardiology`, `orthopedics`)
+</ParamField>
+
+<ParamField query="engagement_level" type="string">
+  Filter by engagement level. Options: `high`, `medium`, `low`
+</ParamField>
+
+<ParamField query="search" type="string">
+  Search by name, institution, or email
+</ParamField>
+
+<ParamField query="tags" type="string">
+  Filter by tags (comma-separated)
+</ParamField>
+
+<ParamField query="is_archived" type="boolean" default="false">
+  Include archived KOLs
+</ParamField>
+
+## Response
+
+<ResponseField name="data" type="array">
+  <Expandable title="KOL object">
+    <ResponseField name="id" type="string">
+      Unique identifier
+    </ResponseField>
+    <ResponseField name="full_name" type="string">
+      Full name of the KOL
+    </ResponseField>
+    <ResponseField name="title" type="string">
+      Professional title
+    </ResponseField>
+    <ResponseField name="institution" type="string">
+      Primary institution or hospital
+    </ResponseField>
+    <ResponseField name="department" type="string">
+      Department within the institution
+    </ResponseField>
+    <ResponseField name="specialties" type="array">
+      List of medical specialties
+    </ResponseField>
+    <ResponseField name="expertise_areas" type="array">
+      Specific areas of expertise
+    </ResponseField>
+    <ResponseField name="tier" type="string">
+      KOL tier classification
+    </ResponseField>
+    <ResponseField name="engagement_level" type="string">
+      Current engagement level
+    </ResponseField>
+    <ResponseField name="email" type="string">
+      Primary email address
+    </ResponseField>
+    <ResponseField name="phone" type="string">
+      Phone number
+    </ResponseField>
+    <ResponseField name="location" type="object">
+      City and country information
+    </ResponseField>
+    <ResponseField name="tags" type="array">
+      Custom tags for organization
+    </ResponseField>
+    <ResponseField name="event_count" type="integer">
+      Number of events attended
+    </ResponseField>
+    <ResponseField name="last_interaction" type="string">
+      ISO 8601 timestamp of last interaction
+    </ResponseField>
+    <ResponseField name="created_at" type="string">
+      ISO 8601 timestamp
+    </ResponseField>
+    <ResponseField name="updated_at" type="string">
+      ISO 8601 timestamp
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+<ResponseField name="meta" type="object">
+  Pagination metadata
+</ResponseField>
+
+<RequestExample>
+
+```bash cURL
+curl -X GET "https://api.getstrato.dev/v1/kols?tier=tier_1&specialty=cardiology&per_page=10" \
+  -H "Authorization: Bearer sk_live_your_api_key"
+```
+
+```javascript Node.js
+const response = await stratosphere.kols.list({
+  tier: 'tier_1',
+  specialty: 'cardiology',
+  per_page: 10
+});
+```
+
+```python Python
+response = stratosphere.kols.list(
+    tier='tier_1',
+    specialty='cardiology',
+    per_page=10
+)
+```
+
+</RequestExample>
+
+<ResponseExample>
+
+```json Response
+{
+  "data": [
+    {
+      "id": "kol_abc123",
+      "full_name": "Dr. Sarah Chen",
+      "title": "Chief of Cardiology",
+      "institution": "Stanford Medical Center",
+      "department": "Cardiovascular Medicine",
+      "specialties": ["interventional_cardiology", "structural_heart"],
+      "expertise_areas": ["TAVR", "MitraClip", "left_atrial_appendage"],
+      "tier": "tier_1",
+      "engagement_level": "high",
+      "email": "s.chen@stanford.edu",
+      "phone": "+1-650-555-0123",
+      "location": {
+        "city": "Palo Alto",
+        "country": "US"
+      },
+      "tags": ["speaker", "advisory_board", "investigator"],
+      "event_count": 12,
+      "last_interaction": "2024-01-15T10:30:00Z",
+      "created_at": "2023-06-01T08:00:00Z",
+      "updated_at": "2024-01-15T10:30:00Z"
+    }
+  ],
+  "meta": {
+    "page": 1,
+    "per_page": 10,
+    "total": 45,
+    "total_pages": 5
+  }
+}
+```
+
+</ResponseExample>

@@ -1,80 +1,160 @@
 ---
 title: "Quickstart"
-description: "Start building awesome documentation in minutes"
+description: "Get started with Stratosphere in 5 minutes: set up your workspace, import KOLs, and run your first AI workflow."
 ---
 
-## Get started in three steps
+## Get Started in 5 Minutes
 
-Get your documentation site running locally and make your first customization.
+This guide walks you through setting up Stratosphere and completing your first tasks.
 
-### Step 1: Set up your local environment
+<Steps>
 
-<AccordionGroup>
-  <Accordion icon="copy" title="Clone your docs locally">
-    During the onboarding process, you created a GitHub repository with your docs content if you didn't already have one. You can find a link to this repository in your [dashboard](https://dashboard.mintlify.com).
-    
-    To clone the repository locally so that you can make and preview changes to your docs, follow the [Cloning a repository](https://docs.github.com/en/repositories/creating-and-managing-repositories/cloning-a-repository) guide in the GitHub docs.
-  </Accordion>
-  <Accordion icon="rectangle-terminal" title="Start the preview server">
-    1. Install the Mintlify CLI: `npm i -g mint`
-    2. Navigate to your docs directory and run: `mint dev`
-    3. Open `http://localhost:3000` to see your docs live!
-    
-    <Tip>Your preview updates automatically as you edit files.</Tip>
-  </Accordion>
-</AccordionGroup>
+<Step title="Set Up Your Workspace">
 
-### Step 2: Deploy your changes
+### Configure Company Profile
 
-<AccordionGroup>
-  <Accordion icon="github" title="Install our GitHub app">
-    Install the Mintlify GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app).
-    
-    Our GitHub app automatically deploys your changes to your docs site, so you don't need to manage deployments yourself.
-</Accordion>
-<Accordion icon="palette" title="Update your site name and colors">
-    For a first change, let's update the name and colors of your docs site.
+Your company profile provides context for AI-generated content.
 
-    1. Open `docs.json` in your editor.
-    2. Change the `"name"` field to your project name.
-    3. Update the `"colors"` to match your brand.
-    4. Save and see your changes instantly at `http://localhost:3000`.
+1. Go to **Settings** then **Company Profile**
+2. Enter your company information:
+   - Company name
+   - Industry focus (e.g., structural heart, orthopedics)
+   - Key products
+   - Target markets
+3. Click **Save**
 
-    <Tip>Try changing the primary color to see an immediate difference!</Tip>
-  </Accordion>
-</AccordionGroup>
+<Tip>
+The more complete your company profile, the better Stratosphere AI understands your context.
+</Tip>
 
-### Step 3: Go live
+</Step>
 
-<Accordion icon="rocket" title="Publish your docs">
-  1. Commit and push your changes.
-  2. Your docs will update and be live in moments!
-</Accordion>
+<Step title="Add Your First KOLs">
 
-## Next steps
+### Option A: Add Manually
 
-Now that you have your docs running, explore these key features:
+1. Go to **KOL** from the main navigation
+2. Click **New KOL**
+3. Fill in the profile:
+   - Name and title
+   - Institution and department
+   - Specialties (required)
+   - Email and contact info
+   - Tier (1, 2, or 3)
+4. Click **Save**
+
+### Option B: Import from CSV
+
+1. Go to **KOL** then click **Import**
+2. Download the CSV template
+3. Fill in your KOL data (minimum: full_name, specialties)
+4. Upload and validate
+5. Confirm import
+
+<Info>
+Start with 10-20 KOLs to get familiar with the system. You can always add more later.
+</Info>
+
+[Detailed guide: Import KOLs](/guides/kol/import-kols-csv)
+
+</Step>
+
+<Step title="Create Your First Event">
+
+1. Go to **Events** from the main navigation
+2. Click **New Event**
+3. Enter event details:
+   - Title (e.g., "Q2 Cardiology Advisory Board")
+   - Type: Advisory Board
+   - Date and time
+   - Location or "Virtual"
+4. Click **Create**
+
+### Add Attendees
+
+1. Open your event
+2. Go to **Attendees** tab
+3. Click **Add Attendee**
+4. Search for KOLs from your database
+5. Assign roles (speaker, attendee, etc.)
+
+[Detailed guide: Events](/guides/events)
+
+</Step>
+
+<Step title="Try AI Workflows">
+
+### Use Slash Commands
+
+1. Go to **AI** from the main navigation
+2. Type `/` to see available commands:
+   - `/discover 10 cardiology KOLs` - Find new KOLs
+   - `/outreach product [product] to [specialty] KOLs` - Draft outreach
+   - `/event remind [event name]` - Generate reminders
+3. Select a command and follow the prompts
+
+### Ask a Question
+
+Type a natural language question:
+- "Who are the top interventional cardiologists in my database?"
+- "Draft an invitation email for my advisory board"
+- "What regulatory signals should I be aware of this week?"
+
+[Detailed guide: AI Native Workflow](/guides/ai-native-workflow)
+
+</Step>
+
+<Step title="Monitor Signals">
+
+1. Go to **Signals** from the main navigation
+2. View the dashboard showing regulatory updates from:
+   - FDA (US)
+   - EMA (EU)
+   - NMPA (China)
+   - Industry news
+3. Filter by impact level (Critical, High, Medium, Low)
+4. Click any signal to see AI-generated summary and product impact
+
+### Set Up Product Correlation
+
+For best signal matching:
+1. Go to **Products** then **New Product**
+2. Add your key products with descriptions and therapeutic areas
+3. Signals will automatically correlate to relevant products
+
+[Detailed guide: Signals](/guides/signals)
+
+</Step>
+
+</Steps>
+
+## Next Steps
+
+Now that you're set up, explore these workflows:
 
 <CardGroup cols={2}>
 
-<Card title="Write Content" icon="pen-to-square" href="/essentials/markdown">
-  Learn MDX syntax and start writing your documentation.
+<Card title="KOL Engagement Workflow" icon="users" href="/use-cases/kol-engagement-workflow">
+  Full lifecycle from discovery to long-term relationship.
 </Card>
 
-<Card title="Customize style" icon="palette" href="/essentials/settings">
-  Make your docs match your brand perfectly.
+<Card title="Event Management" icon="calendar" href="/use-cases/event-management-lifecycle">
+  Plan and execute events from invitation to follow-up.
 </Card>
 
-<Card title="Add code examples" icon="square-code" href="/essentials/code">
-  Include syntax-highlighted code blocks.
+<Card title="For Medical Affairs" icon="user-doctor" href="/roles/for-medical-affairs">
+  Role-specific workflows for MA/MSL teams.
 </Card>
 
-<Card title="API documentation" icon="code" href="/api-reference/introduction">
-  Auto-generate API docs from OpenAPI specs.
+<Card title="For Marketing" icon="bullhorn" href="/roles/for-marketing">
+  Role-specific workflows for marketing teams.
 </Card>
 
 </CardGroup>
 
-<Note>
-  **Need help?** See our [full documentation](https://mintlify.com/docs) or join our [community](https://mintlify.com/community).
-</Note>
+## Need Help?
+
+- **Browse the docs**: Use the sidebar to explore all modules
+- **Search**: Press Cmd/Ctrl + K to search across all documentation
+- **Glossary**: [Key terms defined](/glossary)
+- **Support**: Contact us through the app or email hello@getstrato.dev

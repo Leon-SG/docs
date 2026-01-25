@@ -1,0 +1,130 @@
+---
+title: 'List Products'
+api: 'GET /v1/products'
+description: 'Retrieve your product catalog with regulatory status.'
+---
+
+## Query Parameters
+
+<ParamField query="page" type="integer" default="1">
+  Page number
+</ParamField>
+
+<ParamField query="per_page" type="integer" default="20">
+  Results per page (max 100)
+</ParamField>
+
+<ParamField query="status" type="string">
+  Filter by status. Options: `active`, `in_development`, `discontinued`
+</ParamField>
+
+<ParamField query="product_line" type="string">
+  Filter by product line ID
+</ParamField>
+
+<ParamField query="target_market" type="string">
+  Filter by target market. Options: `US`, `EU`, `CN`, `JP`, `IN`
+</ParamField>
+
+<ParamField query="search" type="string">
+  Search by product name or description
+</ParamField>
+
+## Response
+
+<ResponseField name="data" type="array">
+  <Expandable title="Product object">
+    <ResponseField name="id" type="string">
+      Unique identifier
+    </ResponseField>
+    <ResponseField name="name" type="string">
+      Product name
+    </ResponseField>
+    <ResponseField name="description" type="string">
+      Product description
+    </ResponseField>
+    <ResponseField name="product_line" type="object">
+      Product line details
+    </ResponseField>
+    <ResponseField name="status" type="string">
+      Product status
+    </ResponseField>
+    <ResponseField name="regulatory_status" type="string">
+      Primary regulatory status
+    </ResponseField>
+    <ResponseField name="target_markets" type="array">
+      Target market codes
+    </ResponseField>
+    <ResponseField name="key_features" type="array">
+      Key product features
+    </ResponseField>
+    <ResponseField name="specifications" type="array">
+      Technical specifications
+    </ResponseField>
+    <ResponseField name="market_status" type="object">
+      Compliance status per market
+    </ResponseField>
+    <ResponseField name="created_at" type="string">
+      Creation timestamp
+    </ResponseField>
+  </Expandable>
+</ResponseField>
+
+<RequestExample>
+
+```bash cURL
+curl -X GET "https://api.getstrato.dev/v1/products?status=active&target_market=US" \
+  -H "Authorization: Bearer sk_live_your_api_key"
+```
+
+```javascript Node.js
+const products = await stratosphere.products.list({
+  status: 'active',
+  target_market: 'US'
+});
+```
+
+</RequestExample>
+
+<ResponseExample>
+
+```json Response
+{
+  "data": [
+    {
+      "id": "prod_abc123",
+      "name": "CardioValve Pro 2.0",
+      "description": "Next-generation transcatheter aortic valve replacement system",
+      "product_line": {
+        "id": "pl_cardio",
+        "name": "Cardiovascular"
+      },
+      "status": "active",
+      "regulatory_status": "FDA 510(k) Cleared",
+      "target_markets": ["US", "EU", "JP"],
+      "key_features": [
+        "Low-profile delivery system",
+        "Repositionable deployment",
+        "Enhanced sealing technology"
+      ],
+      "specifications": [
+        {"name": "Valve Sizes", "value": "23mm, 26mm, 29mm"},
+        {"name": "Delivery Catheter", "value": "14Fr"}
+      ],
+      "market_status": {
+        "US": {"status": "approved", "clearance_number": "K231234"},
+        "EU": {"status": "approved", "ce_mark": true},
+        "JP": {"status": "under_review"}
+      },
+      "created_at": "2023-06-01T08:00:00Z"
+    }
+  ],
+  "meta": {
+    "page": 1,
+    "per_page": 20,
+    "total": 8
+  }
+}
+```
+
+</ResponseExample>
