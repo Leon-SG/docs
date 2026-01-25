@@ -44,9 +44,6 @@
         ]
       },
       {
-        "tab": "Inbox"
-      },
-      {
         "tab": "API reference",
         "groups": [
           {
@@ -65,16 +62,6 @@
             ]
           }
         ]
-      },
-      {
-        "tab": "Main Features",
-        "pages": [
-          "main-features/untitled-page",
-          "main-features/inbox"
-        ]
-      },
-      {
-        "tab": "Features"
       }
     ]
   },
