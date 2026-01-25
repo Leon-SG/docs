@@ -28,17 +28,23 @@
         "tab": "Guides",
         "groups": [
           {
+            "group": "Getting started",
+            "pages": [
+              "index",
+              "quickstart",
+              "development"
+            ]
+          },
+          {
             "group": "Inbox",
             "pages": [
               "inbox/untitled-page"
             ]
           },
           {
-            "group": "Getting started",
+            "group": "AI Native Workflow",
             "pages": [
-              "index",
-              "quickstart",
-              "development"
+              "guides/ai-native-workflow/guide"
             ]
           }
         ]
