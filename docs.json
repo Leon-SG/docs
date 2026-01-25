@@ -46,6 +46,40 @@
             "pages": [
               "guides/ai-native-workflow/guide"
             ]
+          },
+          {
+            "group": "Events",
+            "pages": [
+              "guides/events/guide",
+              "guides/events/untitled-page",
+              "guides/events/untitled-page-1",
+              "guides/events/untitled-page-2"
+            ]
+          },
+          {
+            "group": "KOL",
+            "pages": [
+              "guides/kol/overview",
+              "guides/kol/untitled-page",
+              "guides/kol/untitled-page-1",
+              "guides/kol/activity-monitoring",
+              "guides/kol/untitled-page-2",
+              "guides/kol/untitled-page-3",
+              "guides/kol/untitled-page-4"
+            ]
+          },
+          {
+            "group": "Campaign",
+            "pages": [
+              "guides/campaign/untitled-page-3",
+              "guides/campaign/untitled-page-2",
+              "guides/campaign/untitled-page-1",
+              "guides/campaign/untitled-page"
+            ]
+          },
+          {
+            "group": "Trends",
+            "pages": []
           }
         ]
       },
