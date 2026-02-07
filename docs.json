@@ -212,6 +212,12 @@
               "guides/settings/company-profile",
               "guides/billings/index"
             ]
+          },
+          {
+            "group": "Operations & Legal",
+            "pages": [
+              "operating-regions"
+            ]
           }
         ]
       },
@@ -299,17 +305,6 @@
    ]
   },
   "footer": {
-    "links": [
-      {
-        "label": "Greater China & Southeast Asia",
-        "items": [
-          {
-            "label": "Adventurer Limited",
-            "href": "https://adventurer.fun/"
-          }
-        ]
-      }
-    ],
     "socials": {
       "x": "https://x.com/stratlobal",
       "linkedin": "https://linkedin.com/company/stratlobal"
