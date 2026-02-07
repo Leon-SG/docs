@@ -301,8 +301,13 @@
   "footer": {
     "links": [
       {
-        "label": "Greater China & Southeast Asia (Adventurer Limited)",
-        "href": "https://adventurer.fun/"
+        "label": "Greater China & Southeast Asia",
+        "items": [
+          {
+            "label": "Adventurer Limited",
+            "href": "https://adventurer.fun/"
+          }
+        ]
       }
     ],
     "socials": {
