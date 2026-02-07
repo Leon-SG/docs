@@ -270,7 +270,8 @@
   },
   "logo": {
     "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "dark": "/logo/dark.svg",
+    "href": "https://medstrato.com/"
   },
   "navbar": {
     "links": [
@@ -296,12 +297,6 @@
      "cursor",
      "vscode"
    ]
-  },
-  "footer": {
-    "socials": {
-      "x": "https://x.com/stratlobal",
-      "linkedin": "https://linkedin.com/company/stratlobal"
-    }
   },
   "analytics": {
     "ga4": {
