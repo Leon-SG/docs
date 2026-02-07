@@ -95,8 +95,8 @@ curl -X POST "https://api.getstrato.dev/v1/campaigns" \
       }
     },
     "email": {
-      "subject": "Stratosphere Q1 Update: New Features for {{specialty}}",
-      "from_name": "Stratosphere Medical",
+      "subject": "MedStrato Q1 Update: New Features for {{specialty}}",
+      "from_name": "MedStrato Medical",
       "body_html": "<h1>Hello {{first_name}},</h1><p>Here are the latest updates...</p>"
     },
     "schedule": {
@@ -107,7 +107,7 @@ curl -X POST "https://api.getstrato.dev/v1/campaigns" \
 ```
 
 ```javascript Node.js
-const campaign = await stratosphere.campaigns.create({
+const campaign = await medstrato.campaigns.create({
   name: 'Q1 Product Newsletter',
   type: 'newsletter',
   audience: {
@@ -117,8 +117,8 @@ const campaign = await stratosphere.campaigns.create({
     }
   },
   email: {
-    subject: 'Stratosphere Q1 Update: New Features for {{specialty}}',
-    from_name: 'Stratosphere Medical',
+    subject: 'MedStrato Q1 Update: New Features for {{specialty}}',
+    from_name: 'MedStrato Medical',
     body_html: '<h1>Hello {{first_name}},</h1><p>Here are the latest updates...</p>'
   },
   schedule: {
@@ -141,8 +141,8 @@ const campaign = await stratosphere.campaigns.create({
     "status": "draft",
     "audience_count": 45,
     "email": {
-      "subject": "Stratosphere Q1 Update: New Features for {{specialty}}",
-      "from_name": "Stratosphere Medical"
+      "subject": "MedStrato Q1 Update: New Features for {{specialty}}",
+      "from_name": "MedStrato Medical"
     },
     "schedule": {
       "type": "scheduled",

@@ -90,7 +90,7 @@ description: "[1-2 sentences with primary keyword]"
 ## The Challenge
 [Pain points that resonate with target users]
 
-## How Stratosphere Helps
+## How MedStrato Helps
 [Value proposition, key differentiators]
 
 ## Step-by-Step Workflow
@@ -134,9 +134,9 @@ Key workflows:
 
 | Page | SEO Keywords | Content Value |
 |------|-------------|---------------|
-| `kol-tiering-methodology` | "KOL tiering framework", "KOL 分层模型" | Industry methodology + Stratosphere support |
+| `kol-tiering-methodology` | "KOL tiering framework", "KOL 分层模型" | Industry methodology + MedStrato support |
 | `event-invitation-best-practices` | "医学会议邀请", "conference invitation email" | Timing/frequency/templates/A-B testing |
-| `ai-prompt-tips` | "AI prompt engineering", "AI 提示词技巧" | Effective prompts for Stratosphere AI |
+| `ai-prompt-tips` | "AI prompt engineering", "AI 提示词技巧" | Effective prompts for MedStrato AI |
 
 ### Best Practice Page Template
 
@@ -152,7 +152,7 @@ description: "[1-2 sentences with keyword]"
 ## The Framework/Methodology
 [Core content with tables/diagrams]
 
-## How to Apply This in Stratosphere
+## How to Apply This in MedStrato
 [Product integration]
 
 ## Common Mistakes to Avoid
@@ -185,7 +185,7 @@ Sample terms:
 
 | Element | Rule | Example |
 |---------|------|---------|
-| Title | Action + Object + Brand (optional) | "Create a KOL Profile \| Stratosphere" |
+| Title | Action + Object + Brand (optional) | "Create a KOL Profile \| MedStrato" |
 | Description | 1-2 sentences, primary keyword, under 150 chars | "Learn how to manually add a KOL to your database..." |
 | URL Slug | verb-noun, lowercase, hyphens | `/guides/kol/create-kol` |
 | H1 | Match or expand Title | |

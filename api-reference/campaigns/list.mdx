@@ -90,7 +90,7 @@ curl -X GET "https://api.getstrato.dev/v1/campaigns?status=completed&type=produc
 ```
 
 ```javascript Node.js
-const campaigns = await stratosphere.campaigns.list({
+const campaigns = await medstrato.campaigns.list({
   status: 'completed',
   type: 'product_update'
 });

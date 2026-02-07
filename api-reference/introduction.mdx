@@ -1,11 +1,11 @@
 ---
 title: 'API Introduction'
-description: 'Build integrations with the Stratosphere API to automate KOL management, events, campaigns, and regulatory workflows.'
+description: 'Build integrations with the MedStrato API to automate KOL management, events, campaigns, and regulatory workflows.'
 ---
 
 ## Overview
 
-The Stratosphere API enables you to programmatically access and manage your medical device commercial operations data. Use it to:
+The MedStrato API enables you to programmatically access and manage your medical device commercial operations data. Use it to:
 
 - **Sync KOL data** with your CRM or internal systems
 - **Automate event workflows** and attendee management
@@ -23,7 +23,7 @@ https://api.getstrato.dev/v1
 
 ## Authentication
 
-The Stratosphere API uses API keys for authentication. Include your API key in the `Authorization` header:
+The MedStrato API uses API keys for authentication. Include your API key in the `Authorization` header:
 
 ```bash
 curl -X GET "https://api.getstrato.dev/v1/kols" \
@@ -37,7 +37,7 @@ Keep your API keys secure. Do not expose them in client-side code or public repo
 
 ### Obtaining API Keys
 
-1. Go to **Settings** → **API Keys** in your Stratosphere dashboard
+1. Go to **Settings** → **API Keys** in your MedStrato dashboard
 2. Click **Create API Key**
 3. Copy the key immediately (it won't be shown again)
 4. Set appropriate scopes for your use case
@@ -146,7 +146,7 @@ GET /v1/events?status=scheduled,active&event_type=advisory_board
 
 ## Webhooks
 
-Stratosphere can send real-time notifications to your server when events occur. See the [Webhooks documentation](/api-reference/webhooks) for setup instructions.
+MedStrato can send real-time notifications to your server when events occur. See the [Webhooks documentation](/api-reference/webhooks) for setup instructions.
 
 ## SDKs & Libraries
 

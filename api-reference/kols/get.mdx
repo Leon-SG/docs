@@ -91,13 +91,13 @@ curl -X GET "https://api.getstrato.dev/v1/kols/kol_abc123?include=events,campaig
 ```
 
 ```javascript Node.js
-const kol = await stratosphere.kols.get('kol_abc123', {
+const kol = await medstrato.kols.get('kol_abc123', {
   include: ['events', 'campaigns']
 });
 ```
 
 ```python Python
-kol = stratosphere.kols.get(
+kol = medstrato.kols.get(
     'kol_abc123',
     include=['events', 'campaigns']
 )

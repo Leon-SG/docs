@@ -1,11 +1,11 @@
 ---
 title: 'Webhooks'
-description: 'Receive real-time notifications when events occur in Stratosphere.'
+description: 'Receive real-time notifications when events occur in MedStrato.'
 ---
 
 ## Overview
 
-Webhooks allow you to receive HTTP POST requests when specific events occur in your Stratosphere organization. Use webhooks to:
+Webhooks allow you to receive HTTP POST requests when specific events occur in your MedStrato organization. Use webhooks to:
 
 - Sync KOL data to your CRM in real-time
 - Trigger workflows when campaigns are sent
@@ -115,7 +115,7 @@ All webhook payloads follow this structure:
 
 ## Verifying Signatures
 
-Stratosphere signs all webhook payloads using HMAC-SHA256. Verify signatures to ensure requests are authentic:
+MedStrato signs all webhook payloads using HMAC-SHA256. Verify signatures to ensure requests are authentic:
 
 ```javascript
 const crypto = require('crypto');
@@ -148,7 +148,7 @@ def verify_signature(payload: str, signature: str) -> bool:
 
 ## Retry Policy
 
-If your endpoint returns a non-2xx status code, Stratosphere will retry the webhook:
+If your endpoint returns a non-2xx status code, MedStrato will retry the webhook:
 
 | Attempt | Delay |
 |---------|-------|

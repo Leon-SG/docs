@@ -1,7 +1,7 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "Strato",
+  "name": "MedStrato",
   "colors": {
     "primary": "#F97316",
     "light": "#FB923C",
@@ -297,6 +297,18 @@
      "cursor",
      "vscode"
    ]
+  },
+  "footer": {
+    "links": [
+      {
+        "label": "Greater China & Southeast Asia (Adventurer Limited)",
+        "href": "https://adventurer.fun/"
+      }
+    ],
+    "socials": {
+      "x": "https://x.com/stratlobal",
+      "linkedin": "https://linkedin.com/company/stratlobal"
+    }
   },
   "analytics": {
     "ga4": {

@@ -86,14 +86,14 @@ curl -X GET "https://api.getstrato.dev/v1/events?status=scheduled&time=upcoming"
 ```
 
 ```javascript Node.js
-const events = await stratosphere.events.list({
+const events = await medstrato.events.list({
   status: 'scheduled',
   time: 'upcoming'
 });
 ```
 
 ```python Python
-events = stratosphere.events.list(
+events = medstrato.events.list(
     status='scheduled',
     time='upcoming'
 )

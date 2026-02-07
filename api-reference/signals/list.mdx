@@ -110,7 +110,7 @@ curl -X GET "https://api.getstrato.dev/v1/signals?source=fda&impact=high&per_pag
 ```
 
 ```javascript Node.js
-const signals = await stratosphere.signals.list({
+const signals = await medstrato.signals.list({
   source: 'fda',
   impact: 'high',
   per_page: 10
@@ -118,7 +118,7 @@ const signals = await stratosphere.signals.list({
 ```
 
 ```python Python
-signals = stratosphere.signals.list(
+signals = medstrato.signals.list(
     source='fda',
     impact='high',
     per_page=10

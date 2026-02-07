@@ -78,7 +78,7 @@ curl -X GET "https://api.getstrato.dev/v1/products?status=active&target_market=U
 ```
 
 ```javascript Node.js
-const products = await stratosphere.products.list({
+const products = await medstrato.products.list({
   status: 'active',
   target_market: 'US'
 });

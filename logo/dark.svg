@@ -2,6 +2,6 @@
   <!-- Circle with dot icon -->
   <circle cx="12" cy="12" r="10" stroke="#FAFAFA" stroke-width="2" fill="none"/>
   <circle cx="12" cy="12" r="2" fill="#FAFAFA"/>
-  <!-- Stratosphere text -->
-  <text x="30" y="17" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="600" fill="#FAFAFA">Stratosphere</text>
+  <!-- MedStrato text -->
+  <text x="30" y="17" font-family="Inter, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif" font-size="16" font-weight="600" fill="#FAFAFA">MedStrato</text>
 </svg>

@@ -112,7 +112,7 @@ curl -X POST "https://api.getstrato.dev/v1/kols" \
 ```
 
 ```javascript Node.js
-const kol = await stratosphere.kols.create({
+const kol = await medstrato.kols.create({
   full_name: 'Dr. Michael Rodriguez',
   title: 'Director of Orthopedic Surgery',
   institution: 'Johns Hopkins Hospital',
@@ -131,7 +131,7 @@ const kol = await stratosphere.kols.create({
 ```
 
 ```python Python
-kol = stratosphere.kols.create(
+kol = medstrato.kols.create(
     full_name='Dr. Michael Rodriguez',
     title='Director of Orthopedic Surgery',
     institution='Johns Hopkins Hospital',
