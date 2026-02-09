@@ -47,7 +47,7 @@ app.post('/webhooks/stratosphere', (req, res) => {
 ### 2. Register Your Webhook
 
 ```bash
-curl -X POST "https://api.getstrato.dev/v1/webhooks" \
+curl -X POST "https://api.medstrato.com/v1/webhooks" \
   -H "Authorization: Bearer sk_live_your_api_key" \
   -H "Content-Type: application/json" \
   -d '{
@@ -165,14 +165,14 @@ After 5 failed attempts, the webhook will be marked as failed and you'll receive
 ### List Webhooks
 
 ```bash
-curl -X GET "https://api.getstrato.dev/v1/webhooks" \
+curl -X GET "https://api.medstrato.com/v1/webhooks" \
   -H "Authorization: Bearer sk_live_your_api_key"
 ```
 
 ### Update Webhook
 
 ```bash
-curl -X PATCH "https://api.getstrato.dev/v1/webhooks/wh_abc123" \
+curl -X PATCH "https://api.medstrato.com/v1/webhooks/wh_abc123" \
   -H "Authorization: Bearer sk_live_your_api_key" \
   -H "Content-Type: application/json" \
   -d '{
@@ -184,7 +184,7 @@ curl -X PATCH "https://api.getstrato.dev/v1/webhooks/wh_abc123" \
 ### Delete Webhook
 
 ```bash
-curl -X DELETE "https://api.getstrato.dev/v1/webhooks/wh_abc123" \
+curl -X DELETE "https://api.medstrato.com/v1/webhooks/wh_abc123" \
   -H "Authorization: Bearer sk_live_your_api_key"
 ```
 
@@ -193,7 +193,7 @@ curl -X DELETE "https://api.getstrato.dev/v1/webhooks/wh_abc123" \
 Use the webhook test endpoint to send a test event:
 
 ```bash
-curl -X POST "https://api.getstrato.dev/v1/webhooks/wh_abc123/test" \
+curl -X POST "https://api.medstrato.com/v1/webhooks/wh_abc123/test" \
   -H "Authorization: Bearer sk_live_your_api_key" \
   -H "Content-Type: application/json" \
   -d '{

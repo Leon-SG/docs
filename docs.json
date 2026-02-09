@@ -283,13 +283,13 @@
     "links": [
       {
         "label": "Support",
-        "href": "mailto:hello@getstrato.dev"
+        "href": "mailto:hello@medstrato.com"
       }
     ],
     "primary": {
       "type": "button",
       "label": "Open App",
-      "href": "https://app.getstrato.dev"
+      "href": "https://app.medstrato.com"
     }
   },
   "contextual": {
