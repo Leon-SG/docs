@@ -91,6 +91,7 @@
             "pages": [
               "index",
               "quickstart",
+              "guides/user-manual",
               "glossary"
             ]
           },
