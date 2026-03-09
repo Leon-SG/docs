@@ -96,9 +96,24 @@
             ]
           },
           {
+            "group": "Tenders",
+            "pages": [
+              "guides/tenders/index",
+              "guides/tenders/create-tender",
+              "guides/tenders/document-parse",
+              "guides/tenders/technical-editor",
+              "guides/tenders/commercial-editor",
+              "guides/tenders/tender-package",
+              "guides/tenders/bid-autopilot",
+              "guides/tenders/tender-intel",
+              "guides/tenders/post-bid-evaluation"
+            ]
+          },
+          {
             "group": "Use Cases",
             "pages": [
               "use-cases/index",
+              "use-cases/tender-bid-automation",
               "use-cases/kol-engagement-workflow",
               "use-cases/event-management-lifecycle",
               "use-cases/regulatory-signal-monitoring",
