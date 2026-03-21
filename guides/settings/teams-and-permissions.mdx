@@ -1,0 +1,61 @@
+---
+title: "Teams & Permissions"
+description: "Create teams, assign roles, and control who can access each module in your workspace."
+---
+
+## Overview
+
+MedStrato uses a role-based access control (RBAC) system that lets workspace admins control exactly what each team member can see and do. Permissions are organized by module (Products, Tenders, Training, etc.) and by action (view, create, edit, delete).
+
+## Where to find it
+
+Open **Settings** → **Teams** tab.
+
+## Teams
+
+Teams let you organize members into functional groups (e.g., "Bid Team", "Product Managers", "Marketing"). Each team member is assigned a role that determines their permissions.
+
+### Creating a team
+
+1. Go to **Settings** → **Teams**.
+2. Click **Create Team**.
+3. Enter a team name and optional description.
+4. Add members and assign roles.
+5. Click **Save**.
+
+## Roles
+
+MedStrato comes with built-in role presets that cover common organizational structures:
+
+| Role | Access level |
+|---|---|
+| **Owner** | Full access to everything, including billing and admin settings |
+| **Admin** | Full access to all modules, can manage members and roles |
+| **Manager** | Can view and edit all modules, manage team assignments |
+| **Editor** | Can view and edit content across assigned modules |
+| **Viewer** | Read-only access to assigned modules |
+
+### Custom permissions
+
+Admins can customize permissions at a granular level for each module:
+
+- **Products** — view, create, edit, delete
+- **Tenders** — view, create, edit, delete, manage responses
+- **Training** — view, take sessions, view team performance
+- **Knowledge** — view, create, edit
+- **Institutions** — view, create, edit, delete
+- **KOLs** — view, create, edit, manage profiles
+- **Campaigns** — view, create, send
+- **Signals** — view, configure monitors
+
+## Module access
+
+Each module can be enabled or disabled for your workspace. Disabled modules are hidden from the sidebar and their API endpoints return 403 errors. Module availability also depends on your subscription plan.
+
+<Tip>
+Changes to permissions take effect immediately. If you remove someone's access to a module, they'll see a "Permission denied" message the next time they navigate there.
+</Tip>
+
+## Audit logs
+
+All permission changes are recorded in the **Audit Logs** tab under Settings. You can see who changed what role, when, and for which team member.

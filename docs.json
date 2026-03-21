@@ -50,6 +50,9 @@
     { "source": "/guides/products", "destination": "/guides/products/index", "permanent": true },
     { "source": "/guides/products/new-products", "destination": "/guides/products/create-product", "permanent": true },
 
+    { "source": "/guides/training/overview", "destination": "/guides/training/index", "permanent": true },
+    { "source": "/guides/training", "destination": "/guides/training/index", "permanent": true },
+
     { "source": "/guides/registration/untitled-page", "destination": "/guides/registration/index", "permanent": true },
     { "source": "/guides/registration", "destination": "/guides/registration/index", "permanent": true },
     { "source": "/guides/registration/untitled-page-1", "destination": "/guides/registration/registration-details", "permanent": true },
@@ -181,7 +184,18 @@
             "group": "Products",
             "pages": [
               "guides/products/index",
-              "guides/products/create-product"
+              "guides/products/create-product",
+              "guides/products/product-detail",
+              "guides/products/compare-products",
+              "guides/products/competitive-dashboard"
+            ]
+          },
+          {
+            "group": "Training",
+            "pages": [
+              "guides/training/index",
+              "guides/training/start-session",
+              "guides/training/team-performance"
             ]
           },
           {
@@ -226,6 +240,7 @@
             "group": "Settings and Billing",
             "pages": [
               "guides/settings/company-profile",
+              "guides/settings/teams-and-permissions",
               "guides/billings/index"
             ]
           },
