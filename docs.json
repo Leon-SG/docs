@@ -10,28 +10,22 @@
   "favicon": "/favicon.svg",
   "redirects": [
     { "source": "/guides/ai-native-workflow/guide", "destination": "/guides/ai-native-workflow/index", "permanent": true },
-    { "source": "/guides/ai-native-workflow", "destination": "/guides/ai-native-workflow/index", "permanent": true },
     { "source": "/guides/billings/untitled-page", "destination": "/guides/billings/index", "permanent": true },
-    { "source": "/guides/billings", "destination": "/guides/billings/index", "permanent": true },
 
     { "source": "/guides/campaign/untitled-page", "destination": "/guides/campaign/index", "permanent": true },
-    { "source": "/guides/campaign", "destination": "/guides/campaign/index", "permanent": true },
     { "source": "/guides/campaign/untitled-page-1", "destination": "/guides/campaign/email-templates", "permanent": true },
     { "source": "/guides/campaign/untitled-page-2", "destination": "/guides/campaign/personalization-variables", "permanent": true },
     { "source": "/guides/campaign/untitled-page-3", "destination": "/guides/campaign/preview-and-testing", "permanent": true },
 
     { "source": "/guides/events/guide", "destination": "/guides/events/index", "permanent": true },
-    { "source": "/guides/events", "destination": "/guides/events/index", "permanent": true },
     { "source": "/guides/events/untitled-page", "destination": "/guides/events/event-details", "permanent": true },
     { "source": "/guides/events/untitled-page-1", "destination": "/guides/events/public-event-page-settings", "permanent": true },
     { "source": "/guides/events/untitled-page-2", "destination": "/guides/events/public-page-and-registration", "permanent": true },
 
     { "source": "/guides/investigations/overview", "destination": "/guides/investigations/index", "permanent": true },
-    { "source": "/guides/investigations", "destination": "/guides/investigations/index", "permanent": true },
     { "source": "/guides/investigations/new-investigation", "destination": "/guides/investigations/create-investigation", "permanent": true },
 
     { "source": "/guides/kol/overview", "destination": "/guides/kol/index", "permanent": true },
-    { "source": "/guides/kol", "destination": "/guides/kol/index", "permanent": true },
     { "source": "/guides/kol/untitled-page", "destination": "/guides/kol/create-kol", "permanent": true },
     { "source": "/guides/kol/untitled-page-1", "destination": "/guides/kol/import-kols-csv", "permanent": true },
     { "source": "/guides/kol/untitled-page-2", "destination": "/guides/kol/kol-profile-and-insights", "permanent": true },
@@ -39,30 +33,23 @@
     { "source": "/guides/kol/untitled-page-4", "destination": "/guides/kol/digital-business-card-qr", "permanent": true },
 
     { "source": "/guides/map/overview", "destination": "/guides/map/index", "permanent": true },
-    { "source": "/guides/map", "destination": "/guides/map/index", "permanent": true },
 
     { "source": "/guides/press/overview", "destination": "/guides/press/index", "permanent": true },
-    { "source": "/guides/press", "destination": "/guides/press/index", "permanent": true },
     { "source": "/guides/press/new-article", "destination": "/guides/press/create-article", "permanent": true },
     { "source": "/guides/press/refine-article", "destination": "/guides/press/improve-article", "permanent": true },
 
     { "source": "/guides/products/overview", "destination": "/guides/products/index", "permanent": true },
-    { "source": "/guides/products", "destination": "/guides/products/index", "permanent": true },
     { "source": "/guides/products/new-products", "destination": "/guides/products/create-product", "permanent": true },
 
     { "source": "/guides/training/overview", "destination": "/guides/training/index", "permanent": true },
-    { "source": "/guides/training", "destination": "/guides/training/index", "permanent": true },
 
     { "source": "/guides/registration/untitled-page", "destination": "/guides/registration/index", "permanent": true },
-    { "source": "/guides/registration", "destination": "/guides/registration/index", "permanent": true },
     { "source": "/guides/registration/untitled-page-1", "destination": "/guides/registration/registration-details", "permanent": true },
 
     { "source": "/guides/signals/overview", "destination": "/guides/signals/index", "permanent": true },
-    { "source": "/guides/signals", "destination": "/guides/signals/index", "permanent": true },
     { "source": "/guides/signals/untitled-page", "destination": "/guides/signals/signal-details", "permanent": true },
 
     { "source": "/guides/trends/overview", "destination": "/guides/trends/index", "permanent": true },
-    { "source": "/guides/trends", "destination": "/guides/trends/index", "permanent": true },
     { "source": "/guides/trends/untitled-page", "destination": "/guides/trends/trend-details", "permanent": true }
   ],
   "navigation": {
