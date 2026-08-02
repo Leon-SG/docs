@@ -1,56 +1,465 @@
 {
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
-  "name": "MedStrato",
+  "name": "Orbid AI",
+  "description": "Orbid AI (formerly MedStrato) help center: native AI agent for medical-device tenders. Workflows, prompts, FAQs (scan/match/fill, cellmap, go/no-go), tools reference.",
   "colors": {
-    "primary": "#F97316",
-    "light": "#FB923C",
-    "dark": "#EA580C"
+    "primary": "#8B1E1E",
+    "light": "#A82828",
+    "dark": "#6B1616"
   },
   "favicon": "/favicon.svg",
   "redirects": [
-    { "source": "/guides/ai-native-workflow/guide", "destination": "/guides/ai-native-workflow/index", "permanent": true },
-    { "source": "/guides/billings/untitled-page", "destination": "/guides/billings/index", "permanent": true },
-
-    { "source": "/guides/campaign/untitled-page", "destination": "/guides/campaign/index", "permanent": true },
-    { "source": "/guides/campaign/untitled-page-1", "destination": "/guides/campaign/email-templates", "permanent": true },
-    { "source": "/guides/campaign/untitled-page-2", "destination": "/guides/campaign/personalization-variables", "permanent": true },
-    { "source": "/guides/campaign/untitled-page-3", "destination": "/guides/campaign/preview-and-testing", "permanent": true },
-
-    { "source": "/guides/events/guide", "destination": "/guides/events/index", "permanent": true },
-    { "source": "/guides/events/untitled-page", "destination": "/guides/events/event-details", "permanent": true },
-    { "source": "/guides/events/untitled-page-1", "destination": "/guides/events/public-event-page-settings", "permanent": true },
-    { "source": "/guides/events/untitled-page-2", "destination": "/guides/events/public-page-and-registration", "permanent": true },
-
-    { "source": "/guides/investigations/overview", "destination": "/guides/investigations/index", "permanent": true },
-    { "source": "/guides/investigations/new-investigation", "destination": "/guides/investigations/create-investigation", "permanent": true },
-
-    { "source": "/guides/kol/overview", "destination": "/guides/kol/index", "permanent": true },
-    { "source": "/guides/kol/untitled-page", "destination": "/guides/kol/create-kol", "permanent": true },
-    { "source": "/guides/kol/untitled-page-1", "destination": "/guides/kol/import-kols-csv", "permanent": true },
-    { "source": "/guides/kol/untitled-page-2", "destination": "/guides/kol/kol-profile-and-insights", "permanent": true },
-    { "source": "/guides/kol/untitled-page-3", "destination": "/guides/kol/public-profile-page", "permanent": true },
-    { "source": "/guides/kol/untitled-page-4", "destination": "/guides/kol/digital-business-card-qr", "permanent": true },
-
-    { "source": "/guides/map/overview", "destination": "/guides/map/index", "permanent": true },
-
-    { "source": "/guides/press/overview", "destination": "/guides/press/index", "permanent": true },
-    { "source": "/guides/press/new-article", "destination": "/guides/press/create-article", "permanent": true },
-    { "source": "/guides/press/refine-article", "destination": "/guides/press/improve-article", "permanent": true },
-
-    { "source": "/guides/products/overview", "destination": "/guides/products/index", "permanent": true },
-    { "source": "/guides/products/new-products", "destination": "/guides/products/create-product", "permanent": true },
-
-    { "source": "/guides/training/overview", "destination": "/guides/training/index", "permanent": true },
-
-    { "source": "/guides/registration/untitled-page", "destination": "/guides/registration/index", "permanent": true },
-    { "source": "/guides/registration/untitled-page-1", "destination": "/guides/registration/registration-details", "permanent": true },
-
-    { "source": "/guides/signals/overview", "destination": "/guides/signals/index", "permanent": true },
-    { "source": "/guides/signals/untitled-page", "destination": "/guides/signals/signal-details", "permanent": true },
-
-    { "source": "/guides/trends/overview", "destination": "/guides/trends/index", "permanent": true },
-    { "source": "/guides/trends/untitled-page", "destination": "/guides/trends/trend-details", "permanent": true }
+    {
+      "source": "/guides/user-manual",
+      "destination": "/quickstart",
+      "permanent": true
+    },
+    {
+      "source": "/guides/kol",
+      "destination": "/guides/what-is-orbid",
+      "permanent": true
+    },
+    {
+      "source": "/guides/kol/overview",
+      "destination": "/guides/what-is-orbid",
+      "permanent": true
+    },
+    {
+      "source": "/guides/kol/create-kol",
+      "destination": "/guides/what-is-orbid",
+      "permanent": true
+    },
+    {
+      "source": "/guides/kol/import-kols-csv",
+      "destination": "/guides/what-is-orbid",
+      "permanent": true
+    },
+    {
+      "source": "/guides/kol/kol-profile-and-insights",
+      "destination": "/guides/what-is-orbid",
+      "permanent": true
+    },
+    {
+      "source": "/guides/kol/activity-monitoring",
+      "destination": "/guides/what-is-orbid",
+      "permanent": true
+    },
+    {
+      "source": "/guides/kol/public-profile-page",
+      "destination": "/guides/what-is-orbid",
+      "permanent": true
+    },
+    {
+      "source": "/guides/kol/digital-business-card-qr",
+      "destination": "/guides/what-is-orbid",
+      "permanent": true
+    },
+    {
+      "source": "/guides/events",
+      "destination": "/guides/what-is-orbid",
+      "permanent": true
+    },
+    {
+      "source": "/guides/events/guide",
+      "destination": "/guides/what-is-orbid",
+      "permanent": true
+    },
+    {
+      "source": "/guides/events/event-details",
+      "destination": "/guides/what-is-orbid",
+      "permanent": true
+    },
+    {
+      "source": "/guides/events/public-event-page-settings",
+      "destination": "/guides/what-is-orbid",
+      "permanent": true
+    },
+    {
+      "source": "/guides/events/public-page-and-registration",
+      "destination": "/guides/what-is-orbid",
+      "permanent": true
+    },
+    {
+      "source": "/guides/campaign",
+      "destination": "/guides/what-is-orbid",
+      "permanent": true
+    },
+    {
+      "source": "/guides/campaign/email-templates",
+      "destination": "/guides/what-is-orbid",
+      "permanent": true
+    },
+    {
+      "source": "/guides/campaign/personalization-variables",
+      "destination": "/guides/what-is-orbid",
+      "permanent": true
+    },
+    {
+      "source": "/guides/campaign/preview-and-testing",
+      "destination": "/guides/what-is-orbid",
+      "permanent": true
+    },
+    {
+      "source": "/guides/signals",
+      "destination": "/guides/what-is-orbid",
+      "permanent": true
+    },
+    {
+      "source": "/guides/signals/overview",
+      "destination": "/guides/what-is-orbid",
+      "permanent": true
+    },
+    {
+      "source": "/guides/signals/signal-details",
+      "destination": "/guides/what-is-orbid",
+      "permanent": true
+    },
+    {
+      "source": "/guides/press",
+      "destination": "/guides/what-is-orbid",
+      "permanent": true
+    },
+    {
+      "source": "/guides/press/overview",
+      "destination": "/guides/what-is-orbid",
+      "permanent": true
+    },
+    {
+      "source": "/guides/press/create-article",
+      "destination": "/guides/what-is-orbid",
+      "permanent": true
+    },
+    {
+      "source": "/guides/press/improve-article",
+      "destination": "/guides/what-is-orbid",
+      "permanent": true
+    },
+    {
+      "source": "/guides/map",
+      "destination": "/guides/what-is-orbid",
+      "permanent": true
+    },
+    {
+      "source": "/guides/map/overview",
+      "destination": "/guides/what-is-orbid",
+      "permanent": true
+    },
+    {
+      "source": "/guides/map/interactive-network-analysis",
+      "destination": "/guides/what-is-orbid",
+      "permanent": true
+    },
+    {
+      "source": "/guides/training",
+      "destination": "/guides/what-is-orbid",
+      "permanent": true
+    },
+    {
+      "source": "/guides/training/overview",
+      "destination": "/guides/what-is-orbid",
+      "permanent": true
+    },
+    {
+      "source": "/guides/training/start-session",
+      "destination": "/guides/what-is-orbid",
+      "permanent": true
+    },
+    {
+      "source": "/guides/training/team-performance",
+      "destination": "/guides/what-is-orbid",
+      "permanent": true
+    },
+    {
+      "source": "/guides/trends",
+      "destination": "/guides/what-is-orbid",
+      "permanent": true
+    },
+    {
+      "source": "/guides/trends/overview",
+      "destination": "/guides/what-is-orbid",
+      "permanent": true
+    },
+    {
+      "source": "/guides/trends/trend-details",
+      "destination": "/guides/what-is-orbid",
+      "permanent": true
+    },
+    {
+      "source": "/guides/investigations",
+      "destination": "/guides/what-is-orbid",
+      "permanent": true
+    },
+    {
+      "source": "/guides/investigations/overview",
+      "destination": "/guides/what-is-orbid",
+      "permanent": true
+    },
+    {
+      "source": "/guides/investigations/create-investigation",
+      "destination": "/guides/what-is-orbid",
+      "permanent": true
+    },
+    {
+      "source": "/guides/registration",
+      "destination": "/guides/what-is-orbid",
+      "permanent": true
+    },
+    {
+      "source": "/guides/tenders",
+      "destination": "/guides/workflows",
+      "permanent": true
+    },
+    {
+      "source": "/guides/tenders/index",
+      "destination": "/guides/workflows",
+      "permanent": true
+    },
+    {
+      "source": "/guides/tenders/create-tender",
+      "destination": "/guides/workspace/agents-sessions",
+      "permanent": true
+    },
+    {
+      "source": "/guides/tenders/document-parse",
+      "destination": "/guides/skills/scan",
+      "permanent": true
+    },
+    {
+      "source": "/guides/tenders/technical-editor",
+      "destination": "/guides/skills/match",
+      "permanent": true
+    },
+    {
+      "source": "/guides/tenders/commercial-editor",
+      "destination": "/guides/skills/fill",
+      "permanent": true
+    },
+    {
+      "source": "/guides/tenders/tender-package",
+      "destination": "/guides/skills/deliverables",
+      "permanent": true
+    },
+    {
+      "source": "/guides/tenders/bid-autopilot",
+      "destination": "/guides/skills",
+      "permanent": true
+    },
+    {
+      "source": "/guides/tenders/tender-intel",
+      "destination": "/guides/skills/scan",
+      "permanent": true
+    },
+    {
+      "source": "/guides/tenders/post-bid-evaluation",
+      "destination": "/guides/skills/packages-review",
+      "permanent": true
+    },
+    {
+      "source": "/guides/products",
+      "destination": "/guides/workspace/library",
+      "permanent": true
+    },
+    {
+      "source": "/guides/products/overview",
+      "destination": "/guides/workspace/library",
+      "permanent": true
+    },
+    {
+      "source": "/guides/products/create-product",
+      "destination": "/guides/skills/catalog-library",
+      "permanent": true
+    },
+    {
+      "source": "/guides/products/product-detail",
+      "destination": "/guides/skills/catalog-library",
+      "permanent": true
+    },
+    {
+      "source": "/guides/products/compare-products",
+      "destination": "/guides/skills/catalog-library",
+      "permanent": true
+    },
+    {
+      "source": "/guides/products/competitive-dashboard",
+      "destination": "/guides/skills/research-monitors",
+      "permanent": true
+    },
+    {
+      "source": "/roles/for-medical-affairs",
+      "destination": "/roles/for-bid-teams",
+      "permanent": true
+    },
+    {
+      "source": "/roles/for-marketing",
+      "destination": "/roles/for-bid-teams",
+      "permanent": true
+    },
+    {
+      "source": "/use-cases/kol-engagement-workflow",
+      "destination": "/use-cases",
+      "permanent": true
+    },
+    {
+      "source": "/use-cases/event-management-lifecycle",
+      "destination": "/use-cases",
+      "permanent": true
+    },
+    {
+      "source": "/use-cases/regulatory-signal-monitoring",
+      "destination": "/use-cases",
+      "permanent": true
+    },
+    {
+      "source": "/use-cases/ai-powered-research",
+      "destination": "/guides/skills/research-monitors",
+      "permanent": true
+    },
+    {
+      "source": "/use-cases/tender-bid-automation",
+      "destination": "/use-cases/ultrasound-tender",
+      "permanent": true
+    },
+    {
+      "source": "/best-practices",
+      "destination": "/guides/workflows/medical-device-bid-workflow",
+      "permanent": true
+    },
+    {
+      "source": "/best-practices/kol-tiering-methodology",
+      "destination": "/guides/what-is-orbid",
+      "permanent": true
+    },
+    {
+      "source": "/best-practices/event-invitation-best-practices",
+      "destination": "/guides/what-is-orbid",
+      "permanent": true
+    },
+    {
+      "source": "/best-practices/ai-prompt-tips",
+      "destination": "/guides/skills",
+      "permanent": true
+    },
+    {
+      "source": "/guides/ai-native-workflow",
+      "destination": "/guides/skills",
+      "permanent": true
+    },
+    {
+      "source": "/guides/ai-native-workflow/guide",
+      "destination": "/guides/skills",
+      "permanent": true
+    },
+    {
+      "source": "/guides/ai-native-workflow/index",
+      "destination": "/guides/skills",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/kols/list",
+      "destination": "/api-reference/introduction",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/kols/get",
+      "destination": "/api-reference/introduction",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/kols/create",
+      "destination": "/api-reference/introduction",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/events/list",
+      "destination": "/api-reference/introduction",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/events/create",
+      "destination": "/api-reference/introduction",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/campaigns/list",
+      "destination": "/api-reference/introduction",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/campaigns/create",
+      "destination": "/api-reference/introduction",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/signals/list",
+      "destination": "/api-reference/introduction",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/products/list",
+      "destination": "/api-reference/introduction",
+      "permanent": true
+    },
+    {
+      "source": "/api-reference/webhooks",
+      "destination": "/api-reference/introduction",
+      "permanent": true
+    },
+    {
+      "source": "/guides/settings/company-profile",
+      "destination": "/guides/workspace/setup-settings-billing",
+      "permanent": true
+    },
+    {
+      "source": "/guides/settings/teams-and-permissions",
+      "destination": "/guides/workspace/setup-settings-billing",
+      "permanent": true
+    },
+    {
+      "source": "/guides/billings",
+      "destination": "/guides/workspace/setup-settings-billing",
+      "permanent": true
+    },
+    {
+      "source": "/guides/billings/index",
+      "destination": "/guides/workspace/setup-settings-billing",
+      "permanent": true
+    },
+    {
+      "source": "/guides/core-loop",
+      "destination": "/guides/how-the-agent-works",
+      "permanent": true
+    },
+    {
+      "source": "/guides/workflows/medical-device-bid-workflow",
+      "destination": "/guides/workflows",
+      "permanent": true
+    },
+    {
+      "source": "/guides/workflows/go-no-go-checklist",
+      "destination": "/guides/workflows/decide-go-no-go",
+      "permanent": true
+    },
+    {
+      "source": "/guides/workflows/fill-residual-review",
+      "destination": "/guides/workflows/fill-excel",
+      "permanent": true
+    },
+    {
+      "source": "/guides/skills",
+      "destination": "/guides/skills/index",
+      "permanent": true
+    },
+    {
+      "source": "/faq/scan-match-fill",
+      "destination": "/faq/scan-vs-match-vs-fill",
+      "permanent": true
+    },
+    {
+      "source": "/best-practices/index",
+      "destination": "/guides/what-to-say",
+      "permanent": true
+    }
   ],
   "navigation": {
     "global": {
@@ -61,14 +470,19 @@
           "href": "/"
         },
         {
-          "anchor": "Use Cases",
+          "anchor": "Workflows",
           "icon": "route",
-          "href": "/use-cases"
+          "href": "/guides/workflows"
         },
         {
-          "anchor": "Best Practices",
-          "icon": "graduation-cap",
-          "href": "/best-practices"
+          "anchor": "What to say",
+          "icon": "comments",
+          "href": "/guides/what-to-say"
+        },
+        {
+          "anchor": "Product",
+          "icon": "globe",
+          "href": "https://orbid.dev"
         }
       ]
     },
@@ -80,160 +494,107 @@
             "group": "Getting Started",
             "pages": [
               "index",
+              "guides/what-is-orbid",
               "quickstart",
-              "guides/user-manual",
+              "guides/how-the-agent-works"
+            ]
+          },
+          {
+            "group": "Common workflows",
+            "pages": [
+              "guides/workflows/index",
+              "guides/workflows/scan-a-tender",
+              "guides/workflows/match-and-review-gaps",
+              "guides/workflows/decide-go-no-go",
+              "guides/workflows/fill-excel",
+              "guides/workflows/generate-deliverables"
+            ]
+          },
+          {
+            "group": "Working with the agent",
+            "pages": [
+              "guides/workspace/agents-sessions",
+              "guides/workspace/library",
+              "guides/workspace/knowledge",
+              "guides/workspace/memory",
+              "guides/workspace/templates",
+              "guides/workspace/review",
+              "guides/workspace/setup-settings-billing",
+              "guides/what-to-say",
+              "guides/trust-and-judgment"
+            ]
+          },
+          {
+            "group": "Tools reference",
+            "pages": [
+              "guides/skills/index",
+              "guides/skills/scan",
+              "guides/skills/match",
+              "guides/skills/fill",
+              "guides/skills/go-no-go",
+              "guides/skills/deliverables",
+              "guides/skills/eligibility-risk",
+              "guides/skills/catalog-library",
+              "guides/skills/research-monitors",
+              "guides/skills/knowledge-memory",
+              "guides/skills/packages-review"
+            ]
+          },
+          {
+            "group": "Concepts",
+            "pages": [
+              "concepts/cellmap",
+              "concepts/formal-vs-rank-match",
+              "concepts/residual",
+              "concepts/product-lock-branches",
+              "concepts/compliance-matrix",
+              "concepts/deviation",
+              "concepts/evidence-and-ownership",
               "glossary"
             ]
           },
           {
-            "group": "Use Cases",
+            "group": "FAQ",
+            "pages": [
+              "faq/index",
+              "faq/scan-vs-match-vs-fill",
+              "faq/what-is-a-cellmap",
+              "faq/rank-vs-formal-match",
+              "faq/what-is-go-no-go",
+              "faq/what-is-bid-fill",
+              "faq/what-orbid-is-not",
+              "faq/go-no-go-and-limits",
+              "faq/matching-and-evidence",
+              "faq/privacy-and-ownership",
+              "faq/what-is-a-residual",
+              "faq/what-is-an-agent-session",
+              "faq/does-orbid-submit-bids",
+              "faq/what-is-product-lock",
+              "faq/what-is-a-compliance-matrix",
+              "faq/knowledge-vs-memory"
+            ]
+          },
+          {
+            "group": "Use cases",
             "pages": [
               "use-cases/index",
-              "use-cases/tender-bid-automation",
-              "use-cases/kol-engagement-workflow",
-              "use-cases/event-management-lifecycle",
-              "use-cases/regulatory-signal-monitoring",
-              "use-cases/ai-powered-research"
+              "use-cases/ultrasound-tender",
+              "use-cases/defibrillator-tender",
+              "use-cases/evaluating-bid-ai-tools"
             ]
           },
           {
-            "group": "Tenders",
+            "group": "For your role",
             "pages": [
-              "guides/tenders/index",
-              "guides/tenders/create-tender",
-              "guides/tenders/document-parse",
-              "guides/tenders/technical-editor",
-              "guides/tenders/commercial-editor",
-              "guides/tenders/tender-package",
-              "guides/tenders/bid-autopilot",
-              "guides/tenders/tender-intel",
-              "guides/tenders/post-bid-evaluation"
+              "roles/for-bid-teams",
+              "roles/for-product-managers",
+              "roles/for-regulatory-specialists"
             ]
           },
           {
-            "group": "For Your Role",
+            "group": "Operations",
             "pages": [
-              "roles/for-medical-affairs",
-              "roles/for-marketing"
-            ]
-          },
-          {
-            "group": "AI Native Workflow",
-            "pages": [
-              "guides/ai-native-workflow/index"
-            ]
-          },
-          {
-            "group": "Events",
-            "pages": [
-              "guides/events/index",
-              "guides/events/event-details",
-              "guides/events/public-event-page-settings",
-              "guides/events/public-page-and-registration"
-            ]
-          },
-          {
-            "group": "KOL Management",
-            "pages": [
-              "guides/kol/index",
-              "guides/kol/create-kol",
-              "guides/kol/import-kols-csv",
-              "guides/kol/kol-profile-and-insights",
-              "guides/kol/activity-monitoring",
-              "guides/kol/public-profile-page",
-              "guides/kol/digital-business-card-qr"
-            ]
-          },
-          {
-            "group": "Campaigns",
-            "pages": [
-              "guides/campaign/index",
-              "guides/campaign/email-templates",
-              "guides/campaign/personalization-variables",
-              "guides/campaign/preview-and-testing"
-            ]
-          },
-          {
-            "group": "Signals",
-            "pages": [
-              "guides/signals/index",
-              "guides/signals/signal-details"
-            ]
-          },
-          {
-            "group": "Investigations",
-            "pages": [
-              "guides/investigations/index",
-              "guides/investigations/create-investigation"
-            ]
-          },
-          {
-            "group": "Products",
-            "pages": [
-              "guides/products/index",
-              "guides/products/create-product",
-              "guides/products/product-detail",
-              "guides/products/compare-products",
-              "guides/products/competitive-dashboard"
-            ]
-          },
-          {
-            "group": "Training",
-            "pages": [
-              "guides/training/index",
-              "guides/training/start-session",
-              "guides/training/team-performance"
-            ]
-          },
-          {
-            "group": "Trends",
-            "pages": [
-              "guides/trends/index",
-              "guides/trends/trend-details"
-            ]
-          },
-          {
-            "group": "Press and Articles",
-            "pages": [
-              "guides/press/index",
-              "guides/press/create-article",
-              "guides/press/improve-article"
-            ]
-          },
-          {
-            "group": "Map",
-            "pages": [
-              "guides/map/index",
-              "guides/map/interactive-network-analysis"
-            ]
-          },
-          {
-            "group": "Registration",
-            "pages": [
-              "guides/registration/index",
-              "guides/registration/registration-details"
-            ]
-          },
-          {
-            "group": "Best Practices",
-            "pages": [
-              "best-practices/index",
-              "best-practices/kol-tiering-methodology",
-              "best-practices/event-invitation-best-practices",
-              "best-practices/ai-prompt-tips"
-            ]
-          },
-          {
-            "group": "Settings and Billing",
-            "pages": [
-              "guides/settings/company-profile",
-              "guides/settings/teams-and-permissions",
-              "guides/billings/index"
-            ]
-          },
-          {
-            "group": "Operations & Legal",
-            "pages": [
+              "guides/brand-and-domains",
               "operating-regions"
             ]
           }
@@ -247,46 +608,6 @@
             "pages": [
               "api-reference/introduction"
             ]
-          },
-          {
-            "group": "KOLs",
-            "pages": [
-              "api-reference/kols/list",
-              "api-reference/kols/get",
-              "api-reference/kols/create"
-            ]
-          },
-          {
-            "group": "Events",
-            "pages": [
-              "api-reference/events/list",
-              "api-reference/events/create"
-            ]
-          },
-          {
-            "group": "Campaigns",
-            "pages": [
-              "api-reference/campaigns/list",
-              "api-reference/campaigns/create"
-            ]
-          },
-          {
-            "group": "Products",
-            "pages": [
-              "api-reference/products/list"
-            ]
-          },
-          {
-            "group": "Signals",
-            "pages": [
-              "api-reference/signals/list"
-            ]
-          },
-          {
-            "group": "Webhooks",
-            "pages": [
-              "api-reference/webhooks"
-            ]
           }
         ]
       }
@@ -295,50 +616,48 @@
   "logo": {
     "light": "/logo/light.svg",
     "dark": "/logo/dark.svg",
-    "href": "https://medstrato.com/"
+    "href": "https://orbid.dev/"
   },
   "navbar": {
     "links": [
       {
         "label": "Product",
-        "href": "https://medstrato.com/features"
+        "href": "https://orbid.dev/"
       },
       {
         "label": "Book Demo",
-        "href": "https://medstrato.com/book"
+        "href": "https://orbid.dev/book"
       },
       {
-        "label": "Support",
-        "href": "mailto:hello@medstrato.com"
+        "label": "Pricing",
+        "href": "https://orbid.dev/pricing"
       }
     ],
     "primary": {
       "type": "button",
-      "label": "Open App",
-      "href": "https://app.medstrato.com"
+      "label": "Open Orbid AI",
+      "href": "https://orbid.dev"
     }
   },
   "contextual": {
     "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
+      "copy",
+      "view",
+      "chatgpt",
+      "claude",
+      "perplexity",
+      "mcp",
+      "cursor",
+      "vscode"
+    ]
   },
   "footer": {
-    "socials": {
-      "x": "https://x.com/stratlobal",
-      "linkedin": "https://linkedin.com/company/stratlobal"
-    }
+    "socials": {}
   },
   "analytics": {
     "ga4": {
       "measurementId": "G-YK5SB959CT"
     }
-  }
+  },
+  "seo": {}
 }

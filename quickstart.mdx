@@ -1,194 +1,94 @@
 ---
 title: "Quickstart"
-description: "Get started with MedStrato in 5 minutes: set up your workspace, import KOLs, and run your first AI workflow."
+description: "Run your first Orbid AI bid session: create a session, upload a tender, delegate a task in plain language, review results."
 ---
 
-## Get Started in 5 Minutes
+# Quickstart
 
-This guide walks you through setting up MedStrato and completing your first tasks.
+Create an **Agents** session, upload a tender package, and **tell Orbid the outcome you want** in one or two sentences. Review what it returns. You still decide go/no-go and what gets submitted.
 
-<CardGroup cols={3}>
-  <Card title="Product overview" icon="globe" href="https://medstrato.com/features">
-    See how the tender, compliance, product, and KOL workflows fit together.
-  </Card>
-  <Card title="Tender automation path" icon="route" href="/use-cases/tender-bid-automation">
-    Follow the highest-value workflow from RFP intake to submission.
-  </Card>
-  <Card title="Open app" icon="arrow-up-right-from-square" href="https://app.medstrato.com">
-    Use the live workspace after company profile and product data are ready.
-  </Card>
-</CardGroup>
+Pricing: [orbid.dev/pricing](https://orbid.dev/pricing).
 
-<Steps>
+## Before you start
 
-<Step title="Set Up Your Workspace">
+- Access to Orbid AI ([orbid.dev](https://orbid.dev))  
+- A tender package (multi-sheet Excel is common; PDF packs also appear)  
+- Optional: product datasheets in [Library](/guides/workspace/library) so match quality is higher  
 
-### Configure Company Profile
+## Your first win (one task)
 
-Your company profile provides context for AI-generated content.
+### 1. Open Agents and start a session
 
-1. Go to **Settings** then **Company Profile**
-2. Enter your company information:
-   - Company name
-   - Industry focus (e.g., structural heart, orthopedics)
-   - Key products
-   - Target markets
-3. Click **Save**
+Each session is a workspace for one bid effort: files, conversation, match state, and drafts.
 
-<Tip>
-The more complete your company profile, the better MedStrato AI understands your context.
-</Tip>
+### 2. Give Orbid the tender
 
-</Step>
+Upload the buyer’s package into the session (or attach from Library).
 
-<Step title="Create Your First Tender">
+### 3. Delegate in plain language
 
-1. Go to **Tenders** from the main navigation
-2. Click **New Tender**
-3. Add the tender name, issuer, country, estimated value, and submission deadline
-4. Upload the RFP or specification files
-5. Run **AI Parse** to extract requirements
+Paste something like:
 
-<Tip>
-Tender workflows perform best after your **Company Profile** and **Products** are configured, because AI matching needs company context and product specifications.
-</Tip>
+```text
+Analyze this tender package. Summarize the key technical requirements
+and deadlines, then tell me what you need from me next.
+```
 
-[Detailed guide: Tender & Bid Automation](/use-cases/tender-bid-automation)
+中文示例：
 
-[Product context: Tender automation features](https://medstrato.com/features)
+```text
+分析这份标书，总结关键技术要求和截止时间，并告诉我下一步需要我提供什么。
+```
 
-</Step>
+Orbid should **scan** the package and answer from the documents—not invent buyer rules.
 
-<Step title="Add Your First KOLs">
+### 4. Lock one product and match
 
-### Option A: Add Manually
+When you know the model (or after browsing the catalog):
 
-1. Go to **KOL** from the main navigation
-2. Click **New KOL**
-3. Fill in the profile:
-   - Name and title
-   - Institution and department
-   - Specialties (required)
-   - Email and contact info
-   - Tier (1, 2, or 3)
-4. Click **Save**
+```text
+Match our <MODEL> to this tender. Show gaps and deviations I should review.
+```
 
-### Option B: Import from CSV
+```text
+用我们的 <型号> 对这份标书做匹配，列出需要我审的偏差和缺口。
+```
 
-1. Go to **KOL** then click **Import**
-2. Download the CSV template
-3. Fill in your KOL data (minimum: full_name, specialties)
-4. Upload and validate
-5. Confirm import
+Use your real model name. Formal match expects **one** locked product—see [Match workflow](/guides/workflows/match-and-review-gaps).
 
-<Info>
-Start with 10-20 KOLs to get familiar with the system. You can always add more later.
-</Info>
+### 5. Review, then ask for the next artifact
 
-[Detailed guide: Import KOLs](/guides/kol/import-kols-csv)
+Examples:
 
-</Step>
+```text
+Should we bid on this? Give a go/no-go style assessment with red lines.
+```
 
-<Step title="Create Your First Event">
+```text
+Fill the buyer Excel form from the match. Flag anything you could not evidence.
+```
 
-1. Go to **Events** from the main navigation
-2. Click **New Event**
-3. Enter event details:
-   - Title (e.g., "Q2 Cardiology Advisory Board")
-   - Type: Advisory Board
-   - Date and time
-   - Location or "Virtual"
-4. Click **Create**
+```text
+Generate a compliance matrix and a deviation letter draft.
+```
 
-### Add Attendees
+### 6. You finish the job
 
-1. Open your event
-2. Go to **Attendees** tab
-3. Click **Add Attendee**
-4. Search for KOLs from your database
-5. Assign roles (speaker, attendee, etc.)
+- Check hard limits, evidence, commercial lines  
+- Fix catalog facts if the agent was wrong  
+- Export, sign, and **submit through the buyer’s channel**  
 
-[Detailed guide: Events](/guides/events)
+Orbid does not submit the bid for you.
 
-</Step>
+## If something fails
 
-<Step title="Try AI Workflows">
+- **Weak or empty match** — Enrich Library specs; confirm product category; re-match one model
+- **Many blank cells after fill** — [Residuals](/concepts/residual)—empty beats invented
+- **Unclear if you should bid** — [Go/no-go workflow](/guides/workflows/decide-go-no-go); human still decides
+- **Wrong tool / wrong step** — Rephrase as **outcome** (“generate deviation letter”), not internal ids
 
-### Use Slash Commands
+## Next
 
-1. Go to **AI** from the main navigation
-2. Type `/` to see available commands:
-   - `/discover 10 cardiology KOLs` - Find new KOLs
-   - `/outreach product [product] to [specialty] KOLs` - Draft outreach
-   - `/event remind [event name]` - Generate reminders
-3. Select a command and follow the prompts
-
-### Ask a Question
-
-Type a natural language question:
-- "Who are the top interventional cardiologists in my database?"
-- "Draft an invitation email for my advisory board"
-- "What regulatory signals should I be aware of this week?"
-
-[Detailed guide: AI Native Workflow](/guides/ai-native-workflow)
-
-</Step>
-
-<Step title="Monitor Signals">
-
-1. Go to **Signals** from the main navigation
-2. View the dashboard showing regulatory updates from:
-   - FDA (US)
-   - EMA (EU)
-   - NMPA (China)
-   - Industry news
-3. Filter by impact level (Critical, High, Medium, Low)
-4. Click any signal to see AI-generated summary and product impact
-
-### Set Up Product Correlation
-
-For best signal matching:
-1. Go to **Products** then **New Product**
-2. Add your key products with descriptions and therapeutic areas
-3. Signals will automatically correlate to relevant products
-
-[Detailed guide: Signals](/guides/signals)
-
-</Step>
-
-</Steps>
-
-## Next Steps
-
-Now that you're set up, explore these workflows:
-
-<CardGroup cols={2}>
-
-<Card title="KOL Engagement Workflow" icon="users" href="/use-cases/kol-engagement-workflow">
-  Full lifecycle from discovery to long-term relationship.
-</Card>
-
-<Card title="Tender & Bid Automation" icon="file-contract" href="/use-cases/tender-bid-automation">
-  Parse RFPs, match products, check compliance, and export bid packages.
-</Card>
-
-<Card title="Event Management" icon="calendar" href="/use-cases/event-management-lifecycle">
-  Plan and execute events from invitation to follow-up.
-</Card>
-
-<Card title="For Medical Affairs" icon="user-doctor" href="/roles/for-medical-affairs">
-  Role-specific workflows for MA/MSL teams.
-</Card>
-
-<Card title="For Marketing" icon="bullhorn" href="/roles/for-marketing">
-  Role-specific workflows for marketing teams.
-</Card>
-
-</CardGroup>
-
-## Need Help?
-
-- **Browse the docs**: Use the sidebar to explore all modules
-- **Search**: Press Cmd/Ctrl + K to search across all documentation
-- **Glossary**: [Key terms defined](/glossary)
-- **Support**: Contact us through the app or email hello@medstrato.com
+- [Common workflows](/guides/workflows)  
+- [What to say](/guides/what-to-say)  
+- [How the agent works](/guides/how-the-agent-works)  

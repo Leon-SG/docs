@@ -1,0 +1,18 @@
+
+> test:docs-gates
+> node scripts/verify-orbid-docs-gates.mjs
+
+OK: docs.json name "Orbid AI"
+OK: primary nav has no banned legacy module paths
+OK: required 15 pages exist on disk + nav
+OK: formerly clause on index + what-is
+OK: what-is Identity Formerly = MedStrato
+OK: index formerly-MedStrato history wording
+OK: api intro legacy attribution = MedStrato
+OK: core S-tier skill ids present in skills docs
+OK: match/fill/go-no-go include ownership language
+OK: no screenshot embeds in index/quickstart/guides/**
+OK: orbid.dev CTAs on hub surfaces
+OK: core-loop documents SMFD stages
+
+All structural gates PASSED

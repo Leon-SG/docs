@@ -1,0 +1,60 @@
+---
+title: "Scan and tender understanding"
+description: "Scan tenders with Orbid AI skills run_tender_scan, answer_from_context, search_tender_text, and related tools."
+---
+
+# Scan & tender understanding
+
+> **Tools reference.** Prefer [Workflows](/guides/workflows) and [What to say](/guides/what-to-say) for daily use.
+
+Scan skills turn uploaded tender files into structured requirements, deadlines, categories, and Q&A context—foundation for match and fill.
+
+## Skills in this group
+
+- **`run_tender_scan`**
+  - User-facing name: Scan / analyze tender
+  - Summary: Extract parameters, categories, deadlines, metadata
+- **`answer_from_context`**
+  - User-facing name: Ask about this tender
+  - Summary: Q&A against uploaded/scanned package
+- **`search_tender_text`**
+  - User-facing name: Search tender text
+  - Summary: Locate clauses in the package
+- **`extract_administrative_requirements`**
+  - User-facing name: Extract admin requirements
+  - Summary: Admin/eligibility-oriented extraction
+- **`import_bid_document`**
+  - User-facing name: Import bid document
+  - Summary: Bring documents into session workflow
+- **`tender_dna`**
+  - User-facing name: Tender profile signals
+  - Summary: Structured tender profile signals
+- **`lookup_source_context`**
+  - User-facing name: Lookup source context
+  - Summary: Retrieve grounded context for claims
+
+## When to use
+
+Use these skills inside an [Agents](/guides/workspace/agents-sessions) session at the appropriate phase (see [Core loop](/guides/core-loop)).
+
+## How to use (example utterances)
+
+- `analyze tender` / `scan` / `parse this tender`  
+- `extract all requirements from the tender PDF`  
+- `what does the tender say about warranty` (via context Q&A)  
+
+
+## Prerequisites
+
+Files must be present in the session (`hasFiles`). Prefer scan before formal match.
+
+## Professional notes
+
+- Re-scan after replacing tender files.  
+- Cellmap formation for Excel forms is part of understanding structure—see [Cellmap](/concepts/cellmap).  
+- Negative examples for scan: do not confuse with “match products” (that is `run_match`).  
+
+
+## Related
+
+- [Match](/guides/skills/match) · [Cellmap](/concepts/cellmap) · [Core loop](/guides/core-loop)

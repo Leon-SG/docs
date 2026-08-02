@@ -1,0 +1,65 @@
+---
+title: "How the agent works"
+description: "Sessions, tool loops, phases, and when Orbid AI waits for human input in medical-device bid work."
+---
+
+# How the agent works
+
+Orbid is a **session-based agent**. You provide files and instructions; Orbid chooses tools (scan, match, fill, generate, research, …), returns intermediate results, and often **stops for your judgment** before high-stakes steps.
+
+## The loop (user view)
+
+```text
+You  →  message / upload / pick product
+        ↓
+Orbid → tool calls (scan, match, fill, draft, …)
+        ↓
+You  ←  summaries, matrices, downloads, questions
+        ↓
+You  →  correct, lock product, approve, ask next outcome
+```
+
+This is the same pattern as other native agents: **delegate → tools → review → continue**.
+
+## Sessions
+
+- One **session** ≈ one bid effort  
+- Holds conversation, attached files, match state, and drafts  
+- Switching product models may use branches / re-match—do not blend two models’ evidence silently  
+
+See [Agents and sessions](/guides/workspace/agents-sessions).
+
+## Context the agent can use
+
+- **Session uploads** — Primary tender truth
+- **[Library](/guides/workspace/library)** — Product and supporting files
+- **[Knowledge](/guides/workspace/knowledge)** — Org lessons (never overrides tender hard limits)
+- **[Memory](/guides/workspace/memory)** — Cross-work hints—always re-verify critical constraints
+
+## Phases (what “ready” feels like)
+
+- **Empty** — Search opportunities, browse catalog, research—**matching still needs a file**
+- **Has file** — Ask Orbid to analyze / scan the package
+- **Scanned** — Match a product, eligibility pre-check, risk flags
+- **Matched** — Deviations, go/no-go, fill Excel, generate packs
+- **Exported** — Review bid, record outcome
+
+These map to product phase guidance (pills), not a rigid wizard you must click through.
+
+## Tools (optional detail)
+
+Under the hood, outcomes map to tools such as tender scan, product match, Excel fill, go/no-go, and deliverable generation. Daily use: speak in **outcomes**. Specialists: [Tools reference](/guides/skills).
+
+## When Orbid should wait on you
+
+- Product selection / lock  
+- Hard-limit failures and no-bid decisions  
+- Weak evidence / residuals  
+- Commercial pricing  
+- Final package approval and submission  
+
+See [Trust and judgment](/guides/trust-and-judgment).
+
+## Related
+
+- [Quickstart](/quickstart) · [Workflows](/guides/workflows) · [What to say](/guides/what-to-say)

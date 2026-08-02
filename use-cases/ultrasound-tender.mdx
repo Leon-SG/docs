@@ -1,0 +1,30 @@
+---
+title: "Ultrasound tender response"
+description: "How teams use Orbid AI to scan, match, fill, and deliver an ultrasound medical-device tender."
+---
+
+# Use case: ultrasound tender response
+
+For ultrasound tenders with multi-sheet Excel technical forms, Orbid AI helps scan requirements, match a locked probe/system model, fill response cells, and generate compliance artifacts—humans review residuals and submit.
+
+## Skills used
+
+`run_tender_scan` → `search_product_catalog` → `run_match` → `get_deviation_summary` → `run_fill_excel` / `run_generate_deliverable`
+
+## Everyday path
+
+1. Upload RFP + technical Excel.  
+2. “analyze tender”.  
+3. “search products” for ultrasound category; lock model.  
+4. “match”.  
+5. Review deviations; “fill excel” or “generate compliance matrix”.  
+6. Human residual review; submit.  
+
+## Professional notes
+
+- Probe accessories and consumables often need separate matching—see specialist judgment.  
+- Service/warranty rows may not be pure technical specs.  
+
+## Related
+
+- [Fill](/guides/skills/fill) · [Cellmap](/concepts/cellmap)

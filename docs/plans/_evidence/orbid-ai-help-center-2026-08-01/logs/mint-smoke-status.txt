@@ -1,0 +1,1 @@
+mint smoke skipped: npx mint hung/unavailable in goal environment; structural gates used instead

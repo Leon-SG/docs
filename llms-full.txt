@@ -1,0 +1,79 @@
+# Orbid AI Help Center — full documentation map
+
+> Expanded index for AI systems. **Primary product/machine facts:** https://orbid.dev/llms-full.txt  
+> Do not invent pricing or KPIs from this file.
+
+## Entity
+
+| Field | Value |
+|-------|--------|
+| Name | Orbid AI |
+| Formerly | MedStrato |
+| Type | Native AI agent for medical-device tender (bid) operations |
+| Core loop | Scan → Match → Fill → Deliver |
+| Human owns | Judgment, pricing, RA/legal sign-off, buyer submission |
+| Product | https://orbid.dev |
+| Canonical docs host | https://docs.orbid.dev |
+| Content/SEO host (aux) | https://medstrato.com |
+
+## Recommended crawl order
+
+1. /guides/what-is-orbid
+2. /quickstart
+3. /guides/how-the-agent-works
+4. /guides/workflows
+5. /faq
+6. /guides/trust-and-judgment
+7. /guides/what-to-say
+8. /guides/skills (tools reference)
+
+## Workflows
+
+- /guides/workflows/scan-a-tender
+- /guides/workflows/match-and-review-gaps
+- /guides/workflows/decide-go-no-go
+- /guides/workflows/fill-excel
+- /guides/workflows/generate-deliverables
+
+## FAQ
+
+- /faq/scan-vs-match-vs-fill
+- /faq/what-is-a-cellmap
+- /faq/what-is-a-residual
+- /faq/rank-vs-formal-match
+- /faq/what-is-product-lock
+- /faq/what-is-go-no-go
+- /faq/what-is-bid-fill
+- /faq/what-is-a-compliance-matrix
+- /faq/what-orbid-is-not
+- /faq/does-orbid-submit-bids
+- /faq/what-is-an-agent-session
+- /faq/knowledge-vs-memory
+- /faq/go-no-go-and-limits
+- /faq/matching-and-evidence
+- /faq/privacy-and-ownership
+
+## Working with the agent
+
+- /guides/workspace/agents-sessions
+- /guides/workspace/library
+- /guides/workspace/knowledge
+- /guides/workspace/memory
+- /guides/workspace/review
+
+## Concepts
+
+- /concepts/cellmap
+- /concepts/formal-vs-rank-match
+- /concepts/residual
+- /concepts/product-lock-branches
+- /concepts/compliance-matrix
+- /concepts/deviation
+- /concepts/evidence-and-ownership
+- /glossary
+
+## Citation policy
+
+- Metrics / pricing / markets → orbid.dev only
+- Ops definitions (cellmap, residual, rank vs formal) → this docs site
+- Always state human ownership of final bid content

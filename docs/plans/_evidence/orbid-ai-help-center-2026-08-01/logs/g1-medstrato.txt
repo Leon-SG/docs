@@ -1,0 +1,17 @@
+./docs.json:5:  "description": "Orbid AI (formerly MedStrato) help center \u2014 medical-device bid ops: scan, match, fill, deliver.",
+./faq/index.mdx:3:description: "Answer-first FAQs for Orbid AI (formerly MedStrato): tender matching, scan/match/fill, go/no-go, evidence, and ownership."
+./index.mdx:3:description: "Orbid AI (formerly MedStrato) help center: scan tenders, match products, fill response forms, and prepare bid deliverables."
+./index.mdx:8:**Orbid AI (formerly MedStrato)** is an AI-assisted bid operations product for medical-device tenders. Teams work through **Scan → Match → Fill → Deliver** in an Agents workspace—while humans keep go/no-go strategy and final submission ownership.
+./index.mdx:58:## Formerly MedStrato
+./index.mdx:60:Orbid AI was previously known as **MedStrato**. Product documentation and the primary site now use the **Orbid AI** brand. Some legacy links may still mention MedStrato during migration; prefer [orbid.dev](https://orbid.dev).
+./api-reference/introduction.mdx:12:Legacy KOL/Events API pages from the former **MedStrato** docs have been retired from navigation.
+./guides/brand-and-domains.mdx:3:description: "Orbid AI (formerly MedStrato) brand usage and primary domains for product and docs."
+./guides/brand-and-domains.mdx:8:**Answer:** The product brand is **Orbid AI**. First mention on major pages: **Orbid AI (formerly MedStrato)**. Primary site is [https://orbid.dev](https://orbid.dev).
+./guides/brand-and-domains.mdx:15:| Auxiliary / legacy | medstrato.com (migration only) |
+./guides/what-is-orbid.mdx:2:title: "What is Orbid AI (formerly MedStrato)?"
+./guides/what-is-orbid.mdx:3:description: "Orbid AI (formerly MedStrato) is an AI-assisted medical-device bid workflow product: scan, match, fill, deliver—with human ownership of strategy and submission."
+./guides/what-is-orbid.mdx:8:**Answer:** **Orbid AI (formerly MedStrato)** helps medical-device teams run bid operations: scan tender packages, match catalog products to requirements, fill structured response forms with evidence, and prepare deliverables. It is a **workflow product for bid ops**, not a general chatbot and not a guarantee of award.
+./guides/what-is-orbid.mdx:15:| Formerly | MedStrato |
+./guides/what-is-orbid.mdx:49:| Auxiliary / legacy | medstrato.com (migration equity only) |
+./glossary.mdx:26:| **Orbid AI** | Product name (formerly MedStrato) |
+./quickstart.mdx:3:description: "Get started with Orbid AI (formerly MedStrato): open Agents, upload a tender, scan, match a product, review gaps, fill or generate deliverables."

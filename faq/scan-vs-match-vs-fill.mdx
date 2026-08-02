@@ -1,0 +1,38 @@
+---
+title: "Scan vs match vs fill"
+description: "Difference between scan, match, and fill in medical-device tender automation. How Orbid AI sequences bid stages."
+---
+
+# What is the difference between scan, match, and fill?
+
+**Scan** turns tender files into structured requirements and form layout. **Match** compares those requirements to product data and flags gaps. **Fill** writes bidder responses into the buyer’s form using matched values and evidence, leaving residuals for humans. Stages are sequential in logic; teams may iterate when new product facts appear.
+
+## How the stages differ
+
+**Scan** takes tender files and produces structured requirements plus a cellmap. It fails when the wrong sheets or rows are mapped.
+
+**Match** takes those requirements plus product facts and produces compliance outcomes and residuals. It fails on false “meets” or missing evidence.
+
+**Fill** takes match results plus the cellmap and drafts the buyer template. It fails when values land in the wrong cells.
+
+### Order that works
+
+1. Scan until structure is trusted  
+2. Rank, then lock a product  
+3. Formal match (hard limits first)  
+4. Fill and residual review  
+5. Export / deliver  
+
+### Anti-patterns
+
+- Filling without a match — invented or inconsistent cells  
+- Matching without a scan — no reliable requirement inventory  
+- Treating rank as fill-ready — rank is not formal compliance  
+
+## Related
+
+- [How the agent works](/guides/how-the-agent-works) · [Scan workflow](/guides/workflows/scan-a-tender) · [Match workflow](/guides/workflows/match-and-review-gaps) · [Cellmap](/faq/what-is-a-cellmap)
+
+## Product note
+
+Orbid AI is a native agent for medical-device tenders. Live product: [orbid.dev](https://orbid.dev).

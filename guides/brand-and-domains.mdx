@@ -1,0 +1,52 @@
+---
+title: "Brand and domains"
+description: "Orbid AI (formerly MedStrato) brand, domains, and design tokens aligned with orbid.dev / medstrato.com."
+---
+
+# Brand and domains
+
+The product brand is **Orbid AI**. First mention on major pages: **Orbid AI (formerly MedStrato)**. Primary product site is [https://orbid.dev](https://orbid.dev). Content/SEO equity may still live on [https://medstrato.com](https://medstrato.com). **Canonical help center host:** [https://docs.orbid.dev](https://docs.orbid.dev) (preferred). Do not run two live docs hosts without 301 + canonical tags.
+
+## Domains
+
+- **Primary product / brand** — https://orbid.dev
+- **Content / SEO (formerly MedStrato site)** — https://medstrato.com
+- **Pricing** — https://orbid.dev/pricing
+- **Machine facts** — https://orbid.dev/llms.txt
+- **Canonical help center** — **https://docs.orbid.dev** (preferred public docs host)
+- **Aux / migration** — https://docs.medstrato.com only if still needed—must 301 to docs.orbid.dev
+
+**Rule:** Marketing `BRAND.docsSite` and Mintlify custom domain **must match** the canonical host above. This repo is the content source; DNS/Mintlify project settings own the live hostname.
+
+Do not invent metrics in docs—link orbid.dev.
+
+## Design tokens (match marketing site)
+
+Aligned with `medstarto-website` `globals.css` / `brand.ts`:
+
+- **Accent (primary)**
+  - Value: `#8B1E1E`
+  - Use: CTAs, emphasis, Mintlify primary
+- **Accent dark**
+  - Value: `#6B1616`
+  - Use: Hover / dark mode primary
+- **Ink**
+  - Value: `#0A0A0A`
+  - Use: Primary text / logo on light
+- **Paper**
+  - Value: `#FAF8F3`
+  - Use: Warm surface
+- **Line**
+  - Value: `#E5E2D9`
+  - Use: Borders
+- **Match / partial / gap**
+  - Value: `#1F5E3A` / `#8B6914` / `#8B1E1E`
+  - Use: Semantic status
+
+**Logo (docs nav):** product **O-mark** (same paths as app `OrbidLogo`) + **“Orbid AI”** text lockup — Mintlify-safe (no SVG masks). Marketing full wordmark archived under `logo/brand/orbid-wordmark-*.svg`.
+
+**Typography (marketing):** Inter + Source Serif 4 + JetBrains Mono. Docs inherit Mintlify theme fonts unless customized later.
+
+## Formerly MedStrato
+
+During rebrand, “Formerly MedStrato” is intentional. Product and primary CTAs use **Orbid AI** / **orbid.dev**.

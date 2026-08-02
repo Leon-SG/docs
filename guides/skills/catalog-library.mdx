@@ -1,0 +1,59 @@
+---
+title: "Product catalog and library"
+description: "Search product catalog, compare products, and update specs with Orbid AI catalog skills."
+---
+
+# Product catalog & library skills
+
+> **Tools reference.** Prefer [Workflows](/guides/workflows) and [What to say](/guides/what-to-say) for daily use.
+
+Catalog skills find candidate models, compare options, and maintain structured product specs used by match and fill.
+
+## Skills in this group
+
+- **`search_product_catalog`**
+  - User-facing name: Browse / search catalog
+  - Summary: Keyword + semantic product candidates
+- **`compare_products`**
+  - User-facing name: Compare products
+  - Summary: Side-by-side vs requirements or peers
+- **`query_structured_specs`**
+  - User-facing name: Query structured specs
+  - Summary: Pull structured parameters
+- **`query_product_intelligence`**
+  - User-facing name: Product intelligence
+  - Summary: Product intel queries
+- **`update_product_spec` / `revert_product_spec`**
+  - User-facing name: Update / revert specs
+  - Summary: Catalog writes (human-governed)
+- **`update_product_features` / `update_product_intelligence`**
+  - User-facing name: Update features / intel
+  - Summary: Catalog enrichment
+- **`apply_user_correction`**
+  - User-facing name: Apply corrections
+  - Summary: Session/product corrections
+
+## When to use
+
+Use these skills inside an [Agents](/guides/workspace/agents-sessions) session at the appropriate phase (see [Core loop](/guides/core-loop)).
+
+## How to use (example utterances)
+
+- `browse catalog` / `search products` / `what products do we have`  
+- `compare products`  
+- `switch product` after a poor match  
+
+
+## Prerequisites
+
+No tender required for pure catalog browse; match still needs tender context.
+
+## Professional notes
+
+- Find candidates → catalog; formal parameter compliance → `run_match` with locked model.  
+- Spec updates should be evidence-backed; revert when wrong.  
+
+
+## Related
+
+- [Library workspace](/guides/workspace/library) · [Match](/guides/skills/match)

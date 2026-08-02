@@ -1,0 +1,59 @@
+---
+title: "Scan, match, fill, deliver"
+description: "How Orbid AI runs medical-device bid work: scan tenders, match products, fill forms, deliver packages—with human checkpoints."
+---
+
+# Core loop: Scan → Match → Fill → Deliver
+
+Orbid AI structures bid work as four stages: **Scan** (understand the tender), **Match** (compare a product to requirements), **Fill** (complete response forms with evidence), and **Deliver** (export packages for human submission). Automation accelerates comparison; humans own strategy and legal sign-off.
+
+## Stage map
+
+- **Scan**
+  - What happens: Ingest files; structure requirements and form layout signals (cellmap)
+  - Primary skills: `run_tender_scan`, `answer_from_context`, `search_tender_text`
+- **Match**
+  - What happens: Rank/lock product; formal parameter comparison; deviations
+  - Primary skills: `search_product_catalog`, `run_match`, `get_deviation_summary`
+- **Fill**
+  - What happens: Draft bidder responses into templates; flag residuals
+  - Primary skills: `run_fill_excel`
+- **Deliver**
+  - What happens: Generate letters, matrices, packages; review
+  - Primary skills: `run_generate_deliverable`, `run_bid_package`, `review_bid`
+
+## Everyday path
+
+1. Upload → “analyze tender”  
+2. “search products” / pick model → “match”  
+3. Read deviations → “fill excel” or “generate compliance matrix”  
+4. Human review → submit outside Orbid as required  
+
+## Professional path
+
+1. Confirm hard limits vs preferred requirements ([FAQ](/faq/go-no-go-and-limits)).  
+2. Separate **quick rank** from **formal match** ([concept](/concepts/formal-vs-rank-match)).  
+3. Use **product lock / branches** when evaluating multiple models ([concept](/concepts/product-lock-branches)).  
+4. Drive **residual review** before export ([workflow](/guides/workflows/fill-residual-review)).  
+5. Run **Go/No-Go** as decision support—not auto-award ([skill](/guides/skills/go-no-go)).  
+
+## Anti-patterns
+
+- **Skip scan**
+  - Why it hurts: Match on unstructured text
+  - Better: Always scan first when files are new
+- **Rank = formal**
+  - Why it hurts: False confidence
+  - Better: Lock product, then formal match
+- **Invent specs**
+  - Why it hurts: Bid risk
+  - Better: Leave residual; enrich catalog
+- **Auto-submit mindset**
+  - Why it hurts: Legal/compliance risk
+  - Better: Human owns submission
+
+## Related
+
+- [Quickstart](/quickstart)  
+- [Skills catalog](/guides/skills)  
+- [Medical device bid workflow](/guides/workflows/medical-device-bid-workflow)  

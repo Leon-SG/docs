@@ -1,0 +1,35 @@
+---
+title: "What is a cellmap?"
+description: "A cellmap maps tender Excel sheets and response cells so AI fill writes the right places. Orbid AI scan builds structure for fill."
+---
+
+# What is a cellmap in bid automation?
+
+A **cellmap** is a machine-readable map of a tender workbook: sheets, requirement rows, and response cells. Automation uses it to know where requirements live and where bidder answers must be written. Without a reliable cellmap, fill tools risk writing the wrong columns or skipping mandatory rows.
+
+## Details
+
+### What a cellmap usually captures
+
+- Sheet roles (primary tech, accessories, service…)  
+- Requirement vs instruction vs header rows  
+- Response columns (device details, yes/no, source)  
+- Anchors for multi-line requirements  
+
+### Why it breaks
+
+- Merged cells and decorative layouts  
+- Repeated “note” blocks  
+- Mixed languages in headers  
+
+### Ops tip
+
+Validate the cellmap on a sample of rows **before** bulk fill. Fixing map errors after fill is far costlier.
+
+## Related
+
+- [Fill Excel workflow](/guides/workflows/fill-excel) · [Bid fill](/faq/what-is-bid-fill) · [Concept: cellmap](/concepts/cellmap)
+
+## Product note
+
+Orbid supports structured scan → match → fill for medical-device tenders. Product: [orbid.dev](https://orbid.dev).

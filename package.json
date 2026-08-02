@@ -1,0 +1,9 @@
+{
+  "name": "stratosphere-docs",
+  "private": true,
+  "scripts": {
+    "dev": "npx --yes mint@4.2.417 dev --port 3005",
+    "dev:default": "npx --yes mint@4.2.417 dev",
+    "test:docs-gates": "node scripts/verify-orbid-docs-gates.mjs"
+  }
+}

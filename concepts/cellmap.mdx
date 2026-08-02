@@ -1,0 +1,27 @@
+---
+title: "What is a cellmap?"
+description: "A cellmap maps tender form cells to requirement rows so fill hits the correct Excel locations."
+---
+
+# What is a cellmap?
+
+A **cellmap** is the structural map from tender spreadsheet cells (and related form regions) to requirement semantics used by scan/fill. Without a sound cellmap, Excel fill writes to the wrong places.
+
+## Why it matters
+
+Medical tenders often use multi-sheet Excel response forms. Orbid’s [`run_fill_excel`](/guides/skills/fill) depends on knowing which cells are bidder response vs instructions vs commercial schedules.
+
+## Everyday
+
+After scan, you do not “draw” a cellmap manually in docs terms—you ensure the tender was scanned and that fill runs only after match.
+
+## Professional notes
+
+- **Multi-sheet forms** — Confirm the response sheet was identified
+- **Merged cells / labels** — Expect residuals where structure is ambiguous
+- **Re-upload** — Re-scan; do not reuse stale maps
+
+## Related
+
+- [Fill skill](/guides/skills/fill) · [Scan](/guides/skills/scan) · [Residual](/concepts/residual)
+

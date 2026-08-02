@@ -1,0 +1,56 @@
+---
+title: "Match products to tenders"
+description: "Formal product–tender matching with Orbid AI run_match, deviation summary, and benchmark status."
+---
+
+# Match products to tenders
+
+> **Tools reference.** Prefer [Workflows](/guides/workflows) and [What to say](/guides/what-to-say) for daily use.
+
+Match skills compare a selected product’s specifications to scanned tender requirements, surface deviations, and support specialist review. They do not award contracts.
+
+## Skills in this group
+
+- **`run_match`**
+  - User-facing name: Match product to tender
+  - Summary: Parameter-level match; deviations; optional fill path
+- **`get_deviation_summary`**
+  - User-facing name: Deviation summary
+  - Summary: Summarize gaps/deviations after match
+- **`check_benchmark_status`**
+  - User-facing name: Match / benchmark status
+  - Summary: Progress/status of analysis–match pipeline
+
+## When to use
+
+Use these skills inside an [Agents](/guides/workspace/agents-sessions) session at the appropriate phase (see [Core loop](/guides/core-loop)).
+
+## How to use (example utterances)
+
+- `match` / `match products` / `match this tender`  
+- `match our <MODEL> against tender requirements`  
+- `deviation summary` / `show deviations`  
+
+
+## Prerequisites
+
+- Tender files in session; prefer **scanned** package first (`run_tender_scan`).  
+- **Exactly one** product selected/locked for formal comparison (product catalog rule).  
+- Do not plan `run_match` and `run_fill_excel` as parallel planner tools in the same decision—auto-fill may run **inside** match when appropriate; use explicit fill only when needed.
+
+## Human ownership
+
+**Your organization** owns final bid content, commercial strategy, regulatory sign-off, and submission. Orbid provides decision support and drafts—not award guarantees.
+
+## Professional notes
+
+- Distinguish **quick rank** vs **formal match**—see [concept](/concepts/formal-vs-rank-match).  
+- Use **product lock / branches** when testing multiple models.  
+- Do not treat partial matches as compliant without human review.  
+- After match, risk may be green / yellow / red: deviations → correct specs or switch product (`search_product_catalog`); green path often offers deliverables + Go/No-Go.  
+- Optional Excel write-back can occur as part of match; still review residuals before submit.  
+
+
+## Related
+
+- [Fill](/guides/skills/fill) · [Go/No-Go](/guides/skills/go-no-go) · [Deviation](/concepts/deviation)

@@ -1,0 +1,47 @@
+---
+title: "Fill the buyer Excel form"
+description: "Let Orbid AI fill tender Excel from a matched product, then review residuals before export and submission."
+---
+
+# Fill the buyer Excel form
+
+Fill writes matched product data into the buyer Excel form where the cellmap and evidence allow, and leaves **residuals** empty or flagged when evidence is weak. You review blanks, commercial rows, and export for submission **outside** Orbid.
+
+You want a filled buyer workbook draft grounded in matched product data—not invented cells.
+
+You provide match completed for one product; tender source is **xlsx/xls** with form structure (cellmap).
+
+## What to say
+
+```text
+Fill the buyer Excel form from the match. Flag anything you could not evidence.
+```
+
+```text
+把匹配结果填回招标 Excel，标出无法举证的格子。
+```
+
+```text
+Re-fill after I corrected product specs.
+```
+
+## What Orbid does
+
+1. Writes bidder-response values into mapped cells when data exists  
+2. Leaves **residuals** empty or flagged when evidence is weak  
+3. Provides download of the draft workbook  
+
+Note: match may already have auto-filled once—check session downloads before re-running.
+
+## What you review
+
+- **Residuals / blanks** — Empty beats invented—see [Residual](/concepts/residual)
+- **Hard technical claims** — Must match datasheet / catalog
+- **Commercial rows** — Usually human-owned
+- **Wrong sheet / map** — Re-scan if files changed
+
+Then export, package, and **submit outside Orbid** as required.
+
+## Related
+
+- [Generate deliverables](/guides/workflows/generate-deliverables) · [Evidence](/concepts/evidence-and-ownership) · [Tools: fill](/guides/skills/fill)

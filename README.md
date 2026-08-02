@@ -1,43 +1,37 @@
-# Mintlify Starter Kit
+# Orbid AI Docs
 
-Use the starter kit to get your docs deployed and ready to customize.
-
-Click the green **Use this template** button at the top of this repo to copy the Mintlify starter kit. The starter kit contains examples with
-
-- Guide pages
-- Navigation
-- Customizations
-- API reference pages
-- Use of popular components
-
-**[Follow the full quickstart guide](https://starter.mintlify.com/quickstart)**
+Help center for **Orbid AI (formerly MedStrato)** — medical-device bid operations (Scan → Match → Fill → Deliver).
 
 ## Development
 
-Install the [Mintlify CLI](https://www.npmjs.com/package/mint) to preview your documentation changes locally. To install, use the following command:
-
-```
-npm i -g mint
+```bash
+npm run dev
 ```
 
-Run the following command at the root of your documentation, where your `docs.json` is located:
+Site: http://localhost:3005 (Mintlify). See `package.json`.
 
-```
-mint dev
-```
+## Content rules
 
-View your local preview at `http://localhost:3000`. The **User Manual** (`guides/user-manual`) and all 47 product screenshots are embedded so you get a full doc center out of the box.
+- Brand: Orbid AI; first hub mention includes (formerly MedStrato)
+- No product UI screenshots in guides/skills
+- Skills must map to product routing catalog ids
+- Pricing/KPI only via https://orbid.dev
 
-## Publishing changes
+## Plan / evidence
 
-Install our GitHub app from your [dashboard](https://dashboard.mintlify.com/settings/organization/github-app) to propagate changes from your repo to your deployment. Changes are deployed to production automatically after pushing to the default branch.
+- `docs/plans/2026-08-01-orbid-ai-help-center-rebuild.md`
+- `docs/plans/_evidence/orbid-ai-help-center-2026-08-01/`
 
-## Need help?
+## Brand / theme (aligned with medstarto-website)
 
-### Troubleshooting
+- Name: **Orbid AI** (formerly MedStrato)
+- Logo: official mark in `logo/light.svg` (ink) / `logo/dark.svg` (on-dark)
+- Mintlify primary: `#8B1E1E` (marketing `--accent`)
+- Product CTAs: https://orbid.dev
 
-- If your dev environment isn't running: Run `mint update` to ensure you have the most recent version of the CLI.
-- If a page loads as a 404: Make sure you are running in a folder with a valid `docs.json`.
+## SEO · AEO · GEO (docs layer)
 
-### Resources
-- [Mintlify documentation](https://mintlify.com/docs)
+- Plan: `docs/plans/2026-08-02-docs-seo-aeo-geo.md`
+- Machine maps: `llms.txt`, `llms-full.txt` (metrics still canonical on orbid.dev)
+- AEO FAQs: `faq/*` answer-first
+- How-to SEO: `guides/workflows/*`

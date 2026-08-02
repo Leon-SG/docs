@@ -1,0 +1,108 @@
+---
+title: "What to say to Orbid AI"
+description: "Prompt patterns for Orbid AI bid agent sessions—scan, match, go/no-go, fill, deliverables—in English and Chinese."
+---
+
+# What to say
+
+Speak in **outcomes**, not internal tool names. Give the agent files + one clear job. Follow up with review questions.
+
+## Pattern
+
+```text
+[Action] + [object] + [constraints] + [what to return]
+```
+
+Example:
+
+```text
+Match our EP500 to this tender. Focus on hard limits first.
+Return deviations I must review before fill.
+```
+
+## By job
+
+### Understand the package
+
+```text
+Analyze this tender. Extract key requirements and deadlines.
+```
+
+```text
+分析标书，总结关键技术要求与截止时间。
+```
+
+### Catalog / product
+
+```text
+Search our catalog for portable ultrasound systems we could bid.
+```
+
+```text
+查看产品目录，有哪些监护仪型号适合这个标。
+```
+
+### Match
+
+```text
+Match our <MODEL> to this tender and show gaps.
+```
+
+```text
+用 <型号> 匹配这份标书，列出偏差。
+```
+
+### Decide
+
+```text
+Should we bid on this? Go/no-go with red lines.
+```
+
+```text
+能不能投？红线评估。
+```
+
+```text
+Quick eligibility check—do we qualify on paper?
+```
+
+### Fill
+
+```text
+Fill the Excel form. Flag cells without evidence.
+```
+
+```text
+填表，标出无法举证的格子。
+```
+
+### Deliverables
+
+```text
+Generate a compliance matrix.
+```
+
+```text
+生成偏差函草稿。
+```
+
+```text
+List deliverable types you support.
+```
+
+### Research (when relevant)
+
+```text
+Research competitor landscape for this device category in <market>.
+```
+
+## Anti-patterns
+
+- **“Run run_match”** — “Match our model to this tender”
+- **Vague “handle this”** — One outcome + constraints
+- **Inventing specs when residual** — “Flag what you cannot evidence”
+- **Parallel conflicting jobs** — One primary outcome per message when stuck
+
+## Related
+
+- [Quickstart](/quickstart) · [Workflows](/guides/workflows) · [Tools reference](/guides/skills)

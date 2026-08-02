@@ -1,0 +1,51 @@
+---
+title: "Bid deliverables"
+description: "Generate bid deliverables with Orbid AI: compliance matrix, deviation letter, technical proposal via run_generate_deliverable."
+---
+
+# Bid deliverables
+
+> **Tools reference.** Prefer [Workflows](/guides/workflows) and [What to say](/guides/what-to-say) for daily use.
+
+Deliverable skills generate individual bid artifacts (for example deviation letters, compliance matrices, technical proposals). Prefer listing types when unsure. Most types require match first.
+
+## Skills in this group
+
+- **`list_deliverables`**
+  - User-facing name: List deliverable types
+  - Summary: Discover available artifact types
+- **`run_generate_deliverable`**
+  - User-facing name: Generate a deliverable
+  - Summary: Single-type artifact generation
+- **`produce_artifact`**
+  - User-facing name: Produce artifact
+  - Summary: General artifact production (e.g. research export)
+- **`list_document_formats` / `learn_document_format`**
+  - User-facing name: Document formats
+  - Summary: List/learn format templates
+
+## When to use
+
+Use these skills inside an [Agents](/guides/workspace/agents-sessions) session at the appropriate phase (see [Core loop](/guides/core-loop)).
+
+## How to use (example utterances)
+
+- `list deliverables`  
+- `generate compliance matrix`  
+- `generate deviation letter`  
+- `create a technical proposal`  
+
+
+## Prerequisites
+
+Most generation types require completed match (`isMatched`).
+
+## Professional notes
+
+- Single type → `run_generate_deliverable`; multi-artifact bundle → package skills.  
+- Do not invent public KPI counts for “number of types”; describe types you need and list in-product.  
+
+
+## Related
+
+- [Packages](/guides/skills/packages-review) · [Compliance matrix](/concepts/compliance-matrix)

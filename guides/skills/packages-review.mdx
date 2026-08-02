@@ -1,0 +1,51 @@
+---
+title: "Packages and bid review"
+description: "Orbid AI bid packages, submission packages, and review_bid for post-export QC."
+---
+
+# Packages & bid review
+
+> **Tools reference.** Prefer [Workflows](/guides/workflows) and [What to say](/guides/what-to-say) for daily use.
+
+Package skills bundle multiple artifacts; review skills support post-export quality checks before human submission.
+
+## Skills in this group
+
+- **`run_bid_package`**
+  - User-facing name: Bid package (bundle)
+  - Summary: Multi-artifact package path
+- **`run_submission_package`**
+  - User-facing name: Submission package
+  - Summary: Submission-oriented packaging
+- **`review_bid`**
+  - User-facing name: Review bid
+  - Summary: Post-export / review pass
+- **`record_bid_outcome`**
+  - User-facing name: Record outcome
+  - Summary: Close the learning loop
+
+## When to use
+
+Use these skills inside an [Agents](/guides/workspace/agents-sessions) session at the appropriate phase (see [Core loop](/guides/core-loop)).
+
+## How to use (example utterances)
+
+- `prepare bid package`  
+- `submission package`  
+- `review bid`  
+- `record bid outcome`  
+
+
+## Prerequisites
+
+Packages usually follow match + selected deliverable types.
+
+## Professional notes
+
+- Single artifact → `run_generate_deliverable`; multi → package skills.  
+- Always human-review before buyer submission.  
+
+
+## Related
+
+- [Deliverables](/guides/skills/deliverables) · [Review workspace](/guides/workspace/review)

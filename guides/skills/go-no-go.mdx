@@ -1,0 +1,46 @@
+---
+title: "Go/No-Go assessment"
+description: "Orbid AI run_gonogo supports go/no-go bid decisions with red-line style assessment—not auto-award."
+---
+
+# Go/No-Go assessment
+
+> **Tools reference.** Prefer [Workflows](/guides/workflows) and [What to say](/guides/what-to-say) for daily use.
+
+Go/No-Go skills provide structured decision support (red-line style assessment and report framing). Final bid/no-bid is always a human commercial decision.
+
+## Skills in this group
+
+- **`run_gonogo`**
+  - User-facing name: Go/No-Go assessment
+  - Summary: Decision support report path (requires files; may scan/match as needed)
+
+## When to use
+
+Use these skills inside an [Agents](/guides/workspace/agents-sessions) session at the appropriate phase (see [Core loop](/guides/core-loop)).
+
+## How to use (example utterances)
+
+- `should we bid on this`  
+- `Go/No-Go` / `can we bid`  
+- `analyze red-line requirements and give a bid recommendation`  
+
+
+## Prerequisites
+
+Requires tender files. Full report path differs from lightweight `check_eligibility`.
+
+## Human ownership
+
+**Your organization** owns final bid content, commercial strategy, regulatory sign-off, and submission. Orbid provides decision support and drafts—not award guarantees.
+
+## Professional notes
+
+- Prefer `check_eligibility` for quick JSON-style pre-check; `run_gonogo` for fuller assessment.  
+- Do not call score simulation in the same turn as gonogo when tooling forbids it.  
+- Checklist workflow: [Go/No-Go checklist](/guides/workflows/go-no-go-checklist).  
+
+
+## Related
+
+- [Eligibility & risk](/guides/skills/eligibility-risk) · [When to no-bid](/faq/go-no-go-and-limits)

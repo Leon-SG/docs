@@ -1,0 +1,47 @@
+---
+title: "Fill Excel tender forms"
+description: "Fill buyer Excel templates with Orbid AI run_fill_excel using cellmap and matched product data."
+---
+
+# Fill Excel tender forms
+
+> **Tools reference.** Prefer [Workflows](/guides/workflows) and [What to say](/guides/what-to-say) for daily use.
+
+Fill writes matched product values into the buyer’s Excel tender template via cellmap, then supports download. Residuals must be reviewed by humans before submit.
+
+## Skills in this group
+
+- **`run_fill_excel`**
+  - User-facing name: Fill Excel tender form
+  - Summary: Write matched values into buyer template cells
+
+## When to use
+
+Use these skills inside an [Agents](/guides/workspace/agents-sessions) session at the appropriate phase (see [Core loop](/guides/core-loop)).
+
+## How to use (example utterances)
+
+- `fill excel` / `fill the excel tender`  
+- `write results back to the Excel form`  
+
+
+## Prerequisites
+
+- Session **already matched** (`isMatched`).  
+- Source tender is **xlsx/xls** with a cellmap from the scan/match pipeline (PDF-only packages may need other deliverable paths, not Excel fill).  
+- If match already produced a filled workbook, re-fill only when you need a new pass or directive (colors/rows/sheets).
+
+## Human ownership
+
+**Your organization** owns final bid content, commercial strategy, regulatory sign-off, and submission. Orbid provides decision support and drafts—not award guarantees.
+
+## Professional notes
+
+- Empty required cells beat invented numbers—see [Residual](/concepts/residual).  
+- Style-only freeform is restricted; comparison-table row paint uses `compare_products`, not this skill.  
+- After fill, run residual review workflow before buyer submission.  
+
+
+## Related
+
+- [Cellmap](/concepts/cellmap) · [Residual review](/guides/workflows/fill-residual-review) · [Match](/guides/skills/match)

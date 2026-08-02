@@ -1,0 +1,29 @@
+guides/skills/deliverables.mdx:3:description: "Generate bid deliverables with Orbid AI: compliance matrix, deviation letter, technical proposal via run_generate_deliverable."
+guides/skills/deliverables.mdx:15:| `run_generate_deliverable` | Generate a deliverable | Single-type artifact generation |
+guides/skills/deliverables.mdx:37:- Single type → `run_generate_deliverable`; multi-artifact bundle → package skills.  
+guides/skills/index.mdx:16:| Scan & understanding | [Scan](/guides/skills/scan) | `run_tender_scan`, `answer_from_context`, `search_tender_text` |
+guides/skills/index.mdx:17:| Match | [Match](/guides/skills/match) | `run_match`, `get_deviation_summary`, `check_benchmark_status` |
+guides/skills/index.mdx:18:| Fill | [Fill](/guides/skills/fill) | `run_fill_excel` |
+guides/skills/index.mdx:19:| Go/No-Go | [Go/No-Go](/guides/skills/go-no-go) | `run_gonogo` |
+guides/skills/index.mdx:20:| Deliverables | [Deliverables](/guides/skills/deliverables) | `run_generate_deliverable`, `list_deliverables` |
+guides/skills/index.mdx:22:| Catalog & library | [Catalog](/guides/skills/catalog-library) | `search_product_catalog`, `compare_products` |
+guides/skills/index.mdx:31:| Empty | `search_opportunities`, `search_product_catalog`, `web_research` |
+guides/skills/index.mdx:32:| Has file | `run_tender_scan`, `answer_from_context` |
+guides/skills/index.mdx:33:| Scanned | `run_match`, `check_eligibility`, `compare_products`, `flag_tender_risks` |
+guides/skills/index.mdx:34:| Matched | `get_deviation_summary`, `run_generate_deliverable`, `run_gonogo`, `run_fill_excel` |
+guides/skills/go-no-go.mdx:3:description: "Orbid AI run_gonogo supports go/no-go bid decisions with red-line style assessment—not auto-award."
+guides/skills/go-no-go.mdx:14:| `run_gonogo` | Go/No-Go assessment | Decision support report path (requires files; may scan/match as needed) |
+guides/skills/go-no-go.mdx:37:- Prefer `check_eligibility` for quick JSON-style pre-check; `run_gonogo` for fuller assessment.  
+guides/skills/scan.mdx:3:description: "Scan tenders with Orbid AI skills run_tender_scan, answer_from_context, search_tender_text, and related tools."
+guides/skills/scan.mdx:14:| `run_tender_scan` | Scan / analyze tender | Extract parameters, categories, deadlines, metadata |
+guides/skills/scan.mdx:41:- Negative examples for scan: do not confuse with “match products” (that is `run_match`).  
+guides/skills/packages-review.mdx:37:- Single artifact → `run_generate_deliverable`; multi → package skills.  
+guides/skills/match.mdx:3:description: "Formal product–tender matching with Orbid AI run_match, deviation summary, and benchmark status."
+guides/skills/match.mdx:14:| `run_match` | Match product to tender | Parameter-level match; deviations; optional fill path |
+guides/skills/match.mdx:31:Prefer scanned tender + selected/locked product. `run_match` expects a single product for formal comparison.
+guides/skills/match.mdx:42:- Yellow/red risk paths: review deviations, correct specs, or switch product (`search_product_catalog`).  
+guides/skills/fill.mdx:3:description: "Fill buyer Excel templates with Orbid AI run_fill_excel using cellmap and matched product data."
+guides/skills/fill.mdx:14:| `run_fill_excel` | Fill Excel tender form | Write matched values into buyer template cells |
+guides/skills/fill.mdx:28:`isMatched` required for `run_fill_excel`. Source should be xlsx/xls with cellmap from scan/match pipeline.
+guides/skills/catalog-library.mdx:14:| `search_product_catalog` | Browse / search catalog | Keyword + semantic product candidates |
+guides/skills/catalog-library.mdx:39:- Find candidates → catalog; formal parameter compliance → `run_match` with locked model.  

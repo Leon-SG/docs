@@ -1,0 +1,59 @@
+---
+title: "Medical device bid workflow"
+description: "Practical Scan → Match → Fill → Deliver workflow for medical-device tenders with Orbid AI."
+---
+
+# Medical device bid workflow
+
+A practical medical-device bid workflow has four stages: **scan** the tender, **match** a product, **fill** the response form, and **deliver** an exportable package for human submission.
+
+## 1. Scan
+
+- Ingest tender files (often multi-sheet Excel).  
+- Identify requirement rows vs instructions vs commercial schedules.  
+- Build structure (cellmap) so fill hits correct cells.  
+
+**Skills:** `run_tender_scan`, `answer_from_context`.
+
+## 2. Match
+
+- Shortlist (rank) then lock one model.  
+- Run formal matching for hard limits first.  
+- Record meet / partial / missing / deviation with evidence pointers.  
+
+**Skills:** `search_product_catalog`, `run_match`, `get_deviation_summary`.
+
+## 3. Fill
+
+- Write bidder responses from matched product facts.  
+- Keep source/reference honest; empty beats invented.  
+- Route residuals to reviewers.  
+
+**Skills:** `run_fill_excel`.
+
+## 4. Deliver
+
+- Export buyer-compatible files and letters/matrices.  
+- Final commercial and legal review.  
+- Submit via the buyer’s channel.  
+
+**Skills:** `run_generate_deliverable`, `run_bid_package`, `review_bid`.
+
+## Failure modes
+
+- **Weak catalog data**
+  - Symptom: Many not found
+  - Mitigation: Enrich Library/specs
+- **Rank treated as formal**
+  - Symptom: False confidence
+  - Mitigation: Separate shortlist vs `run_match`
+- **Silent invention**
+  - Symptom: Plausible uncited values
+  - Mitigation: Residual + evidence rules
+- **Skipping go/no-go**
+  - Symptom: Late no-bid
+  - Mitigation: Early hard-gate review
+
+## Related
+
+- [Core loop](/guides/core-loop) · [Go/No-Go checklist](/guides/workflows/go-no-go-checklist) · [Fill residual review](/guides/workflows/fill-residual-review)

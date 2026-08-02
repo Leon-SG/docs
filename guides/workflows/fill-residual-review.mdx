@@ -1,0 +1,22 @@
+---
+title: "Fill residual review"
+description: "How specialists review residual cells after Orbid AI Excel fill before submission."
+---
+
+# Fill residual review
+
+After automated fill, systematically review **residuals**—empty, uncertain, or weakly evidenced cells—before export and submission.
+
+## Steps
+
+1. Run [`run_fill_excel`](/guides/skills/fill) after formal match.  
+2. List residual / flagged cells.  
+3. Classify: missing catalog data vs tender ambiguity vs commercial-only.  
+4. Fix catalog (`apply_user_correction` / spec update) or assign human authors.  
+5. Re-fill if data improved; never invent hard specs.  
+6. Generate deviation documentation where required.  
+7. `review_bid` before package handoff.  
+
+## Related
+
+- [Residual concept](/concepts/residual) · [Evidence](/concepts/evidence-and-ownership)

@@ -1,0 +1,58 @@
+---
+title: "Eligibility, risk, and scoring"
+description: "Orbid AI eligibility pre-check, tender risk flags, tech score simulation, strategy and pricing suggestions."
+---
+
+# Eligibility, risk & scoring
+
+> **Tools reference.** Prefer [Workflows](/guides/workflows) and [What to say](/guides/what-to-say) for daily use.
+
+These skills support pre-qualification, risk flagging, score simulation, strategy analysis, and pricing suggestions—always under human commercial ownership.
+
+## Skills in this group
+
+- **`check_eligibility`**
+  - User-facing name: Eligibility pre-check
+  - Summary: Lightweight qualify / red-line pre-check (JSON-style; **not** full Go/No-Go). Treat depth as evolving per tenant.
+- **`flag_tender_risks`**
+  - User-facing name: Flag tender risks
+  - Summary: Clause risk flags
+- **`simulate_tech_score`**
+  - User-facing name: Simulate technical score
+  - Summary: Scoring simulation support
+- **`analyze_bid_strategy`**
+  - User-facing name: Bid strategy analysis
+  - Summary: Strategy-oriented analysis
+- **`suggest_pricing`**
+  - User-facing name: Pricing suggestions
+  - Summary: Pricing assistance (human owns final price)
+- **`track_deadline`**
+  - User-facing name: Track deadline
+  - Summary: Deadline tracking
+
+## When to use
+
+Use these skills inside an [Agents](/guides/workspace/agents-sessions) session at the appropriate phase (see [Core loop](/guides/core-loop)).
+
+## How to use (example utterances)
+
+- `eligibility` / `do we qualify`  
+- `flag tender risks`  
+- `simulate technical score`  
+- `when is the deadline`  
+
+
+## Prerequisites
+
+Works best after scan; some tools available more broadly.
+
+## Professional notes
+
+- Eligibility ≠ full Go/No-Go report.  
+- Pricing suggestions are not quotes; commercial owners finalize.  
+- Stub/evolving behaviors may expand—verify live if a tool is marked evolving in release notes.  
+
+
+## Related
+
+- [Go/No-Go](/guides/skills/go-no-go) · [Core loop](/guides/core-loop)

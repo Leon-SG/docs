@@ -1,0 +1,22 @@
+---
+title: "Defibrillator tender response"
+description: "Orbid AI workflow for defibrillator tenders: hard limits, go/no-go, deviations, and deliverables."
+---
+
+# Use case: defibrillator tender response
+
+Defibrillator tenders often hinge on hard clinical and regulatory limits. Use scan + formal match early, run go/no-go support, document deviations, then fill/deliver only if strategy is go.
+
+## Skills used
+
+`run_tender_scan` → `run_match` → `run_gonogo` / `check_eligibility` → `get_deviation_summary` → deliverables/fill
+
+## Professional notes
+
+- Separate hard limits from preferred energy/UI features.  
+- Local registration vs FDA/CE claims—see FAQ ownership and site glossary.  
+- No-bid early if hard limits fail.  
+
+## Related
+
+- [Go/No-Go](/guides/skills/go-no-go) · [Workflow](/guides/workflows/medical-device-bid-workflow)

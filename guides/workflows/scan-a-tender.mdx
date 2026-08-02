@@ -1,0 +1,48 @@
+---
+title: "Scan a tender package"
+description: "Delegate tender analysis to Orbid AI: upload files, ask for requirements and deadlines, confirm interpretation."
+---
+
+# Scan a tender package
+
+Scanning means uploading a tender package and asking Orbid AI to extract requirements, hard limits, and deadlines from the files—so you understand the bid before matching a product. Orbid reads what is in the package; it does not invent missing clauses.
+
+You want a structured read of the tender—key requirements, categories, deadlines—before matching a product.
+
+You provide tender files in an [Agents session](/guides/workspace/agents-sessions) (Excel multi-sheet forms are common).
+
+## What to say
+
+```text
+Analyze this tender package. Extract key technical requirements,
+administrative hard limits, and deadlines. Tell me what is still ambiguous.
+```
+
+```text
+分析这份标书，提取关键技术要求、硬性资格条件和截止时间，并指出仍不清晰的地方。
+```
+
+```text
+What does the tender say about warranty and local service?
+```
+
+## What Orbid does
+
+1. Reads uploaded files  
+2. Structures requirements and form signals (including cellmap for Excel when applicable)  
+3. Answers questions **from the package**  
+
+## What you review
+
+- Ambiguous clauses (ask follow-ups; do not invent)  
+- Whether the right sheets/files were included  
+- Ready to [match a product](/guides/workflows/match-and-review-gaps)?  
+
+## Tips
+
+- Re-scan after replacing files  
+- Prefer outcome language (“analyze tender”) over internal tool names  
+
+## Related
+
+- [How the agent works](/guides/how-the-agent-works) · [Cellmap](/concepts/cellmap) · [Tools: scan](/guides/skills/scan)

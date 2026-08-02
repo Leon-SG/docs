@@ -1,0 +1,13 @@
+index.mdx:23:  <Card title="Product website" icon="globe" href="https://orbid.dev">
+index.mdx:24:    Features, pricing pointers, and conversion pages on orbid.dev.
+index.mdx:56:Pricing and marketing metrics live on **[orbid.dev](https://orbid.dev)** (see [pricing](https://orbid.dev/pricing) and [llms.txt](https://orbid.dev/llms.txt)). This help center does not invent KPI numbers.
+index.mdx:60:Orbid AI was previously known as Orbid AI. Product documentation and the primary site now use the **Orbid AI** brand. Some legacy links may still mention Orbid AI during migration; prefer [orbid.dev](https://orbid.dev).
+quickstart.mdx:8:**Answer:** Open an **Agents** session, upload a tender package, ask Orbid to **scan**, select or search a product, **match**, review deviations or residuals, then **fill Excel** or **generate a deliverable**. You own go/no-go and final submission. Pricing: [orbid.dev/pricing](https://orbid.dev/pricing).
+quickstart.mdx:12:- Access to Orbid AI (see [orbid.dev](https://orbid.dev))  
+quickstart.mdx:87:- Metrics and plans: [orbid.dev/llms.txt](https://orbid.dev/llms.txt) only.
+docs.json:450:          "href": "https://orbid.dev"
+docs.json:568:    "href": "https://orbid.dev/"
+docs.json:574:        "href": "https://orbid.dev/"
+docs.json:578:        "href": "https://orbid.dev/book"
+docs.json:582:        "href": "https://orbid.dev/pricing"
+docs.json:588:      "href": "https://orbid.dev"
