@@ -1,0 +1,74 @@
+---
+title: "来源指南与验证范围"
+description: "追溯手册的仓库证据，并了解未进行运行时测试的范围。"
+---
+
+
+本手册曾依据提供的本地产品仓库进行检查。源码检查只能证明代码和设计资料存在，不能证明生产环境执行成功。
+
+项目验证报告记录的后续检查以 2026-11-02 的产品提交 `91290bb972d8e92a381217cefaf61b1b92226785` 为基准。产品工作树另有未提交更改；报告列出的交付文件以已提交版本检查。这是审查基准，不代表部署版本。
+
+## 阅读来源引用
+
+| ID | 证据路径 | 可确立的内容 |
+| --- | --- | --- |
+| S01 | `src/app/(orbid)/orbid/page.tsx`; `src/components/orbid/{nav-path.ts,nav-sidebar.tsx}`; `src/middleware.ts` | 根据主机跳转律师入口及不同界面的导航 |
+| S02 | `src/app/(orbid)/orbid/(workspace)/counsel/{knowledge,memory,gaps,quality}/page.tsx`; `specs/2026-10-20-orbid-ui-spec-prd.md` | 占位路由与规格意图的区别 |
+| S11 | `src/app/(orbid)/orbid/(workspace)/counsel/library/page.tsx`; `src/components/orbid/counsel-library/library-list.tsx` | 律师资料库列表、搜索、上传、筛选及取决于能力的管理 |
+| S12 | `src/lib/orbid/counsel/delivery-checklist.ts` | 非阻断提醒和预留但未实现的格式检查器 |
+| S15 | `src/lib/orbid/matter/intake-step.ts`; `src/lib/orbid/matter/intake-v2-copy.ts`; `src/lib/orbid/client/paid-gate.ts`; `src/app/api/orbid/intake/[token]/verify/route.ts` | v1/v2 顺序、文案、锁定、身份和邀请检查 |
+| S16 | `src/lib/orbid/matter/engagement.ts`; `src/lib/orbid/counsel/engagement-actions.ts`; `src/components/orbid/counsel/counsel-engagements.tsx`; `src/lib/orbid/client/engagement-payments.ts` | 委托生命周期、KYC 关卡、报价有效期、拒绝理由和付款版本检查 |
+| S17 | `src/lib/orbid/client/{access,paid-gate,client-status}.ts`; `src/app/(orbid)/orbid/client/page.tsx` | 客户工作区、组织可见性、操作和状态优先级 |
+| S18 | `src/app/(orbid)/orbid/(workspace)/counsel/page.tsx`; `src/components/orbid/counsel/`; `src/lib/orbid/counsel/decide-adoption.ts` | 律师工作区、文档工具和未保存修改的保留 |
+| S19 | `src/lib/orbid/settings/routes.ts`; `src/app/(orbid)/orbid/client/settings/page.tsx` | 设置分区和独立客户设置入口 |
+| S20 | `src/lib/orbid/kyc/upload-rules.ts`; `src/lib/orbid/kyc/upload-checklist.ts`; `src/lib/orbid/matter/intake-file-ingest.ts`; `src/app/api/orbid/intake/[token]/uploads/` | KYC 上传类型、大小与清单限制，以及服务端验证 |
+| S21 | `src/components/orbid/counsel-library/library-api.ts`; `src/components/orbid/counsel-library/upload-dialog.tsx`; `src/lib/orbid/counsel/library/{upload,ingest-send}.ts`; `src/app/api/orbid/counsel/library/documents/` | 律师资料库上传窗口、服务端检查、重复文件识别与处理队列 |
+| S22 | `src/app/api/orbid/counsel/drafting-tasks/[taskId]/deliver/route.ts`; `src/lib/orbid/drafting/desk/deliver.ts`; `src/lib/orbid/counsel/{docx-comments,comment-audience.server}.ts`; `src/lib/orbid/kyc/{intake-gate,policy}.ts`; `src/lib/orbid/settings/business-gate.ts`; `src/app/api/orbid/counsel/deliver/route.ts` | 起草任务交付路由、检查、工作副本与批注处理选项 |
+| S23 | `src/app/api/orbid/counsel/nda-review/[taskId]/delivery-authorization/route.ts`; `src/lib/orbid/counsel/review/unified/nda-deliveries.ts` | NDA 任务授权、文件绑定与导出状态 |
+| S24 | `src/app/api/orbid/intake/[token]/acknowledge/route.ts`; `src/app/api/orbid/intake/[token]/deliverable/route.ts`; `src/lib/orbid/counsel/delivery.ts`; `src/lib/orbid/matter/intake-quote.ts` | 旧版交付收件确认与发票下载，以及 NDA 任务路径的区别 |
+| S25 | `src/lib/orbid/access/{flags,gates}.ts`; `src/lib/orbid/settings/client-routes.ts`; `src/app/(orbid)/orbid/client/settings/` | 客户设置功能开关与案件成员检查模式 |
+| S26 | `src/lib/orbid/settings/notifications.ts`; `src/lib/orbid/settings/org-admin-api.ts`; `src/lib/orbid/access/store.ts`; `src/lib/orbid/notify/client-notify.ts`; `src/components/orbid/settings/org-admin-panels.tsx` | 通知偏好、事件映射与邮件发送行为 |
+| S27 | `src/lib/orbid/client/engagement-client.ts`; `src/lib/orbid/matter/engagement.ts`; `src/components/orbid/client/workspace/engagement-panel.tsx` | 客户重新开放与提交、KYC 检查及签署 |
+| S28 | `src/lib/orbid/counsel/document-requests.ts`; `src/components/orbid/counsel/counsel-document-requests.tsx`; `src/components/orbid/client/workspace/client-requested-materials.tsx` | KYC 补件请求、旧版文件请求与客户上传处理 |
+| S29 | `src/lib/orbid/matter/firm-invite.ts`; `src/lib/orbid/client/{intake-owner,paid-gate}.ts`; `src/lib/orbid/matter/thread-http.ts` | 律所邀请接受、公司绑定与令牌访问 |
+| S30 | `src/lib/orbid/counsel/library/{types,ingest,store,view-model}.ts`; `supabase/migrations/20261019013500_counsel_library.sql`; `src/components/orbid/counsel-library/document-review.tsx`; `src/app/api/orbid/counsel/library/documents/[documentId]/review/route.ts` | 资料库处理状态、审查与重新执行条件 |
+| S31 | `src/lib/orbid/counsel/library/{search,search-store}.ts`; `src/app/api/orbid/counsel/library/search/route.ts`; `src/components/orbid/counsel-library/library-search.tsx` | 资料库条款搜索回退、结果信息与界面提示 |
+| S32 | `src/lib/orbid/client/engagement-payments.ts`; `src/lib/orbid/nda-tasks/engagement-start.ts` | 已付款委托的工作派送与付款结果区分 |
+| S33 | `src/components/orbid/client-shared/client-composer.tsx`; `src/lib/orbid/client/turn-payload.ts`; `src/app/api/orbid/intake/[token]/client-turn/route.ts` | 客户输入框收件对象与共享委托对话处理 |
+| S34 | `src/lib/orbid/payments/registry.ts`; `src/lib/orbid/client/engagement-payments.ts`; `src/components/orbid/client/workspace/engagement-pay.tsx` | 付款服务商配置与付款方式可用性 |
+| S35 | `src/lib/orbid/counsel/library/review-scan.ts`; `src/app/api/orbid/counsel/library/documents/[documentId]/review/route.ts`; `src/components/orbid/counsel-library/document-review.tsx` | 资料库审查扫描与完成条件 |
+| S36 | `src/lib/orbid/matter/client-stage-v2.ts`; `src/components/orbid/client/workspace/payment-progress-details.tsx` | 客户 v2 进度阶段推导与显示的详情 |
+| S37 | `src/lib/orbid/matter/intake-upload.ts`; `src/components/orbid/intake/use-intake-uploads.ts`; `src/components/orbid/client/workspace/client-requested-materials.tsx` | 旧版补件上传控件与对话附件规则 |
+| S38 | `src/components/orbid/intake/use-intake-uploads.ts`; `src/components/orbid/upload/upload-runner.ts`; `src/app/api/orbid/intake/[token]/files/route.ts`; `src/lib/orbid/compliance/notice-acks.ts` | 委托资料上传的同意与通知检查 |
+| S39 | `src/lib/orbid/counsel/library/permissions.ts`; `src/lib/orbid/counsel/library/review-store.ts` | 资料库功能权限与文档可见性检查 |
+| S40 | `src/app/api/orbid/intake/[token]/verify/route.ts`; `src/components/orbid/intake/intake-kyc-upload.tsx`; `src/lib/orbid/matter/intake-fetch.ts` | 验证提交的处理检查、临时错误重试与锁定恢复 |
+| S41 | `src/app/api/orbid/intake/[token]/deliverable/route.ts`; `src/lib/orbid/counsel/nda/persist-docx.ts`; `src/components/orbid/intake/intake-deliverable.tsx` | NDA 正式交付、可选参考译本与修订追踪版本 |
+| S42 | `src/lib/orbid/drafting/desk/client-deliverable.ts`; `src/app/api/orbid/intake/[token]/deliverable/route.ts`; `src/components/orbid/intake/intake-deliverable.tsx` | 起草 v2 客户交付清单、文件选择与下载完整性检查 |
+| S43 | `src/components/orbid/settings/matter-access-form.tsx`; `src/lib/orbid/settings/{api,copy}.ts`; `src/lib/orbid/access/gates.ts` | 案件访问设置、管理员变更与默认成员限制 |
+| S44 | `src/lib/orbid/settings/{api,validate}.ts`; `src/components/orbid/settings/client/client-settings.tsx` | 客户公司资料变更、KYC 复核标记与名称同步 |
+| S45 | `src/lib/orbid/settings/org-admin-api.ts`; `src/components/orbid/settings/org-admin-panels.tsx`; `src/components/orbid/settings/client/client-settings.tsx`; `src/components/orbid/settings/sections/team-section.tsx` | 管理员批量邀请、逐项结果与重试表单 |
+| S46 | `src/lib/orbid/ipo/{generate,read-sources,connectors}.ts`; `src/lib/orbid/counsel/store.ts` | 研究连接器调用与工作区范围的知识读取 |
+| S47 | `src/lib/orbid/access/{flags,permissions}.ts`; `src/lib/orbid/settings/org-admin-api.ts`; `src/components/orbid/settings/org-admin-panels.tsx` | 细分角色开关、成员角色面板与管理员限制 |
+| S48 | `src/lib/orbid/settings/org-admin-api.ts`; `src/components/orbid/settings/org-admin-panels.tsx`; `src/lib/orbid/counsel/delivery.ts` | 客户计费数据、由发票推得的付款金额与条数上限 |
+| S49 | `src/components/orbid/settings/sections/connectors-section.tsx`; `src/lib/orbid/settings/{counsel-connectors,org-admin-api}.ts`; `src/lib/orbid/ipo/read-sources.ts` | 律所连接器偏好、默认回退与来源可用性 |
+| S50 | `src/lib/orbid/access/audit.ts`; `src/lib/orbid/settings/org-admin-api.ts`; `src/components/orbid/settings/org-admin-panels.tsx` | 审计写入、抽样、案件记录读取失败与导出上限 |
+| S51 | `src/lib/orbid/identity/{membership,admin-api}.ts` | 组织成员变更、最后管理员检查与部分失败 |
+| S52 | `src/app/api/orbid/counsel/library/documents/[documentId]/original/route.ts`; `src/lib/orbid/counsel/library/review-store.ts` | 原始文件下载授权与保留状态 |
+| S53 | `src/app/api/orbid/counsel/library/documents/[documentId]/route.ts`; `src/lib/orbid/counsel/library/governance-store.ts`; `supabase/migrations/20261102010000_counsel_library_retention.sql` | 律所文档删除、模板解除链接与存储空间移除 |
+| S54 | `src/lib/orbid/counsel/library/{retention,agent-context}.ts`; `src/app/api/orbid/counsel/library/retention/route.ts`; `src/components/orbid/counsel-library/library-retention.tsx`; `src/lib/inngest/functions/counsel-library-jobs.ts`; `supabase/migrations/20261102010000_counsel_library_retention.sql` | 律所资料库保留设置、预览与计划删除 |
+| S55 | `src/lib/orbid/counsel/library/archive.ts`; `src/app/api/orbid/counsel/library/archive/route.ts`; `src/components/orbid/counsel/counsel-matter-files.tsx` | 案件文件归档至律所资料库的条件、批次与重复处理 |
+| S56 | `src/lib/orbid/counsel/kyc-upload-review.ts`; `src/lib/orbid/counsel/kyc-file-readiness.ts` | KYC 通过记录的文件绑定、旧记录兼容与文件可用性 |
+
+## 证据优先级与限制
+
+对于实现状态，具体路由与可执行行为优先于规格中的预期。源码检查不能证明部署、权限、价格或法律保证。
+
+本次未执行真实付款、身份验证或法律成果交付。部署和政策问题列于[待确认事项](/zh-CN/product/open-questions)。
+
+## 保持译文同步
+
+英文是唯一内容基准。所有规范页面在 `product/`、`de/product/`、`zh-TW/product/` 和 `zh-CN/product/` 下具有相同路径后缀。同步更新对应页面，保留来源 ID、机器值、数字、示例、限制和不确定性。Mintlify 原生语言导航与对应页面链接提供四种版本。[Mintlify 官方导航文档](https://www.mintlify.com/docs/organize/navigation)是框架参考，不是 Orbid 功能证据。
+
+{/* equivalents:start */}
+本页语言版本: [English](/product/sources) · [Deutsch](/de/product/sources) · [繁體中文](/zh-TW/product/sources) · [简体中文](/zh-CN/product/sources)
+{/* equivalents:end */}

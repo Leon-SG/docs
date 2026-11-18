@@ -4,6 +4,10 @@
   "scripts": {
     "dev": "npx --yes mint@4.2.417 dev --port 3005",
     "dev:default": "npx --yes mint@4.2.417 dev",
-    "test:docs-gates": "node scripts/verify-orbid-docs-gates.mjs"
+    "test:docs-gates": "node scripts/verify-orbid-docs-gates.mjs",
+    "test:docs-i18n": "node scripts/verify-product-docs.mjs",
+    "test:docs": "npm run test:docs-gates && npm run test:docs-i18n",
+    "validate:docs": "npx --yes mint@4.2.417 validate",
+    "check:links": "npx --yes mint@4.2.417 broken-links"
   }
 }

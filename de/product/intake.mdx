@@ -1,0 +1,44 @@
+---
+title: "Mandatsaufnahme und Identitätsunterlagen"
+description: "Ein Anliegen beschreiben, Fakten bestätigen und Informationen über Mandatsaufnahme v2 an die Rechtsberatung übergeben."
+---
+
+
+Die Mandatsaufnahme erfasst Geschäftskontext, Fakten, Dokumente und Identitätsunterlagen, bevor der Rechtsbeistand über die Mandatsannahme entscheidet. Der untersuchte Code enthält Mandatsaufnahme v2 neben einem älteren v1-Ablauf. Diese Seite beschreibt v2 und benennt den wichtigen Unterschied beim Zahlungszeitpunkt. [S15]
+
+## Mandatsaufnahme v2 beginnen und absenden
+
+Melden Sie sich vor dem Öffnen einer ausstehenden Kanzleieinladung mit dem vorgesehenen Mandantenunternehmen an. Im untersuchten Ablauf wird die Einladung an das erste berechtigte Unternehmen gebunden, das sie annimmt; falls eine Empfängeradresse angegeben ist, muss sie zur angemeldeten E-Mail-Adresse passen. Ein zurückgezogener oder abgelaufener Link kann nicht verwendet werden. Ist der Link nicht verfügbar oder an das falsche Unternehmen gebunden, wenden Sie sich zur Klärung an die Kanzlei. [S29]
+
+1. Öffnen Sie die Einladung der Kanzlei oder den Mandatsaufnahmeeinstieg und melden Sie sich mit dem passenden Konto der Mandantenorganisation an.
+2. Wählen Sie den relevanten Geschäfts-/Leistungsbereich und geben Sie die angeforderten Angaben zur Ausrichtung und Identität ein.
+3. Erläutern Sie das Anliegen, beantworten Sie Rückfragen und stellen Sie unterstützende Dateien bereit.
+4. Prüfen und korrigieren Sie die zusammengestellten Fakten und reichen Sie sie ein, um zur Verifizierung fortzufahren.
+5. Laden Sie die erforderlichen Identitätsunterlagen hoch, prüfen Sie den Einwilligungstext und machen Sie die vom Formular angeforderten Angaben zur unterzeichnenden Person.
+6. Senden Sie die Mandatsaufnahme ab und sperren Sie sie für die Prüfung durch die Kanzlei; fahren Sie anschließend im [Mandantenarbeitsbereich](/de/product/client) fort.
+
+Die im Quellcode definierten v2-Schritte sind `start → onboard → ask → confirm → verify → desk`. **Die Mandatsaufnahme v2 selbst enthält keinen Gebühren- oder Zahlungsschritt.** Honorarangebote und Zahlungen erfolgen später über den [Mandatsablauf](/de/product/engagements). Die ältere v1 enthält Leistungsumfangs-/Zahlungsschritte; übertragen Sie ihre Reihenfolge nicht auf v2.
+
+## Identitäts- und Zugriffsregeln
+
+Der gewählte Geschäftsbereich bestimmt den angeforderten Verifizierungsumfang. Das Hochladen von Dokumenten bedeutet nicht, dass der Rechtsbeistand sie als bestanden markiert hat. Das Ausstellen eines Honorarangebots setzt voraus, dass alle erforderlichen KYC-Punkte bestanden und ihre Dateien verfügbar sind. Die untersuchte Annahmeaktion erzwingt diese Prüfung nicht. Dies beschreibt einen Produktablauf und ist keine rechtliche Bewertung der für Ihren Fall geltenden Verifizierungsvorschriften.
+
+Im untersuchten KYC-Upload sind PDF, JPEG, PNG, WebP und HEIC/HEIF mit höchstens **25 MiB pro Datei** und **10 Dateien pro Checklistenpunkt** vorgesehen. Ist der fortsetzbare Upload nicht verfügbar, gilt beim Multipart-Ersatzweg die niedrigere Grenze von **10 MiB pro Datei**. Leere Dateien und als verschlüsselt erkannte PDFs werden abgelehnt; eine Änderung des Dateinamens allein ändert den erkannten Dateityp nicht. Diese Grenzen gelten für Identitätsunterlagen, nicht für jeden Upload in Orbid. Der fortsetzbare KYC-Upload prüft zudem eine Gesamtgrenze von **300 MiB** anhand der gespeicherten Dateien der Aufnahmesitzung; andere Dateien dieser Sitzung zählen mit. [S20]
+
+Die untersuchten Uploadwege der Mandatsaufnahme können vor dem Hochladen eine Einwilligung zur Dateiverarbeitung, zur KI-Verarbeitung oder die Bestätigung geltender Hinweise verlangen. Lesen Sie den für Ihren Fall angezeigten Text und führen Sie die angeforderten Schritte aus, wenn Sie zustimmen; falls nicht oder falls Sie nicht fortfahren können, wenden Sie sich an die Kanzlei. Ein blockierter Upload bestätigt keinen Versand der Datei. [S38]
+
+Vor der Sperrung erfordert der v2-Tokenzugriff die passende Mandantensitzung und Eigentumsprüfungen. Eine Einladung kann die eingeladene E-Mail-Adresse voraussetzen; bei einer Abweichung müssen Sie sich mit dem vorgesehenen Konto anmelden oder die Kanzlei kontaktieren. Ein Token allein erteilt keine allgemeine Zugriffsberechtigung.
+
+## Fehler und gesperrte Informationen
+
+Bei der untersuchten v2-Verifizierung kann die Einreichung angehalten werden, wenn hochgeladene Identitätsdateien noch verarbeitet werden oder ihre Verarbeitung fehlgeschlagen ist. Prüfen Sie den Status und folgen Sie den angezeigten Hinweisen; bleibt das Problem bestehen, kontaktieren Sie die Kanzlei. Eine verarbeitete Datei kann weiterhin eine manuelle Prüfung erfordern und ist nicht automatisch KYC-freigegeben. [S40]
+
+Wurde die Erklärung gespeichert, aber die Sperre ist fehlgeschlagen, wiederholt der untersuchte Client bestimmte vorübergehende Fehler automatisch. Bei einer noch nie gesperrten Mandatsaufnahme kann eine erneute Einreichung die Sperre erneut versuchen. Prüfen Sie den angezeigten Status, bevor Sie von einer erfolgreichen Übergabe ausgehen; bleibt der Fehler bestehen, kontaktieren Sie die Kanzlei und geben Sie eine angezeigte Anfrage-ID an. Dies ersetzt nicht den gesonderten Ablauf für abgelehnte Mandatsaufnahmen. [S40]
+
+Fehlen Pflichtunterlagen oder schlägt Speichern/Hochladen fehl, beheben Sie den gemeldeten Punkt vor dem Absenden. Prüfen Sie vor dem Verlassen den gespeicherten Zustand. Nach Einreichen der Fakten können die früheren Schritte zur Erklärung und Prüfung während der ausstehenden Verifizierung schreibgeschützt angesehen werden. Das Einreichen der Verifizierung sperrt die Mandatsaufnahme und gibt sie an die Kanzlei frei; gehen Sie nicht davon aus, dass die früheren Schritte bearbeitbar bleiben. Ein abgelehntes Mandat besitzt einen kontrollierten Ablauf zum Wiederöffnen und erneuten Einreichen, beschrieben unter [Mandate](/de/product/engagements).
+
+Abgedeckte Geschäftsleistungen, genau erforderliche Dokumente, Vertretungsbefugnis der unterzeichnenden Person, lokalisierter Einwilligungstext und aktivierte Mandatsaufnahmeversion bleiben [Q11](/de/product/open-questions). Oberflächentexte unterscheiden sich zwischen Spezifikation und Implementierung; dieses Handbuch beschreibt Aktionen, ohne Schaltflächenbezeichnungen zu erfinden.
+
+{/* equivalents:start */}
+Sprachversionen dieser Seite: [English](/product/intake) · [Deutsch](/de/product/intake) · [繁體中文](/zh-TW/product/intake) · [简体中文](/zh-CN/product/intake)
+{/* equivalents:end */}

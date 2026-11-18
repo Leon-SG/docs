@@ -1,0 +1,48 @@
+---
+title: "Mandantenarbeitsbereich und Übergaben"
+description: "Anliegen der Organisation verfolgen, Anfragen beantworten und Arbeitsergebnisse des Rechtsbeistands empfangen."
+---
+
+
+Der Mandantenarbeitsbereich unter `/orbid/client` bündelt Fortschritt von Anliegen, Kommunikation, Dateien, angeforderte Aktionen, Mandatszahlungen und empfangene Übergaben. Er folgt auf die Übergabe der Mandatsaufnahme und verwendet Sichtbarkeitsprüfungen auf Organisations- und Anliegenebene. [S17]
+
+## Ein Anliegen bearbeiten
+
+1. Melden Sie sich mit dem Konto der Mandantenorganisation an, das mit dem Anliegen oder der Einladung verbunden ist.
+2. Öffnen Sie das relevante Anliegen und prüfen Sie aktuellen Status und offene Aktionen.
+3. Beantworten Sie Informations- oder Dokumentanfragen und prüfen Sie Dateien vor der Bestätigung.
+4. Wählen Sie den vorgesehenen Empfänger, soweit angeboten. Die Wahl steuert, ob der Assistent um eine Antwort gebeten wird; sie macht die Nachricht nicht zu einer vor dem Rechtsbeistand verborgenen privaten Unterhaltung. [S33]
+5. Prüfen Sie ein aktuelles Honorarangebot und führen Sie bei Bedarf die verfügbare Zahlungsaktion aus.
+6. Öffnen Sie übergebene Dateien, prüfen Sie Begleitinformationen und bestätigen Sie den Empfang, sofern diese Aktion verfügbar ist.
+
+Die untersuchte v2-Fortschrittsanzeige leitet ihre Phase aus dem aktuellen Mandatsstatus und dem Übergabemerkmal ab; sie ist kein vollständiges Ereignisprotokoll. Insbesondere wird der Status „bezahlt“ der Arbeitsphase zugeordnet, ohne den Start einer Hintergrundaufgabe zu belegen. Öffnen Sie verfügbare Details und klären Sie ungewisse Meilensteine mit der Kanzlei. [S36]
+
+Eine ausstehende Empfangsbestätigung, ein zahlbares Honorarangebot oder eine offene Mandantenaktion kann in der Statusübersicht Vorrang haben. Eine offene Mandantenaktion wird vor dem Abschlussstatus geprüft; andernfalls bleibt ein abgeschlossenes Anliegen auch bei älteren Zuständigkeitsmetadaten abgeschlossen. Eine Warte- oder Verarbeitungsanzeige garantiert nicht, dass der Rechtsbeistand die Arbeit angenommen, abgeschlossen oder übergeben hat.
+
+## Sichtbarkeit und Zugriff
+
+Für die untersuchte Leseregel für bezahlte Anliegen müssen Unternehmenszuordnung und relevanter Arbeitsbereich zur Mandantensitzung passen. Eine zusätzliche Prüfung der Anliegen-/Mitgliedersichtbarkeit kann gelten: Im untersuchten Code wird sie nur im aktivierten Modus durchgesetzt; der Shadow-Modus protokolliert Abweichungen ohne Sperre, der Off-Modus prüft sie nicht. Klären Sie die Bereitstellungskonfiguration, bevor Sie sich auf diese Einschränkung verlassen. [S25] Ein gebundenes Mandantenkonto erfasst, wer das Anliegen verknüpft hat; dies beschreibt für sich genommen nicht das vollständige Mitgliedschaftsberechtigungsmodell.
+
+Eine Einladung eines Kollegen oder ein geteiltes Token gewährt nicht automatisch Zugriff. Prüfen Sie bei einer Ablehnung angemeldete E-Mail-Adresse, Unternehmen, Einladungsempfänger und Anliegenzuordnung mit der Kanzlei. Leiten Sie aus einer einzelnen Hilfsfunktion niemals allgemeinen Zugriff für alle Unternehmensmitglieder ab. [Q13](/de/product/open-questions)
+
+## Dateien, Fehler und Status
+
+Im untersuchten Entwurfsablauf v2 sehen Mandanten Aufgabendateien erst nach Freigabe und Übergabe durch den Rechtsbeistand. Eine Übergabe kann mehrere Dateien enthalten, die einzeln heruntergeladen werden können. Die Downloadroute prüft die aufgezeichnete Dateiintegrität und kann eine fehlende oder abweichende Datei verweigern. Schlägt ein Download fehl, prüfen Sie Mandat und Übergabestatus und kontaktieren Sie die Kanzlei, bevor Sie den Empfang voraussetzen. [S42]
+
+Bei der untersuchten NDA-Aufgabenübergabe kann das formelle Dokument durch eine Übersetzung in der Mandantensprache oder bei einer Überarbeitung durch eine Änderungsnachverfolgung gegenüber der Ausgangsfassung ergänzt werden. Diese Links erscheinen nur, wenn die jeweiligen Dateien verfügbar und an die übergebene formelle Ausgabe gebunden sind. Das Produkt kennzeichnet die Übersetzung als unverbindliche Referenz und verweist auf den Vorrang des formellen Textes; fragen Sie den Rechtsbeistand nach der rechtlichen Wirkung. Fehlt eine erwartete Fassung, kontaktieren Sie die Kanzlei. [S41]
+
+Unterscheiden Sie von Ihnen angeforderte Dateien, von Ihnen bereitgestellte Dateien und vom Rechtsbeistand übergebene Dateien. Bestätigen Sie vor einer Antwort oder Empfangsbestätigung, dass Sie das richtige Anliegen und die richtige Dokumentversion sehen. Prüfen Sie bei fehlgeschlagenem Upload, Zahlung oder Nachricht vor einem erneuten Versuch den gespeicherten oder zurückgegebenen Zustand.
+
+Öffnen Sie im untersuchten KYC-Nachreichungsablauf den angeforderten Checklistenpunkt und laden Sie die Datei über das verfügbare Steuerelement hoch. Prüfen Sie danach den Status; eine bereitgestellte Datei bedeutet nicht automatisch, dass der Rechtsbeistand sie geprüft hat. Ältere Anfragen können auch gesondert aufgeführte Dokumentpunkte enthalten. Wird eine Anfrage zurückgezogen oder schlägt ein Upload fehl, aktualisieren Sie den Status und kontaktieren Sie die Kanzlei vor einem erneuten Versuch. [S28]
+
+Für gesondert aufgeführte ältere Dokumentanfragen verwendet das untersuchte Upload-Steuerelement die Regeln für Chat-Anhänge: `.pdf`, `.doc`, `.docx`, `.xls`, `.xlsx`, `.csv` oder `.txt` bis **50 MiB pro Datei**. Diese Grenzen unterscheiden sich von den [KYC-Identitätsunterlagen](/de/product/intake) und beschreiben nicht jeden Uploadweg. [S37]
+
+Im untersuchten bisherigen Empfangsablauf erfordert die Bestätigung einen Namen und erstellt oder verwendet einen Rechnungsdatensatz. Bei einer Neuerstellung wird der Rechnungsbetrag in USD aus den Preisen der Aufnahmemodule berechnet, nicht aus dem aktuellen Honorarangebot. Vergleichen Sie die Rechnung mit dem vereinbarten Angebot und der tatsächlichen Zahlung; kontaktieren Sie bei Abweichungen die Kanzlei. Der NDA-Aufgabenweg erstellt keine Rechnung aus dem Aufgabendatensatz; die Verfügbarkeit hängt vom jeweiligen Übergabedatensatz ab. [S24] Die offene Abstimmungsfrage steht unter [Q16](/de/product/open-questions).
+
+Die Statuslogik umfasst Warten auf Zuweisung, Arbeit durch Assistent oder Rechtsbeistand, Mandantenaktion, Übergabe und Abschluss. Zeitschätzungen hängen von regionaler und Bereitstellungskonfiguration ab; dieses Handbuch garantiert keine Antwortzeit. Eine Empfangsbestätigung dient der Empfangsabwicklung und ersetzt nicht die Prüfung fachlicher Inhalte.
+
+Siehe [Mandatsaufnahme](/de/product/intake), [Mandate](/de/product/engagements) und [gemeinsame Regeln](/de/product/rules). Benachrichtigungskanäle, Mitgliedschaftsrollen und Servicezeitzusagen bleiben [Q13](/de/product/open-questions).
+
+{/* equivalents:start */}
+Sprachversionen dieser Seite: [English](/product/client) · [Deutsch](/de/product/client) · [繁體中文](/zh-TW/product/client) · [简体中文](/zh-CN/product/client)
+{/* equivalents:end */}

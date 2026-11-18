@@ -1,0 +1,74 @@
+---
+title: "Source guide and verification scope"
+description: "Trace the manual to repository evidence and understand what was not runtime-tested."
+---
+
+
+This manual was checked against the supplied local product checkout. Source inspection establishes code and design evidence, not a successful production run.
+
+The follow-up checks recorded in the project verification report used product commit `91290bb972d8e92a381217cefaf61b1b92226785` on 2026-11-02. The product worktree contained other uncommitted changes; for the delivery files called out in that report, the committed versions were inspected. This identifies the review baseline, not the deployed version.
+
+## Reading source references
+
+| ID | Evidence paths | What it establishes |
+| --- | --- | --- |
+| S01 | `src/app/(orbid)/orbid/page.tsx`; `src/components/orbid/{nav-path.ts,nav-sidebar.tsx}`; `src/middleware.ts` | Host-aware counsel hub redirect and surface-specific navigation |
+| S02 | `src/app/(orbid)/orbid/(workspace)/counsel/{knowledge,memory,gaps,quality}/page.tsx`; `specs/2026-10-20-orbid-ui-spec-prd.md` | Placeholder routes versus specified intentions |
+| S11 | `src/app/(orbid)/orbid/(workspace)/counsel/library/page.tsx`; `src/components/orbid/counsel-library/library-list.tsx` | Counsel library list, search, upload, filters, and capability-dependent management |
+| S12 | `src/lib/orbid/counsel/delivery-checklist.ts` | Nonblocking reminders and reserved, unimplemented format checker |
+| S15 | `src/lib/orbid/matter/intake-step.ts`; `src/lib/orbid/matter/intake-v2-copy.ts`; `src/lib/orbid/client/paid-gate.ts`; `src/app/api/orbid/intake/[token]/verify/route.ts` | v1/v2 sequences, copy, lock, identity, and invitation checks |
+| S16 | `src/lib/orbid/matter/engagement.ts`; `src/lib/orbid/counsel/engagement-actions.ts`; `src/components/orbid/counsel/counsel-engagements.tsx`; `src/lib/orbid/client/engagement-payments.ts` | Engagement lifecycle, KYC gates, quote validity, decline reason, payment version checks |
+| S17 | `src/lib/orbid/client/{access,paid-gate,client-status}.ts`; `src/app/(orbid)/orbid/client/page.tsx` | Client workspace, organization visibility, actions, and status precedence |
+| S18 | `src/app/(orbid)/orbid/(workspace)/counsel/page.tsx`; `src/components/orbid/counsel/`; `src/lib/orbid/counsel/decide-adoption.ts` | Counsel workspace, document tools, and preservation of dirty edits |
+| S19 | `src/lib/orbid/settings/routes.ts`; `src/app/(orbid)/orbid/client/settings/page.tsx` | Settings sections and separate client settings entry |
+| S20 | `src/lib/orbid/kyc/upload-rules.ts`; `src/lib/orbid/kyc/upload-checklist.ts`; `src/lib/orbid/matter/intake-file-ingest.ts`; `src/app/api/orbid/intake/[token]/uploads/` | KYC upload types, size and checklist limits, and server validation |
+| S21 | `src/components/orbid/counsel-library/library-api.ts`; `src/components/orbid/counsel-library/upload-dialog.tsx`; `src/lib/orbid/counsel/library/{upload,ingest-send}.ts`; `src/app/api/orbid/counsel/library/documents/` | Counsel library upload dialog, server checks, duplicate detection, and ingestion queue |
+| S22 | `src/app/api/orbid/counsel/drafting-tasks/[taskId]/deliver/route.ts`; `src/lib/orbid/drafting/desk/deliver.ts`; `src/lib/orbid/counsel/{docx-comments,comment-audience.server}.ts`; `src/lib/orbid/kyc/{intake-gate,policy}.ts`; `src/lib/orbid/settings/business-gate.ts`; `src/app/api/orbid/counsel/deliver/route.ts` | Drafting task delivery route, checks, working copies, and comment choices |
+| S23 | `src/app/api/orbid/counsel/nda-review/[taskId]/delivery-authorization/route.ts`; `src/lib/orbid/counsel/review/unified/nda-deliveries.ts` | NDA task authorization, file binding, and export status |
+| S24 | `src/app/api/orbid/intake/[token]/acknowledge/route.ts`; `src/app/api/orbid/intake/[token]/deliverable/route.ts`; `src/lib/orbid/counsel/delivery.ts`; `src/lib/orbid/matter/intake-quote.ts` | Legacy delivery acknowledgment and invoice download; NDA task delivery distinction |
+| S25 | `src/lib/orbid/access/{flags,gates}.ts`; `src/lib/orbid/settings/client-routes.ts`; `src/app/(orbid)/orbid/client/settings/` | Client settings flag and matter-member enforcement modes |
+| S26 | `src/lib/orbid/settings/notifications.ts`; `src/lib/orbid/settings/org-admin-api.ts`; `src/lib/orbid/access/store.ts`; `src/lib/orbid/notify/client-notify.ts`; `src/components/orbid/settings/org-admin-panels.tsx` | Notification preferences, event mapping, and email sender behavior |
+| S27 | `src/lib/orbid/client/engagement-client.ts`; `src/lib/orbid/matter/engagement.ts`; `src/components/orbid/client/workspace/engagement-panel.tsx` | Client reopen and resubmission actions, KYC checks, and signature |
+| S28 | `src/lib/orbid/counsel/document-requests.ts`; `src/components/orbid/counsel/counsel-document-requests.tsx`; `src/components/orbid/client/workspace/client-requested-materials.tsx` | KYC supplement requests, legacy requested documents, and client upload handling |
+| S29 | `src/lib/orbid/matter/firm-invite.ts`; `src/lib/orbid/client/{intake-owner,paid-gate}.ts`; `src/lib/orbid/matter/thread-http.ts` | Firm invitation acceptance, company binding, and token access |
+| S30 | `src/lib/orbid/counsel/library/{types,ingest,store,view-model}.ts`; `supabase/migrations/20261019013500_counsel_library.sql`; `src/components/orbid/counsel-library/document-review.tsx`; `src/app/api/orbid/counsel/library/documents/[documentId]/review/route.ts` | Library ingestion statuses, review, and re-run eligibility |
+| S31 | `src/lib/orbid/counsel/library/{search,search-store}.ts`; `src/app/api/orbid/counsel/library/search/route.ts`; `src/components/orbid/counsel-library/library-search.tsx` | Library clause-search fallback, result metadata, and interface notices |
+| S32 | `src/lib/orbid/client/engagement-payments.ts`; `src/lib/orbid/nda-tasks/engagement-start.ts` | Paid engagement work dispatch and payment-result separation |
+| S33 | `src/components/orbid/client-shared/client-composer.tsx`; `src/lib/orbid/client/turn-payload.ts`; `src/app/api/orbid/intake/[token]/client-turn/route.ts` | Client composer recipient selection and shared intake thread handling |
+| S34 | `src/lib/orbid/payments/registry.ts`; `src/lib/orbid/client/engagement-payments.ts`; `src/components/orbid/client/workspace/engagement-pay.tsx` | Provider configuration and payment-method availability |
+| S35 | `src/lib/orbid/counsel/library/review-scan.ts`; `src/app/api/orbid/counsel/library/documents/[documentId]/review/route.ts`; `src/components/orbid/counsel-library/document-review.tsx` | Library review scan and completion conditions |
+| S36 | `src/lib/orbid/matter/client-stage-v2.ts`; `src/components/orbid/client/workspace/payment-progress-details.tsx` | Client v2 progress-stage projection and displayed details |
+| S37 | `src/lib/orbid/matter/intake-upload.ts`; `src/components/orbid/intake/use-intake-uploads.ts`; `src/components/orbid/client/workspace/client-requested-materials.tsx` | Legacy requested-material upload control and chat attachment rules |
+| S38 | `src/components/orbid/intake/use-intake-uploads.ts`; `src/components/orbid/upload/upload-runner.ts`; `src/app/api/orbid/intake/[token]/files/route.ts`; `src/lib/orbid/compliance/notice-acks.ts` | Intake upload consent and notice gates |
+| S39 | `src/lib/orbid/counsel/library/permissions.ts`; `src/lib/orbid/counsel/library/review-store.ts` | Library capability and document-visibility checks |
+| S40 | `src/app/api/orbid/intake/[token]/verify/route.ts`; `src/components/orbid/intake/intake-kyc-upload.tsx`; `src/lib/orbid/matter/intake-fetch.ts` | Verification submission processing checks, temporary-error retries, and lock recovery |
+| S41 | `src/app/api/orbid/intake/[token]/deliverable/route.ts`; `src/lib/orbid/counsel/nda/persist-docx.ts`; `src/components/orbid/intake/intake-deliverable.tsx` | NDA formal delivery, optional reference translation and tracked-changes copy |
+| S42 | `src/lib/orbid/drafting/desk/client-deliverable.ts`; `src/app/api/orbid/intake/[token]/deliverable/route.ts`; `src/components/orbid/intake/intake-deliverable.tsx` | Drafting v2 client delivery listing, file selection, and download integrity checks |
+| S43 | `src/components/orbid/settings/matter-access-form.tsx`; `src/lib/orbid/settings/{api,copy}.ts`; `src/lib/orbid/access/gates.ts` | Matter-access settings, administrator changes, and default-member limitation |
+| S44 | `src/lib/orbid/settings/{api,validate}.ts`; `src/components/orbid/settings/client/client-settings.tsx` | Client company profile changes, KYC re-review flags, and name synchronization |
+| S45 | `src/lib/orbid/settings/org-admin-api.ts`; `src/components/orbid/settings/org-admin-panels.tsx`; `src/components/orbid/settings/client/client-settings.tsx`; `src/components/orbid/settings/sections/team-section.tsx` | Administrator bulk invitations, per-address outcomes, and retry form |
+| S46 | `src/lib/orbid/ipo/{generate,read-sources,connectors}.ts`; `src/lib/orbid/counsel/store.ts` | Research connector invocation and workspace-scoped knowledge read |
+| S47 | `src/lib/orbid/access/{flags,permissions}.ts`; `src/lib/orbid/settings/org-admin-api.ts`; `src/components/orbid/settings/org-admin-panels.tsx` | Fine-grained role flag, member-role panel, and administrator boundary |
+| S48 | `src/lib/orbid/settings/org-admin-api.ts`; `src/components/orbid/settings/org-admin-panels.tsx`; `src/lib/orbid/counsel/delivery.ts` | Client billing projection, invoice-derived payment amounts, and record limit |
+| S49 | `src/components/orbid/settings/sections/connectors-section.tsx`; `src/lib/orbid/settings/{counsel-connectors,org-admin-api}.ts`; `src/lib/orbid/ipo/read-sources.ts` | Firm connector preference editing, default fallback, and source availability |
+| S50 | `src/lib/orbid/access/audit.ts`; `src/lib/orbid/settings/org-admin-api.ts`; `src/components/orbid/settings/org-admin-panels.tsx` | Audit event writes, sampling, ledger read fallback, and export limits |
+| S51 | `src/lib/orbid/identity/{membership,admin-api}.ts` | Organization membership changes, last-administrator check, and partial failures |
+| S52 | `src/app/api/orbid/counsel/library/documents/[documentId]/original/route.ts`; `src/lib/orbid/counsel/library/review-store.ts` | Original file download authorization and retention boundary |
+| S53 | `src/app/api/orbid/counsel/library/documents/[documentId]/route.ts`; `src/lib/orbid/counsel/library/governance-store.ts`; `supabase/migrations/20261102010000_counsel_library_retention.sql` | Firm document deletion, template unlinking, and storage removal |
+| S54 | `src/lib/orbid/counsel/library/{retention,agent-context}.ts`; `src/app/api/orbid/counsel/library/retention/route.ts`; `src/components/orbid/counsel-library/library-retention.tsx`; `src/lib/inngest/functions/counsel-library-jobs.ts`; `supabase/migrations/20261102010000_counsel_library_retention.sql` | Firm library retention settings, preview, and scheduled purge |
+| S55 | `src/lib/orbid/counsel/library/archive.ts`; `src/app/api/orbid/counsel/library/archive/route.ts`; `src/components/orbid/counsel/counsel-matter-files.tsx` | Matter-file archival to firm library, eligibility, batching, and duplicate handling |
+| S56 | `src/lib/orbid/counsel/kyc-upload-review.ts`; `src/lib/orbid/counsel/kyc-file-readiness.ts` | KYC pass file binding, legacy compatibility, and unavailable-file gate |
+
+## Evidence priority and limits
+
+Concrete routes and executable behavior take priority over an aspirational specification for claims about implementation. Source inspection does not establish deployment, permissions, pricing, or legal guarantees.
+
+This pass did not execute a real payment, identity verification, or legal delivery. Deployment and policy questions remain in [open questions](/product/open-questions).
+
+## Keeping translations aligned
+
+English is the sole content baseline. All canonical pages have the same suffix in `product/`, `de/product/`, `zh-TW/product/`, and `zh-CN/product/`. Update corresponding pages together, preserving source IDs, machine values, numbers, examples, limits, and uncertainty. Native Mintlify language navigation and equivalent-page links expose the four versions. The [official Mintlify navigation documentation](https://www.mintlify.com/docs/organize/navigation) is the framework reference, not evidence about Orbid features.
+
+{/* equivalents:start */}
+Page languages: [English](/product/sources) · [Deutsch](/de/product/sources) · [繁體中文](/zh-TW/product/sources) · [简体中文](/zh-CN/product/sources)
+{/* equivalents:end */}

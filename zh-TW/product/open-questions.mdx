@@ -1,0 +1,29 @@
+---
+title: "待確認事項與來源衝突"
+description: "尚未釐清的產品事實、受影響頁面、影響範圍與所需確認。"
+---
+
+
+以下問題保留不確定性，避免編造產品事實，不表示產品缺少某項功能。原始碼檢查支持文件中的基準內容；以下項目仍需要部署、政策及產品負責人確認。[S01]
+
+| ID | 問題或衝突 | 受影響頁面與影響 | 所需確認 |
+| --- | --- | --- | --- |
+| Q02 | 律師端知識／記憶／缺口／品質已有規格，但路徑為佔位頁面 | [知識](/zh-TW/product/knowledge)、[律師](/zh-TW/product/counsel)、[總覽](/zh-TW/product/overview)：尚未確立可用的獨立流程 | 功能負責人、實作狀態、啟用旗標與推出計畫 |
+| Q04 | 檔案支援與保留規則尚未完整確認 | [檔案](/zh-TW/product/files)：上傳與擷取預期 | 支援格式、大小限制、索引、刪除與保留期限 |
+| Q09 | 內部路徑不是受支援的外部 API 規格 | [總覽](/zh-TW/product/overview)、[設定](/zh-TW/product/settings) | 公開 API 範圍、版本、驗證方式、結構定義、速率限制與支援政策 |
+| Q10 | 記憶／知識範圍與保留資訊不完整 | [知識](/zh-TW/product/knowledge)、[規則](/zh-TW/product/rules) | 核准、刪除、來源溯源、跨工作階段可見性與持續儲存保證 |
+| Q11 | 委託資料收集 v1／v2 並存；規格書與已提供的文案不同 | [委託資料收集](/zh-TW/product/intake)、[流程](/zh-TW/product/workflows) | 啟用版本、支援服務、必要文件、簽署權限，以及在地化介面／同意標籤 |
+| Q12 | 付款服務商設定與商業政策依部署環境而異 | [委任](/zh-TW/product/engagements) | 真實與模擬服務商、幣別、取消／退款規則、稅務與付款人授權 |
+| Q13 | 客戶可見性取決於公司關聯及部署環境是否強制案件／成員檢查 | [客戶](/zh-TW/product/client)、[設定](/zh-TW/product/settings) | 完整成員角色、邀請、通知管道與服務時間承諾 |
+| Q14 | 介面規格書提出阻擋交付的檢查；已實作的提醒清單明確不阻擋 | [律師](/zh-TW/product/counsel)、[總覽](/zh-TW/product/overview) | 各任務的伺服器授權、核准要求、支援文件／修訂標示格式，以及格式檢查規劃 |
+| Q15 | 設定路徑涵蓋範圍超出已驗證的管理行為 | [設定](/zh-TW/product/settings)、[規則](/zh-TW/product/rules) | 角色矩陣、連接器前提、政策效果、稽核涵蓋範圍、地區主機代管，以及安全／保留保證 |
+| Q16 | 舊版發票金額與客戶計費頁付款金額取自發票或委託資料收集價格，而非經核實的服務商扣款 | [客戶工作區](/zh-TW/product/client)、[設定](/zh-TW/product/settings)：金額可能不一致或不完整 | 財務與產品負責人確認預期發票計算、對帳來源、受影響途徑與環境，以及修正方式 |
+| Q17 | 最後管理員檢查先讀取成員，再分別更新身分服務；尚未確認並行保護 | [設定](/zh-TW/product/settings)：同時變更可能造成非預期狀態 | 身分系統負責人確認並行行為、原子保護、受影響環境與修正方式 |
+
+## 如何解決項目
+
+記錄負責人、附日期的佐證、受影響版本／環境，以及最後決策。先更新英文頁面與此清單，再更新另外三個完整翻譯版本及相關[來源紀錄](/zh-TW/product/sources)。在佐證足以釐清前，持續明確保留未解決項目。不得從此清單推定推出日期或商業承諾。
+
+{/* equivalents:start */}
+本頁語言版本: [English](/product/open-questions) · [Deutsch](/de/product/open-questions) · [繁體中文](/zh-TW/product/open-questions) · [简体中文](/zh-CN/product/open-questions)
+{/* equivalents:end */}

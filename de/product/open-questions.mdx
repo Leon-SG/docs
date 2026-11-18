@@ -1,0 +1,29 @@
+---
+title: "Offene Fragen und Quellenwidersprüche"
+description: "Ungeklärte Produktfakten mit betroffenen Seiten, Auswirkungen und Bestätigungsbedarf."
+---
+
+
+Diese Fragen bewahren Unsicherheit, statt Produktfakten zu erfinden. Sie bedeuten nicht, dass dem Produkt eine Funktion fehlt. Die Quellcodeprüfung stützt die dokumentierte Grundlage; für die folgenden Punkte sind weiterhin Bestätigungen zu Bereitstellung, Richtlinien und durch Produktverantwortliche erforderlich. [S01]
+
+| ID | Frage oder Widerspruch | Betroffene Seiten und Auswirkung | Erforderliche Bestätigung |
+| --- | --- | --- | --- |
+| Q02 | Wissen/Gedächtnis/Lücken/Qualität der Rechtsberatung sind spezifiziert, ihre Routen aber Platzhalter | [Wissen](/de/product/knowledge), [Rechtsberatung](/de/product/counsel), [Übersicht](/de/product/overview): kein nutzbarer eigenständiger Ablauf belegt | Funktionsverantwortung, Implementierungsstand, aktivierte Flags und Bereitstellungsplan |
+| Q04 | Dateiunterstützung und Aufbewahrung sind nicht vollständig geklärt | [Dateien](/de/product/files): Erwartungen an Upload und Extraktion | Unterstützte Formate, Größenlimits, Indexierung, Löschung und Aufbewahrung |
+| Q09 | Interne Routen sind keine unterstützte externe API-Spezifikation | [Übersicht](/de/product/overview), [Einstellungen](/de/product/settings) | Öffentlicher API-Umfang, Version, Authentifizierung, Schemata, Ratenbegrenzungen und Supportrichtlinie |
+| Q10 | Gedächtnis-/Wissensumfang und Aufbewahrung sind unvollständig | [Wissen](/de/product/knowledge), [Regeln](/de/product/rules) | Freigabe, Löschung, Quellenherkunft, sitzungsübergreifende Sichtbarkeit und Persistenzgarantien |
+| Q11 | Mandatsaufnahme v1/v2 bestehen parallel; Spezifikation und ausgelieferte Texte weichen ab | [Mandatsaufnahme](/de/product/intake), [Abläufe](/de/product/workflows) | Aktive Version, unterstützte Leistungen, Pflichtdokumente, Zeichnungsbefugnis und lokalisierte Oberflächen-/Einwilligungsbezeichnungen |
+| Q12 | Zahlungsanbieterkonfiguration und kommerzielle Richtlinien hängen von der Bereitstellung ab | [Mandate](/de/product/engagements) | Echte gegenüber simulierten Anbietern, Währungen, Stornierungs-/Erstattungsregeln, Steuern und Berechtigung des Zahlenden |
+| Q13 | Mandantensichtbarkeit hängt von Unternehmenszuordnung und bereitstellungsabhängiger Anliegen-/Mitgliedsprüfung ab | [Mandant](/de/product/client), [Einstellungen](/de/product/settings) | Vollständige Mitgliedschaftsrollen, Einladungen, Benachrichtigungskanäle und Servicezeitzusagen |
+| Q14 | Oberflächenspezifikation sieht blockierende Übergabeprüfungen vor; implementierte Erinnerungslisten blockieren ausdrücklich nicht | [Rechtsberatung](/de/product/counsel), [Übersicht](/de/product/overview) | Serverseitige Berechtigung je Aufgabe, Freigabeanforderungen, unterstützte Dokument-/Änderungsmarkierungsformate und Formatprüfungsplanung |
+| Q15 | Einstellungsrouten gehen über das geprüfte administrative Verhalten hinaus | [Einstellungen](/de/product/settings), [Regeln](/de/product/rules) | Rollenmatrix, Konnektorvoraussetzungen, Richtlinienwirkung, Auditabdeckung, regionales Hosting und Sicherheits-/Aufbewahrungsgarantien |
+| Q16 | Ältere Rechnungsbeträge und Zahlungsbeträge der Mandantenabrechnung nutzen Rechnungs- oder Aufnahmepreisdaten statt einer verifizierten Anbieterbelastung | [Mandantenarbeitsbereich](/de/product/client), [Einstellungen](/de/product/settings): Beträge können abweichen oder unvollständig sein | Finanz- und Produktverantwortliche: vorgesehene Rechnungsberechnung, Abgleichsquelle, betroffene Wege und Umgebungen sowie Behebung |
+| Q17 | Die Prüfung des letzten Administrators liest Mitglieder vor getrennten Änderungen beim Identitätsdienst; Schutz bei Parallelität ist nicht nachgewiesen | [Einstellungen](/de/product/settings): parallele Änderungen könnten zu einem unerwarteten Zustand führen | Identitätsverantwortliche: Verhalten bei Parallelität, atomarer Schutz, betroffene Umgebungen und Behebung |
+
+## Einen Punkt klären
+
+Dokumentieren Sie verantwortliche Person, datierte Nachweise, betroffene Version/Umgebung und resultierende Entscheidung. Aktualisieren Sie zuerst die englische Seite und diese Liste, anschließend alle drei vollständigen Übersetzungen und den relevanten [Quelleneintrag](/de/product/sources). Halten Sie ungeklärte Punkte ausdrücklich offen, bis Nachweise sie klären. Aus dieser Liste dürfen weder Veröffentlichungstermine noch kommerzielle Zusagen abgeleitet werden.
+
+{/* equivalents:start */}
+Sprachversionen dieser Seite: [English](/product/open-questions) · [Deutsch](/de/product/open-questions) · [繁體中文](/zh-TW/product/open-questions) · [简体中文](/zh-CN/product/open-questions)
+{/* equivalents:end */}

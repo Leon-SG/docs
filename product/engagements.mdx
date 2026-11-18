@@ -1,0 +1,47 @@
+---
+title: "Engagement review, quotes, and payment"
+description: "Follow acceptance, quoting, payment, and controlled resubmission rules."
+---
+
+
+An intake handoff is not an accepted, paid engagement. Counsel reviews the locked submission, decides acceptance, and issues a quote; the client then reviews the quote and pays through an enabled provider. [S16]
+
+## Counsel review
+
+1. Open the engagement queue at `/orbid/counsel/engagements` using an authorized firm account.
+2. Inspect the locked intake, identity checklist, and available documents.
+3. Review required KYC items. Before issuing a quote, all required items must be marked passed and their files must be available. The inspected acceptance action does not enforce this gate.
+4. Accept or decline the engagement. A decline needs a client-facing reason of at least **10 characters**; the internal note is separate and is not shown to the client by the engagement view.
+5. After acceptance, prepare and issue the quote. Acceptance and quote issuance are distinct steps.
+
+The source lifecycle includes `pending_review → accepted → quoted → paid`. Decline enters `declined`; controlled reopening uses `reopened` before resubmission. Matter status and engagement status are different fields and need not share the same names.
+
+A quote draft can be saved during review, after reopening or acceptance, or while preparing a replacement. Saving a draft does not change the engagement status or notify the client. Issuing it is a separate action: the engagement must have been accepted, and the required KYC and file checks must pass. The issued quote replaces the saved draft; a sent quote is replaced by issuing a new version rather than withdrawing it. [S16]
+
+## Client quote and payment
+
+Review the scope, amount, currency, validity, and quote version in the client workspace. The source default validity is **14 days**; counsel can set **1–60 days**. Supported quote currency identifiers in the model are `EUR`, `USD`, and `CNY`; this does not establish that every provider accepts every currency.
+
+In the inspected fixed-price flow, the client cannot decline a quote through the quote action. If the terms need to change or the quote expires, contact the firm; counsel can issue a replacement with a new version. Do not confuse this with counsel declining the engagement. [S16]
+
+A fixed-price confirmation can accept the quote and start payment together. The server obtains the payable amount and currency from the quote, rather than trusting browser-supplied values. A failed payment may leave the quote accepted so the client can retry. Verify the returned payment status rather than treating a click as a successful charge.
+
+Provider configuration distinguishes real and simulated payment paths. A local mock payment is not evidence of a production charge. Do not enter or rely on test-payment instructions as a production procedure. The inspected engagement flow opens the v2 counsel workbench after the engagement is paid, rather than immediately after acceptance.
+
+A successful payment does not by itself prove that the background work has started or finished. The inspected code records payment and then attempts to enqueue eligible work; a dispatch failure does not undo the payment result. If payment succeeded but work does not appear, check the matter status and contact the firm rather than making another payment. [S32]
+
+If no online payment method is available, contact the firm to confirm how to proceed. A displayed provider name alone does not establish that the deployment is using a real payment provider; check the payment screen and ask the firm if the mode is unclear. [S34]
+
+## Exceptions and recovery
+
+In the inspected online payment flow, starting payment creates a payment request; a pending request is not a successful payment. A request can expire independently of the quote. If the screen reports that payment timed out, check the latest payment and quote status before starting again; if the outcome is unclear, contact the firm before attempting another payment. A current, valid quote is still required. [S34]
+
+Expired or replaced quotes need a current version; reload before acting on a stale quote. Concurrent engagement changes can return a stale-state or assignment conflict. Do not repeat an action blindly. In the inspected lifecycle, a declined intake can be resubmitted at most **two times**; check the remaining availability in the client view.
+
+To revise a declined intake, open the matter in the client workspace and use the reopen action when offered. Update the information or files and check the KYC list. Before resubmitting, supply a file for each required KYC item and enter the signer name requested by the interface. Resubmission records a new signature, locks the intake again, and returns it to counsel for review. If the limit is reached or an action is unavailable, contact the firm. [S27]
+
+Firm visibility, workspace assignment, and operator privileges affect review access. Full refund/cancellation rules, deployed payment methods, tax treatment, currency coverage, and client authorization remain [Q12](/product/open-questions). Continue with [client workspace](/product/client) or [counsel work](/product/counsel).
+
+{/* equivalents:start */}
+Page languages: [English](/product/engagements) · [Deutsch](/de/product/engagements) · [繁體中文](/zh-TW/product/engagements) · [简体中文](/zh-CN/product/engagements)
+{/* equivalents:end */}

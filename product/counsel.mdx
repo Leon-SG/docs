@@ -1,0 +1,66 @@
+---
+title: "Counsel matter and document workspace"
+description: "Review source documents, manage legal work, and deliver approved outputs."
+---
+
+
+The counsel workspace combines matter conversation, files, a document working area, and review tools. The current product hub redirects to counsel. The route and concrete components establish implementation, but not deployment availability or the completion of every operation described in a UI specification. [S01, S18]
+
+## Open and work on a matter
+
+1. Sign in with an authorized firm account and open the counsel workspace from your organization’s entry. Its route is `/orbid/counsel` on a shared host or `/counsel` on a configured dedicated host; see [access and routes](/product/rules).
+2. Find the matter or complete [engagement review](/product/engagements) first. For intake v2, the source engagement flow gates the workbench on payment.
+3. Inspect the matter's facts, files, requests, and conversation before asking for analysis or drafting.
+4. Open the relevant source document or working copy. Check its identity and source references.
+5. Inspect review findings, annotations, proposed changes, and generated work. Decide which changes to retain using the operations available for that document/task.
+6. Review the delivery checklist and available approval/delivery action, then inspect the final output sent to the client.
+
+**Illustrative request:**
+
+```text
+Review this document against the confirmed matter facts. Show the source for each concern and keep unresolved facts explicit.
+```
+
+## Working copies and professional judgment
+
+Source documents, generated drafts, and lawyer working copies are different objects. Check which one is open before editing or delivering. The inspected document-adoption logic preserves dirty local edits during ordinary incoming updates; explicit forced regeneration is a separate path. Save and inspect the current version before switching or regenerating.
+
+### KYC supplements and review
+
+The inspected current supplement-request action names KYC checklist items; older requests may still contain free-text document items. Review the returned files and KYC status before marking an item passed. Request history can show open, partially answered, answered, or cancelled states, and an open request may be withdrawn. If creating a request fails, check the current KYC status, message thread, and request history before retrying: the KYC update occurs before the later message and request-record steps. Withdrawing the request does not itself restore the previous KYC item or file state; check the current KYC status and coordinate any next steps with the client. A provided file is not automatically a verified KYC item. [S28] [S56]
+
+For a KYC supplement request in the inspected flow, the selected required items return to pending and their existing file IDs move out of the current item list into superseded history. The client must provide the requested files again; superseded does not by itself mean the underlying file was deleted. [S56]
+
+In the inspected KYC review, a pass recorded with file identities applies to that file set. If the current set differs, or a file is unavailable, the item is treated as pending for the reviewed gate. Historical pass records may lack file identities and follow a compatibility rule, so do not assume every older pass was checked against the current files. Recheck the files and item status before relying on it. [S56]
+
+### Professional review
+
+AI-generated legal content needs counsel's assessment. A review finding, annotation, drafting task, and client-facing note serve different purposes. Check recipient visibility before adding sensitive internal analysis. Follow document/source references and resolve missing or invalid citations rather than treating them as verified.
+
+## Delivery checks and limits
+
+The implemented delivery checklist contains file and project reminders for review findings, draft checks, files, KYC, missing facts, requests, and other deliverables. It explicitly says these reminder lists do **not** themselves block delivery; server-side checks for the applicable delivery path determine whether delivery can proceed. It also reserves a format-check row without an implemented format checker. Do not describe the stricter blocking behavior proposed in the UI specification as universal runtime behavior. [S12]
+
+### Drafting v2 delivery
+
+For the inspected drafting v2 task path, counsel must confirm review; the task must have succeeded, contain published files, and not already be delivered. The route checks matter access and calls the delivery-permission and KYC gates. The fine-role gate is conditional on its feature switch; the inspected KYC gate applies when enabled and the client is not explicitly an individual. All published files are delivered together using the current working copy when present, otherwise the generated file. When native comments are detected, a comment-handling choice is required; inspect the chosen audience before delivery. These conditions are specific to this path. [S22]
+
+The quote and delivery checks are separate. The inspected quote action checks intake KYC items and file availability, while the conditional delivery gate reads a KYC case status and validity. Passing the quote check alone does not establish that the delivery gate will pass; check the applicable status before delivery. [S16, S22]
+
+In the reviewed commit `91290bb97`, the drafting v2 path accepts these choices when native comments are detected: `keep` (retain all), `strip` (remove all), or `client` (retain comments marked for the client or both audiences). Unmarked comment threads default to internal for the `client` choice. Choosing `keep` can include internal comments in the delivered file; inspect the output and audience markings before confirming. These choices are version-specific; check the deployed path and its available options before delivery. [S22]
+
+### NDA task authorization
+
+For the inspected NDA task path, an authorized lawyer explicitly authorizes a specific task artifact; a review task with multiple source files requires the relevant file to be selected. Authorization alone is not delivery: the export must be recorded before the client sees it. Changes to the review selection can invalidate authorization and require a fresh authorization. Check the resulting export status before telling the client it is ready. [S23]
+
+In this inspected NDA task authorization path, the server does not impose a candidate-completeness or citation-verification threshold, and authorization does not mark citations verified. Counsel must review the relevant findings and sources before authorizing; successful authorization alone is not evidence that those checks were completed. [S23]
+
+### Other limits and recovery
+
+The dedicated counsel knowledge, memory, gaps, and quality pages are placeholders. Matter-specific requests or findings do not change that status. Available document types, redline behavior per format, approval requirements, and the relation between reminder checks and server delivery gates remain [Q14](/product/open-questions).
+
+If loading, preview, generation, or delivery fails, inspect the reported error and preserved working copy before retrying. Continue with the [client delivery flow](/product/client), [library](/product/files), or [open questions](/product/open-questions).
+
+{/* equivalents:start */}
+Page languages: [English](/product/counsel) · [Deutsch](/de/product/counsel) · [繁體中文](/zh-TW/product/counsel) · [简体中文](/zh-CN/product/counsel)
+{/* equivalents:end */}

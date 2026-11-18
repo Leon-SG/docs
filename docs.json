@@ -2,7 +2,7 @@
   "$schema": "https://mintlify.com/docs.json",
   "theme": "mint",
   "name": "Orbid AI",
-  "description": "Orbid AI (formerly MedStrato) help center: native AI agent for medical-device tenders. Workflows, prompts, FAQs (scan/match/fill, cellmap, go/no-go), tools reference.",
+  "description": "Orbid AI product documentation for client intake, legal matters, counsel review, and delivery.",
   "colors": {
     "primary": "#8B1E1E",
     "light": "#A82828",
@@ -11,602 +11,238 @@
   "favicon": "/favicon.svg",
   "redirects": [
     {
-      "source": "/guides/user-manual",
-      "destination": "/quickstart",
+      "source": "/",
+      "destination": "/product/index",
       "permanent": true
     },
     {
-      "source": "/guides/kol",
-      "destination": "/guides/what-is-orbid",
-      "permanent": true
-    },
-    {
-      "source": "/guides/kol/overview",
-      "destination": "/guides/what-is-orbid",
-      "permanent": true
-    },
-    {
-      "source": "/guides/kol/create-kol",
-      "destination": "/guides/what-is-orbid",
-      "permanent": true
-    },
-    {
-      "source": "/guides/kol/import-kols-csv",
-      "destination": "/guides/what-is-orbid",
-      "permanent": true
-    },
-    {
-      "source": "/guides/kol/kol-profile-and-insights",
-      "destination": "/guides/what-is-orbid",
-      "permanent": true
-    },
-    {
-      "source": "/guides/kol/activity-monitoring",
-      "destination": "/guides/what-is-orbid",
-      "permanent": true
-    },
-    {
-      "source": "/guides/kol/public-profile-page",
-      "destination": "/guides/what-is-orbid",
-      "permanent": true
-    },
-    {
-      "source": "/guides/kol/digital-business-card-qr",
-      "destination": "/guides/what-is-orbid",
-      "permanent": true
-    },
-    {
-      "source": "/guides/events",
-      "destination": "/guides/what-is-orbid",
-      "permanent": true
-    },
-    {
-      "source": "/guides/events/guide",
-      "destination": "/guides/what-is-orbid",
-      "permanent": true
-    },
-    {
-      "source": "/guides/events/event-details",
-      "destination": "/guides/what-is-orbid",
-      "permanent": true
-    },
-    {
-      "source": "/guides/events/public-event-page-settings",
-      "destination": "/guides/what-is-orbid",
-      "permanent": true
-    },
-    {
-      "source": "/guides/events/public-page-and-registration",
-      "destination": "/guides/what-is-orbid",
-      "permanent": true
-    },
-    {
-      "source": "/guides/campaign",
-      "destination": "/guides/what-is-orbid",
-      "permanent": true
-    },
-    {
-      "source": "/guides/campaign/email-templates",
-      "destination": "/guides/what-is-orbid",
-      "permanent": true
-    },
-    {
-      "source": "/guides/campaign/personalization-variables",
-      "destination": "/guides/what-is-orbid",
-      "permanent": true
-    },
-    {
-      "source": "/guides/campaign/preview-and-testing",
-      "destination": "/guides/what-is-orbid",
-      "permanent": true
-    },
-    {
-      "source": "/guides/signals",
-      "destination": "/guides/what-is-orbid",
-      "permanent": true
-    },
-    {
-      "source": "/guides/signals/overview",
-      "destination": "/guides/what-is-orbid",
-      "permanent": true
-    },
-    {
-      "source": "/guides/signals/signal-details",
-      "destination": "/guides/what-is-orbid",
-      "permanent": true
-    },
-    {
-      "source": "/guides/press",
-      "destination": "/guides/what-is-orbid",
-      "permanent": true
-    },
-    {
-      "source": "/guides/press/overview",
-      "destination": "/guides/what-is-orbid",
-      "permanent": true
-    },
-    {
-      "source": "/guides/press/create-article",
-      "destination": "/guides/what-is-orbid",
-      "permanent": true
-    },
-    {
-      "source": "/guides/press/improve-article",
-      "destination": "/guides/what-is-orbid",
-      "permanent": true
-    },
-    {
-      "source": "/guides/map",
-      "destination": "/guides/what-is-orbid",
-      "permanent": true
-    },
-    {
-      "source": "/guides/map/overview",
-      "destination": "/guides/what-is-orbid",
-      "permanent": true
-    },
-    {
-      "source": "/guides/map/interactive-network-analysis",
-      "destination": "/guides/what-is-orbid",
-      "permanent": true
-    },
-    {
-      "source": "/guides/training",
-      "destination": "/guides/what-is-orbid",
-      "permanent": true
-    },
-    {
-      "source": "/guides/training/overview",
-      "destination": "/guides/what-is-orbid",
-      "permanent": true
-    },
-    {
-      "source": "/guides/training/start-session",
-      "destination": "/guides/what-is-orbid",
-      "permanent": true
-    },
-    {
-      "source": "/guides/training/team-performance",
-      "destination": "/guides/what-is-orbid",
-      "permanent": true
-    },
-    {
-      "source": "/guides/trends",
-      "destination": "/guides/what-is-orbid",
-      "permanent": true
-    },
-    {
-      "source": "/guides/trends/overview",
-      "destination": "/guides/what-is-orbid",
-      "permanent": true
-    },
-    {
-      "source": "/guides/trends/trend-details",
-      "destination": "/guides/what-is-orbid",
-      "permanent": true
-    },
-    {
-      "source": "/guides/investigations",
-      "destination": "/guides/what-is-orbid",
-      "permanent": true
-    },
-    {
-      "source": "/guides/investigations/overview",
-      "destination": "/guides/what-is-orbid",
-      "permanent": true
-    },
-    {
-      "source": "/guides/investigations/create-investigation",
-      "destination": "/guides/what-is-orbid",
-      "permanent": true
-    },
-    {
-      "source": "/guides/registration",
-      "destination": "/guides/what-is-orbid",
-      "permanent": true
-    },
-    {
-      "source": "/guides/tenders",
-      "destination": "/guides/workflows",
-      "permanent": true
-    },
-    {
-      "source": "/guides/tenders/index",
-      "destination": "/guides/workflows",
-      "permanent": true
-    },
-    {
-      "source": "/guides/tenders/create-tender",
-      "destination": "/guides/workspace/agents-sessions",
-      "permanent": true
-    },
-    {
-      "source": "/guides/tenders/document-parse",
-      "destination": "/guides/skills/scan",
-      "permanent": true
-    },
-    {
-      "source": "/guides/tenders/technical-editor",
-      "destination": "/guides/skills/match",
-      "permanent": true
-    },
-    {
-      "source": "/guides/tenders/commercial-editor",
-      "destination": "/guides/skills/fill",
-      "permanent": true
-    },
-    {
-      "source": "/guides/tenders/tender-package",
-      "destination": "/guides/skills/deliverables",
-      "permanent": true
-    },
-    {
-      "source": "/guides/tenders/bid-autopilot",
-      "destination": "/guides/skills",
-      "permanent": true
-    },
-    {
-      "source": "/guides/tenders/tender-intel",
-      "destination": "/guides/skills/scan",
-      "permanent": true
-    },
-    {
-      "source": "/guides/tenders/post-bid-evaluation",
-      "destination": "/guides/skills/packages-review",
-      "permanent": true
-    },
-    {
-      "source": "/guides/products",
-      "destination": "/guides/workspace/library",
-      "permanent": true
-    },
-    {
-      "source": "/guides/products/overview",
-      "destination": "/guides/workspace/library",
-      "permanent": true
-    },
-    {
-      "source": "/guides/products/create-product",
-      "destination": "/guides/skills/catalog-library",
-      "permanent": true
-    },
-    {
-      "source": "/guides/products/product-detail",
-      "destination": "/guides/skills/catalog-library",
-      "permanent": true
-    },
-    {
-      "source": "/guides/products/compare-products",
-      "destination": "/guides/skills/catalog-library",
-      "permanent": true
-    },
-    {
-      "source": "/guides/products/competitive-dashboard",
-      "destination": "/guides/skills/research-monitors",
-      "permanent": true
-    },
-    {
-      "source": "/roles/for-medical-affairs",
-      "destination": "/roles/for-bid-teams",
-      "permanent": true
-    },
-    {
-      "source": "/roles/for-marketing",
-      "destination": "/roles/for-bid-teams",
-      "permanent": true
-    },
-    {
-      "source": "/use-cases/kol-engagement-workflow",
-      "destination": "/use-cases",
-      "permanent": true
-    },
-    {
-      "source": "/use-cases/event-management-lifecycle",
-      "destination": "/use-cases",
-      "permanent": true
-    },
-    {
-      "source": "/use-cases/regulatory-signal-monitoring",
-      "destination": "/use-cases",
-      "permanent": true
-    },
-    {
-      "source": "/use-cases/ai-powered-research",
-      "destination": "/guides/skills/research-monitors",
-      "permanent": true
-    },
-    {
-      "source": "/use-cases/tender-bid-automation",
-      "destination": "/use-cases/ultrasound-tender",
-      "permanent": true
-    },
-    {
-      "source": "/best-practices",
-      "destination": "/guides/workflows/medical-device-bid-workflow",
-      "permanent": true
-    },
-    {
-      "source": "/best-practices/kol-tiering-methodology",
-      "destination": "/guides/what-is-orbid",
-      "permanent": true
-    },
-    {
-      "source": "/best-practices/event-invitation-best-practices",
-      "destination": "/guides/what-is-orbid",
-      "permanent": true
-    },
-    {
-      "source": "/best-practices/ai-prompt-tips",
-      "destination": "/guides/skills",
-      "permanent": true
-    },
-    {
-      "source": "/guides/ai-native-workflow",
-      "destination": "/guides/skills",
-      "permanent": true
-    },
-    {
-      "source": "/guides/ai-native-workflow/guide",
-      "destination": "/guides/skills",
-      "permanent": true
-    },
-    {
-      "source": "/guides/ai-native-workflow/index",
-      "destination": "/guides/skills",
-      "permanent": true
-    },
-    {
-      "source": "/api-reference/kols/list",
-      "destination": "/api-reference/introduction",
-      "permanent": true
-    },
-    {
-      "source": "/api-reference/kols/get",
-      "destination": "/api-reference/introduction",
-      "permanent": true
-    },
-    {
-      "source": "/api-reference/kols/create",
-      "destination": "/api-reference/introduction",
-      "permanent": true
-    },
-    {
-      "source": "/api-reference/events/list",
-      "destination": "/api-reference/introduction",
-      "permanent": true
-    },
-    {
-      "source": "/api-reference/events/create",
-      "destination": "/api-reference/introduction",
-      "permanent": true
-    },
-    {
-      "source": "/api-reference/campaigns/list",
-      "destination": "/api-reference/introduction",
-      "permanent": true
-    },
-    {
-      "source": "/api-reference/campaigns/create",
-      "destination": "/api-reference/introduction",
-      "permanent": true
-    },
-    {
-      "source": "/api-reference/signals/list",
-      "destination": "/api-reference/introduction",
-      "permanent": true
-    },
-    {
-      "source": "/api-reference/products/list",
-      "destination": "/api-reference/introduction",
-      "permanent": true
-    },
-    {
-      "source": "/api-reference/webhooks",
-      "destination": "/api-reference/introduction",
-      "permanent": true
-    },
-    {
-      "source": "/guides/settings/company-profile",
-      "destination": "/guides/workspace/setup-settings-billing",
-      "permanent": true
-    },
-    {
-      "source": "/guides/settings/teams-and-permissions",
-      "destination": "/guides/workspace/setup-settings-billing",
-      "permanent": true
-    },
-    {
-      "source": "/guides/billings",
-      "destination": "/guides/workspace/setup-settings-billing",
-      "permanent": true
-    },
-    {
-      "source": "/guides/billings/index",
-      "destination": "/guides/workspace/setup-settings-billing",
-      "permanent": true
-    },
-    {
-      "source": "/guides/core-loop",
-      "destination": "/guides/how-the-agent-works",
-      "permanent": true
-    },
-    {
-      "source": "/guides/workflows/medical-device-bid-workflow",
-      "destination": "/guides/workflows",
-      "permanent": true
-    },
-    {
-      "source": "/guides/workflows/go-no-go-checklist",
-      "destination": "/guides/workflows/decide-go-no-go",
-      "permanent": true
-    },
-    {
-      "source": "/guides/workflows/fill-residual-review",
-      "destination": "/guides/workflows/fill-excel",
-      "permanent": true
-    },
-    {
-      "source": "/guides/skills",
-      "destination": "/guides/skills/index",
-      "permanent": true
-    },
-    {
-      "source": "/faq/scan-match-fill",
-      "destination": "/faq/scan-vs-match-vs-fill",
-      "permanent": true
-    },
-    {
-      "source": "/best-practices/index",
-      "destination": "/guides/what-to-say",
+      "source": "/index",
+      "destination": "/product/index",
       "permanent": true
     }
   ],
   "navigation": {
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "icon": "book-open-cover",
-          "href": "/"
-        },
-        {
-          "anchor": "Workflows",
-          "icon": "route",
-          "href": "/guides/workflows"
-        },
-        {
-          "anchor": "What to say",
-          "icon": "comments",
-          "href": "/guides/what-to-say"
-        },
-        {
-          "anchor": "Product",
-          "icon": "globe",
-          "href": "https://orbid.dev"
-        }
-      ]
-    },
-    "tabs": [
+    "languages": [
       {
-        "tab": "Guides",
+        "language": "en",
+        "default": true,
+        "navbar": {
+          "links": [
+            {
+              "label": "Product",
+              "href": "https://orbid.dev/"
+            },
+            {
+              "label": "Book Demo",
+              "href": "https://orbid.dev/book"
+            },
+            {
+              "label": "Pricing",
+              "href": "https://orbid.dev/pricing"
+            }
+          ],
+          "primary": {
+            "type": "button",
+            "label": "Open Orbid AI",
+            "href": "https://orbid.dev"
+          }
+        },
         "groups": [
           {
-            "group": "Getting Started",
+            "group": "Start here",
             "pages": [
-              "index",
-              "guides/what-is-orbid",
-              "quickstart",
-              "guides/how-the-agent-works"
+              "product/index",
+              "product/overview",
+              "product/rules",
+              "product/workflows"
             ]
           },
           {
-            "group": "Common workflows",
+            "group": "Client and counsel",
             "pages": [
-              "guides/workflows/index",
-              "guides/workflows/scan-a-tender",
-              "guides/workflows/match-and-review-gaps",
-              "guides/workflows/decide-go-no-go",
-              "guides/workflows/fill-excel",
-              "guides/workflows/generate-deliverables"
+              "product/intake",
+              "product/engagements",
+              "product/client",
+              "product/counsel",
+              "product/files",
+              "product/knowledge",
+              "product/settings"
             ]
           },
           {
-            "group": "Working with the agent",
+            "group": "Reference and evidence",
             "pages": [
-              "guides/workspace/agents-sessions",
-              "guides/workspace/library",
-              "guides/workspace/knowledge",
-              "guides/workspace/memory",
-              "guides/workspace/templates",
-              "guides/workspace/review",
-              "guides/workspace/setup-settings-billing",
-              "guides/what-to-say",
-              "guides/trust-and-judgment"
-            ]
-          },
-          {
-            "group": "Tools reference",
-            "pages": [
-              "guides/skills/index",
-              "guides/skills/scan",
-              "guides/skills/match",
-              "guides/skills/fill",
-              "guides/skills/go-no-go",
-              "guides/skills/deliverables",
-              "guides/skills/eligibility-risk",
-              "guides/skills/catalog-library",
-              "guides/skills/research-monitors",
-              "guides/skills/knowledge-memory",
-              "guides/skills/packages-review"
-            ]
-          },
-          {
-            "group": "Concepts",
-            "pages": [
-              "concepts/cellmap",
-              "concepts/formal-vs-rank-match",
-              "concepts/residual",
-              "concepts/product-lock-branches",
-              "concepts/compliance-matrix",
-              "concepts/deviation",
-              "concepts/evidence-and-ownership",
-              "glossary"
-            ]
-          },
-          {
-            "group": "FAQ",
-            "pages": [
-              "faq/index",
-              "faq/scan-vs-match-vs-fill",
-              "faq/what-is-a-cellmap",
-              "faq/rank-vs-formal-match",
-              "faq/what-is-go-no-go",
-              "faq/what-is-bid-fill",
-              "faq/what-orbid-is-not",
-              "faq/go-no-go-and-limits",
-              "faq/matching-and-evidence",
-              "faq/privacy-and-ownership",
-              "faq/what-is-a-residual",
-              "faq/what-is-an-agent-session",
-              "faq/does-orbid-submit-bids",
-              "faq/what-is-product-lock",
-              "faq/what-is-a-compliance-matrix",
-              "faq/knowledge-vs-memory"
-            ]
-          },
-          {
-            "group": "Use cases",
-            "pages": [
-              "use-cases/index",
-              "use-cases/ultrasound-tender",
-              "use-cases/defibrillator-tender",
-              "use-cases/evaluating-bid-ai-tools"
-            ]
-          },
-          {
-            "group": "For your role",
-            "pages": [
-              "roles/for-bid-teams",
-              "roles/for-product-managers",
-              "roles/for-regulatory-specialists"
-            ]
-          },
-          {
-            "group": "Operations",
-            "pages": [
-              "guides/brand-and-domains",
-              "operating-regions"
+              "product/glossary",
+              "product/sources",
+              "product/open-questions"
             ]
           }
         ]
       },
       {
-        "tab": "API Reference",
+        "language": "de",
+        "default": false,
+        "navbar": {
+          "links": [
+            {
+              "label": "Produkt",
+              "href": "https://orbid.dev/"
+            },
+            {
+              "label": "Demo vereinbaren",
+              "href": "https://orbid.dev/book"
+            },
+            {
+              "label": "Preise",
+              "href": "https://orbid.dev/pricing"
+            }
+          ],
+          "primary": {
+            "type": "button",
+            "label": "Orbid AI öffnen",
+            "href": "https://orbid.dev"
+          }
+        },
         "groups": [
           {
-            "group": "Overview",
+            "group": "Einstieg",
             "pages": [
-              "api-reference/introduction"
+              "de/product/index",
+              "de/product/overview",
+              "de/product/rules",
+              "de/product/workflows"
+            ]
+          },
+          {
+            "group": "Mandanten und Rechtsbeistand",
+            "pages": [
+              "de/product/intake",
+              "de/product/engagements",
+              "de/product/client",
+              "de/product/counsel",
+              "de/product/files",
+              "de/product/knowledge",
+              "de/product/settings"
+            ]
+          },
+          {
+            "group": "Referenz und Nachweise",
+            "pages": [
+              "de/product/glossary",
+              "de/product/sources",
+              "de/product/open-questions"
+            ]
+          }
+        ]
+      },
+      {
+        "language": "zh-Hant",
+        "default": false,
+        "navbar": {
+          "links": [
+            {
+              "label": "產品",
+              "href": "https://orbid.dev/"
+            },
+            {
+              "label": "預約示範",
+              "href": "https://orbid.dev/book"
+            },
+            {
+              "label": "價格方案",
+              "href": "https://orbid.dev/pricing"
+            }
+          ],
+          "primary": {
+            "type": "button",
+            "label": "開啟 Orbid AI",
+            "href": "https://orbid.dev"
+          }
+        },
+        "groups": [
+          {
+            "group": "從這裡開始",
+            "pages": [
+              "zh-TW/product/index",
+              "zh-TW/product/overview",
+              "zh-TW/product/rules",
+              "zh-TW/product/workflows"
+            ]
+          },
+          {
+            "group": "客戶與律師",
+            "pages": [
+              "zh-TW/product/intake",
+              "zh-TW/product/engagements",
+              "zh-TW/product/client",
+              "zh-TW/product/counsel",
+              "zh-TW/product/files",
+              "zh-TW/product/knowledge",
+              "zh-TW/product/settings"
+            ]
+          },
+          {
+            "group": "參考資料與依據",
+            "pages": [
+              "zh-TW/product/glossary",
+              "zh-TW/product/sources",
+              "zh-TW/product/open-questions"
+            ]
+          }
+        ]
+      },
+      {
+        "language": "zh-Hans",
+        "default": false,
+        "navbar": {
+          "links": [
+            {
+              "label": "产品",
+              "href": "https://orbid.dev/"
+            },
+            {
+              "label": "预约演示",
+              "href": "https://orbid.dev/book"
+            },
+            {
+              "label": "价格方案",
+              "href": "https://orbid.dev/pricing"
+            }
+          ],
+          "primary": {
+            "type": "button",
+            "label": "打开 Orbid AI",
+            "href": "https://orbid.dev"
+          }
+        },
+        "groups": [
+          {
+            "group": "从这里开始",
+            "pages": [
+              "zh-CN/product/index",
+              "zh-CN/product/overview",
+              "zh-CN/product/rules",
+              "zh-CN/product/workflows"
+            ]
+          },
+          {
+            "group": "客户与律师",
+            "pages": [
+              "zh-CN/product/intake",
+              "zh-CN/product/engagements",
+              "zh-CN/product/client",
+              "zh-CN/product/counsel",
+              "zh-CN/product/files",
+              "zh-CN/product/knowledge",
+              "zh-CN/product/settings"
+            ]
+          },
+          {
+            "group": "参考资料与依据",
+            "pages": [
+              "zh-CN/product/glossary",
+              "zh-CN/product/sources",
+              "zh-CN/product/open-questions"
             ]
           }
         ]
@@ -654,10 +290,10 @@
   "footer": {
     "socials": {}
   },
-  "analytics": {
+  "seo": {},
+  "integrations": {
     "ga4": {
       "measurementId": "G-YK5SB959CT"
     }
-  },
-  "seo": {}
+  }
 }

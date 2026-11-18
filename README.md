@@ -1,37 +1,25 @@
-# Orbid AI Docs
+# Orbid AI product documentation
 
-Help center for **Orbid AI (formerly MedStrato)** — medical-device bid operations (Scan → Match → Fill → Deliver).
+Orbid documentation for client intake, legal matters, counsel review, and delivery. English is the content baseline; the same pages are maintained in German, Traditional Chinese, and Simplified Chinese.
+
+## Documentation
+
+- [English](product/index.mdx)
+- [Deutsch](de/product/index.mdx)
+- [繁體中文](zh-TW/product/index.mdx)
+- [简体中文](zh-CN/product/index.mdx)
+
+The manual covers intake, identity materials, engagement review, quotes and payment, client and counsel workspaces, files, settings, and the availability of knowledge and memory. Source evidence and unresolved questions are recorded in each language. Code evidence does not itself establish production availability.
 
 ## Development
 
 ```bash
 npm run dev
+npm run test:docs
+npm run validate:docs
+npm run check:links -- --check-anchors
 ```
 
-Site: http://localhost:3005 (Mintlify). See `package.json`.
+Update English first and synchronize the corresponding translations. Preserve machine identifiers and source references. `docs.json` uses Mintlify's native language navigation; the pinned CLI requires `zh-Hant` and `zh-Hans`, while the documentation directories use `zh-TW` and `zh-CN`. Run `node scripts/sync-product-language-links.mjs` after adding pages.
 
-## Content rules
-
-- Brand: Orbid AI; first hub mention includes (formerly MedStrato)
-- No product UI screenshots in guides/skills
-- Skills must map to product routing catalog ids
-- Pricing/KPI only via https://orbid.dev
-
-## Plan / evidence
-
-- `docs/plans/2026-08-01-orbid-ai-help-center-rebuild.md`
-- `docs/plans/_evidence/orbid-ai-help-center-2026-08-01/`
-
-## Brand / theme (aligned with medstarto-website)
-
-- Name: **Orbid AI** (formerly MedStrato)
-- Logo: official mark in `logo/light.svg` (ink) / `logo/dark.svg` (on-dark)
-- Mintlify primary: `#8B1E1E` (marketing `--accent`)
-- Product CTAs: https://orbid.dev
-
-## SEO · AEO · GEO (docs layer)
-
-- Plan: `docs/plans/2026-08-02-docs-seo-aeo-geo.md`
-- Machine maps: `llms.txt`, `llms-full.txt` (metrics still canonical on orbid.dev)
-- AEO FAQs: `faq/*` answer-first
-- How-to SEO: `guides/workflows/*`
+Remaining historical material is excluded from publication by `.mintignore`. Retired product-specific URLs are not redirected to unrelated legal content. Product prices are maintained at [orbid.dev](https://orbid.dev).

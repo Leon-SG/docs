@@ -1,0 +1,90 @@
+---
+title: "Einstellungen, Identität und kommerzielle Grenzen"
+description: "Einstellungen finden und die Grenzen dokumentierter Berechtigungen und Abrechnung verstehen."
+---
+
+
+Einstellungsrouten bieten Einstiegspunkte für Organisations-, Konto-, Zugriffs- und Nutzungskonfiguration. Ihre Existenz belegt nicht, dass jedes Konto jede Einstellung bearbeiten kann oder jeder Konnektor aktiv ist. [S19]
+
+## Eine Einstellung finden
+
+Verwenden Sie den Einstellungseinstieg des aktuellen Arbeitsbereichs. Für den Kanzleiarbeitsbereich verwendet die Routenübersicht auf einem gemeinsam genutzten Host `/orbid/settings` mit diesen Abschnittskennungen; dedizierte Hosts können ein anderes Präfix verwenden:
+
+| Abschnitt | Routensuffix |
+| --- | --- |
+| Kanzlei-/Unternehmensprofil | `firm` |
+| Konnektoren | `connectors` |
+| Team | `team` |
+| Agentenrichtlinie | `agent-policy` |
+| Abonnement/Abrechnung | `billing` |
+| Konto | `account` |
+| Agenteneinstellungen | `agent` |
+| Sprache | `language` |
+| Nutzung | `usage` |
+| Anliegenzugriff | `matter-access` |
+| Benachrichtigungen | `notifications` |
+| Audit | `audit` |
+
+Öffnen Sie den relevanten Abschnitt, prüfen Sie die für Ihre Rolle verfügbaren Optionen, nehmen Sie eine erlaubte Änderung vor und kontrollieren Sie deren Speicherung. Gehen Sie nicht davon aus, dass verborgene Steuerelemente über eine direkte URL verfügbar sind. Mandantenspezifische Einstellungen haben Routen unter `/orbid/client/settings`; die untersuchten Seiten melden bei deaktivierter Funktion jedoch „nicht gefunden“. Verfügbarkeit und bearbeitbare Steuerelemente hängen von Konfiguration und Berechtigungen ab und gewähren nicht automatisch Zugriff auf die Kanzleiverwaltung. [S25]
+
+Die Routenübersicht für Mandanteneinstellungen enthält diese Abschnitte: [S25]
+
+| Abschnitt | Routensuffix |
+| --- | --- |
+| Profil | `profile` |
+| Präferenzen | `preferences` |
+| Benachrichtigungen | `notifications` |
+| Sicherheit | `security` |
+| Unternehmen | `company` |
+| Mitglieder | `members` |
+| Mandatszugriff | `matter-access` |
+| Abrechnung | `billing` |
+| Audit | `audit` |
+
+## Team und Einladungen
+
+Wenn Administratoren die Sammeleinladung zur Verfügung steht, geben Sie bis zu **50** Adressen ein, wählen Sie die angebotene Rolle Mitglied oder Administrator und prüfen Sie die Ergebnisse je Adresse. Der untersuchte Ablauf bearbeitet Einladungen einzeln, sodass eine Anfrage teilweise erfolgreich sein kann; ungültige Adressen, Platzlimits oder ein nicht verfügbarer Identitätsdienst können Fehler verursachen. Das Formular behält fehlgeschlagene Einträge zur Korrektur. Eine versandte Einladung belegt noch keinen Beitritt. [S45]
+
+Die untersuchte Ansicht für differenzierte Mitgliederrollen ist bei deaktiviertem Funktionsschalter verborgen. Ist sie verfügbar, kann nur ein Administrator die für die Organisation angebotenen Rollen ohne Administratorstatus ändern; die Organisationsrolle eines Administrators lässt sich dort nicht ändern. Bestätigen Sie die beabsichtigten Berechtigungen und das gespeicherte Ergebnis mit einem Administrator, statt sie aus dem Rollennamen abzuleiten. [S47]
+
+Im untersuchten Organisationsmitgliedschaftsweg wird eine Anfrage abgelehnt, wenn die dafür gelesene Mitgliederliste die Zielperson als letzten Administrator ausweist. Prüfung und Änderungen beim Identitätsdienst sind getrennte Schritte und koordinieren gleichzeitige Änderungen nicht nachweislich; ändern Sie Administratoren einzeln und prüfen Sie die resultierende Liste. Meldet eine Rollenänderung oder Entfernung einen Fehler, laden Sie die Mitgliederliste neu und prüfen Sie den Zustand vor einem erneuten Versuch: Diese Aktionen umfassen mehrere Schritte beim Identitätsdienst und können teilweise fehlschlagen. Bei unklarem Zustand kontaktieren Sie einen Administrator. [S51] Siehe [Q17](/de/product/open-questions).
+
+## Connectors
+
+In den untersuchten Kanzlei-Connector-Einstellungen wählen berechtigte Bearbeiter aktivierte Regionen und Standardquellen. Das Speichern belegt weder Konfiguration noch Erreichbarkeit eines Connectors. Bleibt kein gültiger Standard und ist die Kanzleiregion aktiviert, setzt der Parser `knowledge` als Standard; das Entfernen der letzten Auswahl führt daher nicht zwingend zu einer leeren Auswahl. Prüfen Sie die gespeicherten Einstellungen und den tatsächlichen Quellenstatus; das Kontrollkästchen garantiert keine Zugriffsbeschränkung. [S49]
+
+## Benachrichtigungseinstellungen
+
+Wenn der Benachrichtigungsbereich verfügbar ist, wählen Sie die angezeigten Ereignisse sowie E-Mail- oder In-App-Kanäle, speichern Sie und prüfen Sie den gespeicherten Zustand. Die Einstellungen werden pro Benutzer gespeichert; Kanzlei- und Mandantenbereich bleiben getrennt. Im untersuchten Code sind nicht gesetzte Optionen standardmäßig aktiviert. Der geprüfte E-Mail-Versand wendet Einstellungen nur auf zugeordnete Ereignisse an; andere Meilenstein-E-Mails können weiterhin versendet werden, und bei einem Fehler beim Abrufen der Einstellung wird der Versand zugelassen. Eine gespeicherte Einstellung garantiert weder Zustellung noch Unterdrückung jeder Benachrichtigung. [S26]
+
+## Zugriff und Zuordnung
+
+### Auditprotokoll
+
+Die untersuchte Auditansicht ist kein vollständiges Aktivitätenprotokoll: Audit-Schreibvorgänge erfolgen nach bestem Bemühen, Ereignisse zu verweigertem Zugriff werden stichprobenartig erfasst, und bei einem Fehler beim Lesen des Mandatsjournals können nur Organisationsereignisse angezeigt werden. Der CSV-Export ist auf **5000** Zeilen begrenzt. Nutzen Sie verfügbare Filter und Seitennavigation und prüfen Sie wichtige Ereignisse beim zuständigen System oder Administrator; ein fehlender Eintrag belegt keine unterbliebene Aktion. [S50]
+
+### Identität des Mandantenunternehmens
+
+In den untersuchten Unternehmenseinstellungen für Mandanten markiert der Server Änderungen von Firmenname, Registernummer oder Rechtsraum für eine erneute KYC-Prüfung. Das Speichern bestätigt nicht deren Abschluss. Bei einer Namensänderung wird auch die Synchronisierung angezeigter Namen versucht, die jedoch fehlschlagen kann. Prüfen Sie den angezeigten Namen und kontaktieren Sie bei anhaltenden Abweichungen die Administration oder Kanzlei. [S44]
+
+### Mandatszugriff
+
+In den untersuchten Einstellungen zum Mandatszugriff kann ein Administrator der Mandantenorganisation zwischen `all` und `members` wählen. Die zusätzliche Mitgliedsbeschränkung sperrt nur im serverseitigen Durchsetzungsmodus; die Modi „off“ und „shadow“ setzen sie nicht durch. Bestätigen Sie den eingesetzten Modus, bevor Sie sich auf diese Einstellung verlassen. [S25, S43]
+
+Das Kanzleiformular erlaubt Administratoren, Standardmitglieder für Mandate zu speichern. Der Hilfetext sagt jedoch, dass die automatische Zuordnung zu neuen Mandaten erst in einer späteren Version erfolgt. Ein gespeicherter Standard belegt daher keine Zuordnung zu einem konkreten Mandat. Prüfen Sie dessen tatsächliche Mitglieder und Zugriffe. [S43]
+
+Identität der Mandantenorganisation, Zuweisung zum Kanzleiarbeitsbereich, Anliegensichtbarkeit und spezifische Aktionsschranken sind getrennte Aspekte. Mandatsprüfung und Dokumentenarbeit können unterschiedliche Zustände voraussetzen. Ein Navigationseintrag ist keine Berechtigungsregel. Lassen Sie Unstimmigkeiten von Ihrer Administration klären, statt sachfremde Organisationsdaten zu ändern, um Zugriff zu erhalten.
+
+Vollständige Rollen-/Berechtigungsmatrix, Einladungslebenszyklus, Konnektorvoraussetzungen, Richtlinienwirkung, Auditabdeckung und erlaubte administrative Änderungen bleiben [Q15](/de/product/open-questions).
+
+## Abrechnung und Downloads
+
+Die untersuchte Mandantenabrechnung liest höchstens **500** Mandatsdatensätze des Unternehmens. Angezeigter Zahlungsbetrag und Währung stammen, sofern vorhanden, aus der zuletzt gefundenen Rechnung des Mandats und nicht direkt aus einer Anbietertransaktion; Zahlungsliste und Betrag können daher unvollständig sein oder von der Belastung abweichen. Angezeigte Kartenendungen beschreiben zuvor verwendete Methoden, keinen Kartenspeicher. Gleichen Sie mit dem vereinbarten Angebot und dem Anbieterbeleg ab und kontaktieren Sie bei Abweichungen die Kanzlei. [S48] Die offene Abstimmungsfrage steht unter [Q16](/de/product/open-questions).
+
+Informationen zu Produktplänen stehen auf [orbid.dev/pricing](https://orbid.dev/pricing). Dieses Handbuch leitet keine Preise oder Kontingente aus Quellcodekonstanten ab. Für die Zahlung eines Mandats gilt dessen eigenes Honorarangebot; prüfen Sie Vorgang und Betrag vor der Bestätigung.
+
+Unterstützte öffentliche APIs, Abonnementrechte, regionales Hosting, Datenaufbewahrung und Servicegarantien erfordern ausdrückliche Produktdokumentation. Siehe [gemeinsame Regeln](/de/product/rules) und [offene Fragen](/de/product/open-questions).
+
+{/* equivalents:start */}
+Sprachversionen dieser Seite: [English](/product/settings) · [Deutsch](/de/product/settings) · [繁體中文](/zh-TW/product/settings) · [简体中文](/zh-CN/product/settings)
+{/* equivalents:end */}

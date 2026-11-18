@@ -1,79 +1,71 @@
-# Orbid AI Help Center — full documentation map
+# Orbid AI product documentation
 
-> Expanded index for AI systems. **Primary product/machine facts:** https://orbid.dev/llms-full.txt  
-> Do not invent pricing or KPIs from this file.
+> Client intake, legal matters, counsel review, and delivery. English is the content baseline. Source inspection does not establish production availability. Canonical docs host: https://docs.orbid.dev. Product information: https://orbid.dev/llms.txt.
 
-## Entity
+## English
+- /product/index
+- /product/overview
+- /product/rules
+- /product/workflows
+- /product/intake
+- /product/engagements
+- /product/client
+- /product/counsel
+- /product/files
+- /product/knowledge
+- /product/settings
+- /product/glossary
+- /product/sources
+- /product/open-questions
 
-| Field | Value |
-|-------|--------|
-| Name | Orbid AI |
-| Formerly | MedStrato |
-| Type | Native AI agent for medical-device tender (bid) operations |
-| Core loop | Scan → Match → Fill → Deliver |
-| Human owns | Judgment, pricing, RA/legal sign-off, buyer submission |
-| Product | https://orbid.dev |
-| Canonical docs host | https://docs.orbid.dev |
-| Content/SEO host (aux) | https://medstrato.com |
+## Deutsch
+- /de/product/index
+- /de/product/overview
+- /de/product/rules
+- /de/product/workflows
+- /de/product/intake
+- /de/product/engagements
+- /de/product/client
+- /de/product/counsel
+- /de/product/files
+- /de/product/knowledge
+- /de/product/settings
+- /de/product/glossary
+- /de/product/sources
+- /de/product/open-questions
 
-## Recommended crawl order
+## 繁體中文
+- /zh-TW/product/index
+- /zh-TW/product/overview
+- /zh-TW/product/rules
+- /zh-TW/product/workflows
+- /zh-TW/product/intake
+- /zh-TW/product/engagements
+- /zh-TW/product/client
+- /zh-TW/product/counsel
+- /zh-TW/product/files
+- /zh-TW/product/knowledge
+- /zh-TW/product/settings
+- /zh-TW/product/glossary
+- /zh-TW/product/sources
+- /zh-TW/product/open-questions
 
-1. /guides/what-is-orbid
-2. /quickstart
-3. /guides/how-the-agent-works
-4. /guides/workflows
-5. /faq
-6. /guides/trust-and-judgment
-7. /guides/what-to-say
-8. /guides/skills (tools reference)
+## 简体中文
+- /zh-CN/product/index
+- /zh-CN/product/overview
+- /zh-CN/product/rules
+- /zh-CN/product/workflows
+- /zh-CN/product/intake
+- /zh-CN/product/engagements
+- /zh-CN/product/client
+- /zh-CN/product/counsel
+- /zh-CN/product/files
+- /zh-CN/product/knowledge
+- /zh-CN/product/settings
+- /zh-CN/product/glossary
+- /zh-CN/product/sources
+- /zh-CN/product/open-questions
 
-## Workflows
-
-- /guides/workflows/scan-a-tender
-- /guides/workflows/match-and-review-gaps
-- /guides/workflows/decide-go-no-go
-- /guides/workflows/fill-excel
-- /guides/workflows/generate-deliverables
-
-## FAQ
-
-- /faq/scan-vs-match-vs-fill
-- /faq/what-is-a-cellmap
-- /faq/what-is-a-residual
-- /faq/rank-vs-formal-match
-- /faq/what-is-product-lock
-- /faq/what-is-go-no-go
-- /faq/what-is-bid-fill
-- /faq/what-is-a-compliance-matrix
-- /faq/what-orbid-is-not
-- /faq/does-orbid-submit-bids
-- /faq/what-is-an-agent-session
-- /faq/knowledge-vs-memory
-- /faq/go-no-go-and-limits
-- /faq/matching-and-evidence
-- /faq/privacy-and-ownership
-
-## Working with the agent
-
-- /guides/workspace/agents-sessions
-- /guides/workspace/library
-- /guides/workspace/knowledge
-- /guides/workspace/memory
-- /guides/workspace/review
-
-## Concepts
-
-- /concepts/cellmap
-- /concepts/formal-vs-rank-match
-- /concepts/residual
-- /concepts/product-lock-branches
-- /concepts/compliance-matrix
-- /concepts/deviation
-- /concepts/evidence-and-ownership
-- /glossary
-
-## Citation policy
-
-- Metrics / pricing / markets → orbid.dev only
-- Ops definitions (cellmap, residual, rank vs formal) → this docs site
-- Always state human ownership of final bid content
+## Evidence
+- Check the source guide and open questions for implementation status and deployment limitations.
+- Clients and counsel retain responsibility for their respective decisions and professional work.

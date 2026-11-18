@@ -1,0 +1,29 @@
+---
+title: "待确认事项与来源冲突"
+description: "列出未解决的产品事实、受影响页面、影响及确认需求。"
+---
+
+
+这些问题保留不确定性，避免编造产品事实；不表示产品缺少相应功能。源代码检查支持已记录的基准；以下项目仍需部署、政策和产品负责人确认。[S01]
+
+| ID | 问题或冲突 | 受影响页面与影响 | 所需确认 |
+| --- | --- | --- | --- |
+| Q02 | 律师知识/记忆/缺口/质量有规格，但路由为占位页面 | [知识](/zh-CN/product/knowledge)、[律师](/zh-CN/product/counsel)、[总览](/zh-CN/product/overview)：未确立可用的独立流程 | 功能负责人、实现状态、启用标志和推出计划 |
+| Q04 | 文件支持与保留规则尚未完整确认 | [文件](/zh-CN/product/files)：上传与提取预期 | 支持格式、大小限制、索引、删除与保留期限 |
+| Q09 | 内部路由不是受支持的外部 API 规格 | [总览](/zh-CN/product/overview)、[设置](/zh-CN/product/settings) | 公开 API 范围、版本、身份验证、模式、速率限制和支持政策 |
+| Q10 | 记忆/知识范围与保留信息不完整 | [知识](/zh-CN/product/knowledge)、[规则](/zh-CN/product/rules) | 审批、删除、来源可追溯性、跨会话可见性和持久化保证 |
+| Q11 | intake v1/v2 并存；规格与实际文案不同 | [委托资料收集](/zh-CN/product/intake)、[流程](/zh-CN/product/workflows) | 当前版本、受支持服务、必需文档、签署权限及本地化界面/同意标签 |
+| Q12 | 付款服务商配置和商业政策取决于部署 | [委托](/zh-CN/product/engagements) | 真实与模拟服务商、币种、取消/退款规则、税务及付款人授权 |
+| Q13 | 客户可见性取决于公司关联及部署环境是否强制案件/成员检查 | [客户](/zh-CN/product/client)、[设置](/zh-CN/product/settings) | 完整成员角色、邀请、通知渠道和服务时限承诺 |
+| Q14 | 界面规格提出阻断式交付检查；已实现提醒列表明确不阻断 | [律师](/zh-CN/product/counsel)、[总览](/zh-CN/product/overview) | 各任务服务器授权、审批要求、受支持文档/修订标记格式及格式检查路线图 |
+| Q15 | 设置路由超出已验证的管理行为 | [设置](/zh-CN/product/settings)、[规则](/zh-CN/product/rules) | 角色矩阵、连接器前提、政策效果、审计覆盖、区域托管及安全/保留保证 |
+| Q16 | 旧版发票金额与客户计费页付款金额取自发票或委托资料收集价格，而非经核实的服务商扣款 | [客户工作区](/zh-CN/product/client)、[设置](/zh-CN/product/settings)：金额可能不一致或不完整 | 财务与产品负责人确认预期发票计算、对账来源、受影响路径与环境，以及修复方式 |
+| Q17 | 最后管理员检查先读取成员，再分别更新身份服务；尚未确认并行保护 | [设置](/zh-CN/product/settings)：同时变更可能造成非预期状态 | 身份系统负责人确认并行行为、原子保护、受影响环境与修复方式 |
+
+## 如何解决项目
+
+记录负责人、有日期的证据、受影响版本/环境以及最终决策。先更新英文页面和本清单，再更新另外三种完整译文及相关[来源记录](/zh-CN/product/sources)。在证据解决问题前，明确保留未解决项目。不得从本清单推断发布日期或商业承诺。
+
+{/* equivalents:start */}
+本页语言版本: [English](/product/open-questions) · [Deutsch](/de/product/open-questions) · [繁體中文](/zh-TW/product/open-questions) · [简体中文](/zh-CN/product/open-questions)
+{/* equivalents:end */}
