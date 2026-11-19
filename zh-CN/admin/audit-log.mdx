@@ -1,0 +1,51 @@
+---
+icon: "clock-rotate-left"
+title: "查看并导出审计日志"
+description: "查看谁在您的 Orbid AI 组织中修改了什么，并将最多 5,000 行记录导出为 CSV 文件。"
+sidebarTitle: "审计日志"
+keywords: ["审计日志", "导出 CSV", "操作记录", "合规", "管理员", "Orbid"]
+---
+
+**审计日志**会显示谁在您的组织中修改了什么。管理员可以筛选记录，并最多导出 5,000 行为 CSV。
+
+## 开始之前
+
+- 您必须是管理员。
+
+<Steps>
+  <Step title="打开审计日志">
+    在设置中选择**审计日志**。
+  </Step>
+  <Step title="筛选">
+    使用**事件**、**从**和**至**。选择**载入更多**可以查看更早的记录。
+  </Step>
+  {/* screenshot: settings-audit-log | 审计日志筛选为最近 30 天的“成员已邀请”，显示多条记录和“导出 CSV”按钮；演示律所“Muster Rechtsanwälte” | role=admin | url=/orbid/settings/audit */}
+  <Step title="导出">
+    选择**导出 CSV**。
+  </Step>
+</Steps>
+
+| 限制 | 数值 |
+| --- | --- |
+| 每个 CSV 文件的行数 | 5,000 |
+
+日志会记录这些事件：邀请、移除或变更成员，设置变更，案件访问，付款，交付和下载等。
+
+## 遇到问题怎么办
+
+| 您看到的提示 | 处理方法 |
+| --- | --- |
+| “开始日期晚于结束日期” | 修改日期。 |
+| 需要导出超过 5,000 行 | 缩小日期范围，分几次导出。 |
+| “仅管理员可查看” | 请联系管理员。 |
+
+## 相关内容
+
+<CardGroup cols={2}>
+  <Card title="团队与角色" icon="users" href="/zh-CN/admin/team-and-roles">
+    管理谁有权限。
+  </Card>
+  <Card title="设置概览" icon="gear" href="/zh-CN/admin/settings-overview">
+    所有设置分区。
+  </Card>
+</CardGroup>

@@ -1,0 +1,123 @@
+/* Orbid help center — loaded automatically by Mintlify. */
+
+/* ---------- Home hero ---------- */
+html:has(.orbid-hero) #header {
+  display: none;
+}
+
+.orbid-hero {
+  margin: 0 0 2.5rem;
+  padding: 2.5rem 2rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(139, 30, 30, 0.12);
+  background:
+    radial-gradient(120% 140% at 0% 0%, rgba(139, 30, 30, 0.10) 0%, rgba(139, 30, 30, 0) 60%),
+    linear-gradient(180deg, rgba(139, 30, 30, 0.04), rgba(139, 30, 30, 0));
+}
+.dark .orbid-hero {
+  border-color: rgba(224, 107, 107, 0.18);
+  background:
+    radial-gradient(120% 140% at 0% 0%, rgba(224, 107, 107, 0.14) 0%, rgba(224, 107, 107, 0) 60%);
+}
+.orbid-hero-eyebrow {
+  margin: 0 0 0.5rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  color: #8b1e1e;
+}
+.dark .orbid-hero-eyebrow { color: #e06b6b; }
+.orbid-hero-title {
+  margin: 0 0 0.75rem !important;
+  font-size: clamp(1.75rem, 4vw, 2.5rem) !important;
+  line-height: 1.15 !important;
+  font-weight: 700 !important;
+  letter-spacing: -0.02em;
+}
+.orbid-hero-lead {
+  margin: 0 !important;
+  max-width: 42rem;
+  font-size: 1.0625rem;
+  line-height: 1.65;
+  opacity: 0.8;
+}
+
+/* ---------- Readability ---------- */
+#content-area {
+  line-height: 1.7;
+}
+#content-area h2 {
+  margin-top: 2.5rem;
+  letter-spacing: -0.01em;
+}
+
+/* Cards: subtle lift on hover */
+.card {
+  transition: transform 0.15s ease, box-shadow 0.15s ease, border-color 0.15s ease;
+}
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px -8px rgba(139, 30, 30, 0.25);
+}
+
+/* Tables: full column width, readable rhythm, scroll only when needed */
+#content-area table {
+  width: 100%;
+  max-width: 100%;
+  font-size: 0.9375rem;
+  line-height: 1.55;
+  border-collapse: collapse;
+}
+#content-area th {
+  white-space: nowrap;
+  font-weight: 600;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+#content-area td {
+  padding-top: 0.625rem;
+  padding-bottom: 0.625rem;
+  vertical-align: top;
+}
+@media (max-width: 640px) {
+  #content-area table td { min-width: 120px !important; }
+}
+
+/* Steps: semibold title sits close to its body */
+[data-component-part="step-title"] {
+  font-weight: 600 !important;
+  margin-bottom: 0 !important;
+}
+[data-component-part="step-content"] > :first-child {
+  margin-top: 0.25rem;
+}
+
+/* ---------- Mobile ---------- */
+@media (max-width: 640px) {
+  .orbid-hero {
+    padding: 1.75rem 1.25rem;
+    margin-bottom: 1.75rem;
+  }
+  #page-title {
+    word-break: break-word;
+  }
+}
+
+/* ---------- Prev / next pagination ---------- */
+[data-component-part="pagination-label"] {
+  white-space: nowrap;
+}
+[data-component-part="pagination-prev"] {
+  flex-shrink: 0;
+}
+
+/* Cards: keep icon and title on one left edge */
+[data-component-part="card-content-container"] {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+[data-component-part="card-title"] {
+  margin-top: 0.75rem !important;
+}

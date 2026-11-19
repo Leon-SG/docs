@@ -1,0 +1,66 @@
+---
+icon: "file-invoice-dollar"
+title: "Send a quote to a client"
+description: "Learn how to write, save and send a fixed-price quote in Orbid AI, set how long it is valid and replace it with a new one."
+sidebarTitle: "Send a quote"
+keywords: ["send quote", "fixed price", "quote validity", "currency", "Orbid"]
+---
+
+After you accept a matter, write a quote and select **Send quote**. The client sees it only after you send it. A saved draft stays private.
+
+## Before you start
+
+- Accept the matter first.
+- To send the quote, every required identity item must have passed. You can write and save a draft before that.
+
+## What can I set?
+
+| Setting | Value |
+| --- | --- |
+| Valid days | 14 by default. Choose 1 to 60. |
+| Currency | EUR, USD or CNY |
+| Tax treatment | Standard VAT, reverse charge or exempt |
+
+<Steps>
+  <Step title="Add the work and the price">
+    Open the accepted matter. Add each item with a quantity and a net unit price. Pick the currency and tax treatment.
+  </Step>
+  <Step title="Add a note and valid days">
+    The note is shown to the client. Choose how many days the quote stays valid.
+  </Step>
+  {/* screenshot: counsel-quote-editor | Quote editor with two line items, currency EUR, 14 valid days, total shown and the "Save draft" and "Send quote" buttons; demo client "Demo GmbH" | role=lawyer | url=/orbid/counsel/engagements */}
+  <Step title="Save a draft if you need to">
+    Select **Save draft**. The client cannot see it.
+  </Step>
+  <Step title="Send">
+    Select **Send quote** and confirm. The client can now pay.
+  </Step>
+</Steps>
+
+## Can I change a quote I sent?
+
+No. You cannot take back a sent quote. Send a new one instead. The new quote replaces the old one. Clients cannot decline a fixed price. They contact you if they want changes.
+
+## When does the work start?
+
+After the client pays. Then the matter workbench is open.
+
+## If something goes wrong
+
+| What you see | What to do |
+| --- | --- |
+| “Accept the matter before sending a quote” | Accept the matter first. |
+| “Reverse charge needs the client's VAT ID” | Enter the client's VAT ID, or choose another tax treatment. |
+| You cannot send the quote | Check that every required identity item has passed. |
+| The matter is paid but you do not see it | Reload the page. If it is still missing, contact support. |
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Matter workbench" icon="folder-open" href="/law-firms/matter-workspace">
+    Start work once the client pays.
+  </Card>
+  <Card title="Review engagements" icon="inbox" href="/law-firms/review-engagements">
+    Accept matters and check identity items.
+  </Card>
+</CardGroup>

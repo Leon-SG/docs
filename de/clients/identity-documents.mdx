@@ -1,0 +1,82 @@
+---
+icon: "id-card"
+title: "Ausweisunterlagen hochladen"
+description: "Welche Dateien Orbid für die Identitätsprüfung annimmt, welche Größen erlaubt sind, warum die Kanzlei sie braucht und was danach geschieht."
+sidebarTitle: "Ausweisunterlagen"
+keywords: ["KYC", "Identitätsprüfung", "Ausweis hochladen", "Dateigrößen", "Orbid"]
+---
+
+Ihr Anwalt muss Ihre Identität klären, bevor er mit der Arbeit beginnt. Sie laden die Ausweisunterlagen im Schritt Prüfung hoch, als PDF-, JPEG-, PNG-, WebP- oder HEIC-Dateien mit bis zu 25 MB pro Datei.
+
+## Bevor Sie beginnen
+
+- Ihre Ausweisunterlagen oder die Ihres Unternehmens, bereit auf Ihrem Gerät.
+- Ein paar Minuten Zeit. Sie unterschreiben auch eine kurze Erklärung.
+
+## Was kann ich hochladen?
+
+| Punkt | Grenze |
+| --- | --- |
+| Dateitypen | PDF, JPEG, PNG, WebP, HEIC |
+| Größe einer Datei | 25 MB |
+| Dateien pro Punkt | 10 |
+| Gesamtgröße pro Mandat | 300 MB |
+
+Leere Dateien und passwortgeschützte PDFs werden nicht angenommen. Eine Datei umzubenennen ändert ihren Typ nicht.
+
+## Wie lade ich sie hoch?
+
+<Steps>
+  <Step title="Schritt Prüfung öffnen">
+    Orbid zeigt eine Checkliste. Jeder Punkt mit der Markierung **Pflicht** braucht mindestens eine Datei.
+  </Step>
+  <Step title="Pro Punkt eine Datei hochladen">
+    Wählen Sie neben einem Punkt **Datei hochladen**. Um eine Datei auszutauschen, wählen Sie **Entfernen** und laden eine andere hoch.
+  </Step>
+  {/* screenshot: intake-verify-upload | Schritt Prüfung mit einer Checkliste aus drei Pflichtpunkten; beim ersten steht die hochgeladene Datei „passport.pdf“, bei den anderen „Datei hochladen“; Demo-Mandant „Demo GmbH“ | role=client | url=/orbid/intake/new */}
+  <Step title="Unterschreiben">
+    Lesen Sie den Einwilligungstext und geben Sie den Namen der unterzeichnenden Person ein.
+  </Step>
+  <Step title="Absenden">
+    Wählen Sie **Absenden und sperren**. Fehlt bei einem Pflichtpunkt die Datei, sagt Orbid Ihnen, bei welchem.
+  </Step>
+</Steps>
+
+## Warum braucht die Kanzlei das?
+
+Der Anwalt muss wissen, wer sein Mandant ist, bevor er die Arbeit übernimmt. Manche Mandate erfordern eine vollständige Prüfung, die auch die Personen hinter dem Unternehmen umfassen kann. Orbid zeigt, welche Prüfung gilt. Der Anwalt entscheidet, was nötig ist.
+
+## Wozu stimme ich zu?
+
+Sie bestätigen, dass die Unterlagen echt sind. Außerdem stimmen Sie zu, dass die Kanzlei Ihre personenbezogenen Daten verarbeiten darf. Das kann bedeuten, dass sie nach den chinesischen Datenschutzregeln (PIPL) nach Deutschland übermittelt werden oder nach der DSGVO verarbeitet werden. Stimmen Sie nicht zu, sprechen Sie vor dem Hochladen mit Ihrer Kanzlei.
+
+## Was passiert nach dem Hochladen?
+
+Ein Anwalt sieht sich jeden Punkt persönlich an und markiert ihn als bestanden. Die Kanzlei kann Ihnen erst ein Angebot senden, wenn jeder Pflichtpunkt bestanden ist. Braucht der Anwalt mehr, sehen Sie eine Anfrage in Ihrem Arbeitsbereich. Siehe [Mandat verfolgen](/de/clients/track-your-matter).
+
+<Info>
+Die KI von Orbid weist Sie möglicherweise auf ein Problem hin, etwa auf ein abgelaufenes oder unleserliches Dokument. Die endgültige Entscheidung trifft immer ein Anwalt.
+</Info>
+
+## Wenn etwas nicht klappt
+
+| Was Sie sehen | Was zu tun ist |
+| --- | --- |
+| „File too large (max 25 MB each)“ (Datei zu groß) | Verkleinern Sie die Datei oder laden Sie weniger Seiten pro Datei hoch. |
+| „This matter's files exceed 300 MB in total“ (Dateien des Mandats insgesamt zu groß) | Entfernen Sie Dateien, die Sie nicht brauchen. |
+| „Unsupported type“ (Dateityp nicht unterstützt) | Speichern Sie die Datei als PDF, JPG, PNG, WebP oder HEIC. |
+| „The PDF is encrypted“ (PDF ist verschlüsselt) | Entfernen Sie das Passwort und laden Sie die Datei erneut hoch. |
+| „This document seems to have expired“ (Dokument scheint abgelaufen) | Laden Sie ein gültiges Dokument hoch. |
+| „The file is hard to read“ (Datei schwer lesbar) | Machen Sie ein neues Foto oder einen neuen Scan. |
+| „Some required items have no file yet“ (Für Pflichtpunkte fehlt noch eine Datei) | Fügen Sie jedem Punkt mit der Markierung **Pflicht** eine Datei hinzu. |
+
+## Weiterführend
+
+<CardGroup cols={2}>
+  <Card title="Mandat einreichen" icon="file-arrow-up" href="/de/clients/submit-a-matter">
+    Alle Schritte.
+  </Card>
+  <Card title="Angebot und Zahlung" icon="credit-card" href="/de/clients/quotes-and-payment">
+    Was nach der Identitätsprüfung kommt.
+  </Card>
+</CardGroup>

@@ -2,10 +2,8 @@
 # Remaining historical pages are excluded; only the root URLs redirect in docs.json.
 README.md
 GUIDES_SEO_REWRITE_PLAN.md
-/index.mdx
 /quickstart.mdx
 /glossary.mdx
-/operating-regions.mdx
 guides/**
 concepts/**
 faq/**
@@ -18,3 +16,4 @@ docs/**
 .claude/**
 .baoyu-skills/**
 images/user-manual/**
+docs-site/**

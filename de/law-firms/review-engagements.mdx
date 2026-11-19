@@ -1,0 +1,70 @@
+---
+icon: "clipboard-check"
+title: "Mandate prüfen"
+description: "So lesen Anwälte in Orbid AI neue Mandate, prüfen Ausweisunterlagen und nehmen Mandate an oder lehnen sie mit klarer Begründung ab."
+sidebarTitle: "Mandate prüfen"
+keywords: ["Mandatsprüfung", "Mandat annehmen", "Mandat ablehnen", "KYC", "Orbid"]
+---
+
+Öffnen Sie **Mandatsprüfung**, um neue Mandate zu sehen, die auf Ihre Entscheidung warten. Prüfen Sie jedes Mandat und seine Ausweisunterlagen. Nehmen Sie es dann an oder lehnen Sie es ab.
+
+## Bevor Sie beginnen
+
+- Sie brauchen ein Anwaltskonto in Ihrer Kanzlei.
+
+<Steps>
+  <Step title="Mandat öffnen">
+    Wählen Sie ein Mandat in der Liste. Lesen Sie die Zusammenfassung und die Checkliste zur Identität.
+  </Step>
+  <Step title="Jeden Identitätspunkt prüfen">
+    Öffnen Sie jeden Pflichtpunkt und sehen Sie sich die Dateien an. Wählen Sie **Bestanden** oder **Nicht bestanden** und dann **Ergebnis speichern**. Bei „Nicht bestanden“ ist ein Grund nötig. Der Mandant sieht diesen Grund nicht. Wollen Sie mehr anfordern, wählen Sie **Unterlagen anfordern**.
+  </Step>
+  {/* screenshot: counsel-kyc-check | Mandatsprüfung mit der Identitäts-Checkliste: ein Punkt auf „Bestanden“, einer auf „Nicht bestanden“ mit eingetipptem Grund und die Schaltfläche „Ergebnis speichern“; Demo-Mandant „Demo GmbH“ | role=lawyer | url=/orbid/counsel/engagements */}
+  <Step title="Annehmen oder ablehnen">
+    Wählen Sie **Mandat annehmen**, um mit dem Angebot fortzufahren. Zum Ablehnen wählen Sie **Mandat ablehnen**, schreiben einen Grund für den Mandanten und wählen **Ablehnung bestätigen**.
+  </Step>
+</Steps>
+
+## Wie lehne ich ab?
+
+Schreiben Sie einen Grund mit mindestens 10 Zeichen. Der Mandant sieht ihn. Sie können zusätzlich eine interne Notiz hinzufügen. Diese sehen nur Anwälte. Ein abgelehnter Mandant kann bis zu zweimal bearbeiten und erneut einreichen.
+
+## Blockieren Identitätsprüfungen das Angebot?
+
+Ein Angebot können Sie jederzeit entwerfen. Senden können Sie es erst, wenn jeder Pflichtpunkt der Identität bestanden ist. Eine hochgeladene Datei lässt einen Punkt noch nicht bestehen. Sie entscheiden.
+
+## Was bedeuten die Statusangaben?
+
+| Status | Bedeutung |
+| --- | --- |
+| Prüfung ausstehend | Wartet auf Ihre Entscheidung |
+| Mandant bearbeitet | Sie haben das Mandat zurückgegeben, und der Mandant korrigiert es |
+| Angebot offen | Sie haben angenommen. Senden Sie als Nächstes ein Angebot. |
+| Angebot gesendet | Das Angebot liegt beim Mandanten |
+| Bezahlt | Der Mandant hat bezahlt. Der Mandats-Arbeitsbereich ist offen. |
+| Abgelehnt | Sie haben abgelehnt. Der Mandant kann erneut einreichen. |
+| Storniert | Das Mandat wurde storniert. |
+
+<Warning>
+Die KI von Orbid kann beim Lesen von Dokumenten helfen. Sie lässt nie einen Identitätspunkt für Sie bestehen. Sie entscheiden.
+</Warning>
+
+## Wenn etwas nicht klappt
+
+| Was Sie sehen | Was zu tun ist |
+| --- | --- |
+| „Someone else already handled this matter“ (Jemand anderes hat dieses Mandat schon bearbeitet) | Die Liste wurde aktualisiert. Prüfen Sie den neuen Status, bevor Sie handeln. |
+| „Add a reason when an item fails“ (Grund angeben, wenn ein Punkt nicht besteht) | Tragen Sie den Grund ein und speichern Sie erneut. |
+| „Nothing uploaded for this item yet, so it cannot pass“ (Noch nichts hochgeladen, der Punkt kann nicht bestehen) | Fordern Sie die Datei mit **Unterlagen anfordern** beim Mandanten an. |
+| „The file is unavailable ... and cannot be marked as passed“ (Datei nicht verfügbar, kann nicht als bestanden markiert werden) | Bitten Sie den Mandanten, sie erneut hochzuladen. |
+
+## Weiterführend
+
+<CardGroup cols={2}>
+  <Card title="Angebot senden" icon="file-invoice-dollar" href="/de/law-firms/send-a-quote">
+    Der nächste Schritt nach der Annahme.
+  </Card>
+  <Card title="Mandats-Arbeitsbereich" icon="folder-open" href="/de/law-firms/matter-workspace">
+    Wo die Arbeit nach der Zahlung stattfindet.
+  </Card>
+</CardGroup>

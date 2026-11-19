@@ -1,0 +1,51 @@
+---
+icon: "clock-rotate-left"
+title: "Audit-Protokoll ansehen und exportieren"
+description: "Sehen Sie in Orbid AI, wer in Ihrer Organisation was geändert hat, und exportieren Sie bis zu 5.000 Zeilen in eine CSV-Datei."
+sidebarTitle: "Audit-Protokoll"
+keywords: ["Audit-Protokoll", "CSV-Export", "Aktivitätsverlauf", "Compliance", "Orbid"]
+---
+
+Das **Audit-Protokoll** zeigt, wer in Ihrer Organisation was geändert hat. Administratoren können es filtern und bis zu 5.000 Zeilen als CSV exportieren.
+
+## Bevor Sie beginnen
+
+- Sie müssen Administrator sein.
+
+<Steps>
+  <Step title="Audit-Protokoll öffnen">
+    Wählen Sie in Ihren Einstellungen **Audit-Protokoll**.
+  </Step>
+  <Step title="Filtern">
+    Nutzen Sie **Ereignis**, **Von** und **Bis**. Wählen Sie **Mehr laden**, um ältere Zeilen zu sehen.
+  </Step>
+  {/* screenshot: settings-audit-log | Audit-Protokoll, gefiltert auf „Mitglied eingeladen“ für die letzten 30 Tage, mit mehreren Zeilen und der Schaltfläche „CSV exportieren“; Demo-Kanzlei „Muster Rechtsanwälte“ | role=admin | url=/orbid/settings/audit */}
+  <Step title="Exportieren">
+    Wählen Sie **CSV exportieren**.
+  </Step>
+</Steps>
+
+| Grenze | Wert |
+| --- | --- |
+| Zeilen pro CSV-Datei | 5.000 |
+
+Es zeichnet Ereignisse auf wie eingeladene, entfernte oder geänderte Mitglieder, Änderungen an Einstellungen, Mandatszugriff, Zahlungen, Übergaben und Downloads.
+
+## Wenn etwas nicht klappt
+
+| Was Sie sehen | Was zu tun ist |
+| --- | --- |
+| „Das Startdatum liegt nach dem Enddatum.“ | Korrigieren Sie die Daten. |
+| Sie brauchen mehr als 5.000 Zeilen | Grenzen Sie den Zeitraum ein und exportieren Sie in Teilen. |
+| „Nur Admins sehen das.“ | Fragen Sie einen Administrator. |
+
+## Weiterführend
+
+<CardGroup cols={2}>
+  <Card title="Team und Rollen" icon="users" href="/de/admin/team-and-roles">
+    Zugriffe verwalten.
+  </Card>
+  <Card title="Einstellungen im Überblick" icon="gear" href="/de/admin/settings-overview">
+    Alle Bereiche der Einstellungen.
+  </Card>
+</CardGroup>

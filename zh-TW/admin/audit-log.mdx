@@ -1,0 +1,51 @@
+---
+icon: "clock-rotate-left"
+title: "查看並匯出稽核日誌"
+description: "查看誰在 Orbid AI 組織內做了哪些變更，並匯出最多 5,000 列的 CSV 檔案。"
+sidebarTitle: "稽核日誌"
+keywords: ["稽核日誌", "匯出 CSV", "操作紀錄", "法遵", "Orbid"]
+---
+
+**稽核日誌** 會顯示誰在您的組織內做了哪些變更。管理員可以篩選，並匯出最多 5,000 列的 CSV。
+
+## 開始前請準備
+
+- 您必須是管理員。
+
+<Steps>
+  <Step title="開啟稽核日誌">
+    在設定中，選擇 **稽核日誌**。
+  </Step>
+  <Step title="篩選">
+    使用 **事件（Event）**、**從** 與 **至**。選擇 **載入更多** 可看到更早的紀錄。
+  </Step>
+  {/* screenshot: settings-audit-log | 稽核日誌篩選為最近 30 天的「成員已受邀」，顯示數列紀錄與「匯出 CSV」按鈕；示範事務所「Muster Rechtsanwälte」 | role=admin | url=/orbid/settings/audit */}
+  <Step title="匯出">
+    選擇 **匯出 CSV**。
+  </Step>
+</Steps>
+
+| 限制 | 數值 |
+| --- | --- |
+| 每個 CSV 檔案的列數 | 5,000 |
+
+日誌會記錄的事件包括：邀請、移除或變更成員、設定變更、案件存取、付款、交付與下載。
+
+## 遇到問題時
+
+| 您看到的訊息 | 該怎麼做 |
+| --- | --- |
+| 「開始日期晚於結束日期」 | 修正日期。 |
+| 需要超過 5,000 列 | 縮小日期範圍，分次匯出。 |
+| 「只有管理員可以查看」 | 請詢問管理員。 |
+
+## 相關文章
+
+<CardGroup cols={2}>
+  <Card title="團隊與角色" icon="users" href="/zh-TW/admin/team-and-roles">
+    管理誰可以存取。
+  </Card>
+  <Card title="設定總覽" icon="gear" href="/zh-TW/admin/settings-overview">
+    所有設定區塊。
+  </Card>
+</CardGroup>

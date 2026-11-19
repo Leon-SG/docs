@@ -1,0 +1,59 @@
+---
+icon: "lock"
+title: "设置案件可见范围"
+description: "在 Orbid AI 中决定谁能看到案件：客户公司可选全体成员或指定人员，律所可设置新案件的默认成员。"
+sidebarTitle: "案件可见范围"
+keywords: ["案件可见范围", "访问权限", "默认成员", "权限设置", "管理员", "Orbid"]
+---
+
+管理员在**案件可见范围**中决定谁能看到案件。客户公司可在“全体成员”和“指定人员”之间选择，律所则设置新案件的默认成员。
+
+## 开始之前
+
+- 您必须是管理员。
+
+## 客户公司
+
+在**谁可以看到案件**下选择一项，然后选择**保存**。
+
+| 选项 | 谁能看到案件 |
+| --- | --- |
+| 公司所有成员 | 全体成员 |
+| 仅案件成员 | 管理员，以及创建案件或被加入案件的人 |
+
+{/* screenshot: settings-matter-access-client | 客户设置的“案件可见范围”页面，已选中“仅案件成员”；演示客户“Demo GmbH” | role=admin | url=/orbid/client/settings/matter-access */}
+
+## 律所
+
+<Steps>
+  <Step title="打开案件可见范围">
+    在设置中选择**案件可见范围**。
+  </Step>
+  <Step title="选择默认成员">
+    在**新案件默认成员**下，选择相应同事。
+  </Step>
+  <Step title="保存">
+    选择**保存**。Orbid 会把这些人加入每个新案件。
+  </Step>
+</Steps>
+
+律所管理员和负责律师始终可以打开案件。
+
+## 遇到问题怎么办
+
+| 您看到的提示 | 处理方法 |
+| --- | --- |
+| 同事无法打开某个案件 | 把他加入该案件，或检查公司的设置。 |
+| “仅管理员可执行此操作” | 请联系管理员。 |
+| “登录已过期” | 请重新登录。 |
+
+## 相关内容
+
+<CardGroup cols={2}>
+  <Card title="团队与角色" icon="users" href="/zh-CN/admin/team-and-roles">
+    邀请同事。
+  </Card>
+  <Card title="设置概览" icon="gear" href="/zh-CN/admin/settings-overview">
+    所有设置分区。
+  </Card>
+</CardGroup>

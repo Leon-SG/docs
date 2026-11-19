@@ -1,0 +1,59 @@
+---
+icon: "lock"
+title: "控管案件存取權限"
+description: "決定誰能在 Orbid AI 查看案件：客戶公司可選全體或指定人員，事務所可設定新案件的預設成員。"
+sidebarTitle: "案件存取權限"
+keywords: ["案件存取權限", "可見範圍", "預設成員", "權限", "Orbid"]
+---
+
+管理員在 **案件存取權限** 決定誰能查看案件。客戶公司可選擇全體成員或指定人員。事務所則設定新案件的預設成員。
+
+## 開始前請準備
+
+- 您必須是管理員。
+
+## 客戶公司
+
+在 **誰可以查看案件（Who can see matters）** 下選擇一個選項，再選擇 **儲存**。
+
+| 選項 | 誰看得到案件 |
+| --- | --- |
+| 公司內所有人 | 全體成員 |
+| 只有被加入案件的人 | 管理員，加上建立案件或被加入案件的人 |
+
+{/* screenshot: settings-matter-access-client | 客戶設定的「案件存取權限」頁面，已選取「只有被加入案件的人」；示範客戶「Demo GmbH」 | role=admin | url=/orbid/client/settings/matter-access */}
+
+## 律師事務所
+
+<Steps>
+  <Step title="開啟案件存取權限">
+    在設定中，選擇 **案件存取權限**。
+  </Step>
+  <Step title="選擇預設成員">
+    在 **新案件的預設成員（Default members for new matters）** 下，選出同事。
+  </Step>
+  <Step title="儲存">
+    選擇 **儲存**。Orbid 會把這些人加入每一件新案件。
+  </Step>
+</Steps>
+
+事務所管理員和負責的律師，永遠可以開啟案件。
+
+## 遇到問題時
+
+| 您看到的訊息 | 該怎麼做 |
+| --- | --- |
+| 同事無法開啟案件 | 把他加入該案件，或檢查公司的設定。 |
+| 「只有管理員可以執行此操作」 | 請詢問管理員。 |
+| 「您的登入已過期」 | 請重新登入。 |
+
+## 相關文章
+
+<CardGroup cols={2}>
+  <Card title="團隊與角色" icon="users" href="/zh-TW/admin/team-and-roles">
+    邀請同事。
+  </Card>
+  <Card title="設定總覽" icon="gear" href="/zh-TW/admin/settings-overview">
+    所有設定區塊。
+  </Card>
+</CardGroup>

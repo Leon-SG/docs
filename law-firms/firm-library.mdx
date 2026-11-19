@@ -1,0 +1,90 @@
+---
+icon: "book"
+title: "Use the contract library"
+description: "Upload, search and manage your firm's documents in Orbid AI: file types, size limit, what each status means and how long files are kept."
+sidebarTitle: "Contract library"
+keywords: ["contract library", "upload documents", "clause search", "retention", "Orbid"]
+---
+
+The file library (page title: Contract library) keeps your firm's documents so you can search their clauses and reuse them. You can upload DOCX, DOC, PDF, TXT and MD files up to 50 MB each.
+
+## Before you start
+
+- Documents you may share inside your firm.
+- Orbid removes personal details from uploads, but you should still check the results.
+
+## How do I upload?
+
+<Steps>
+  <Step title="Open the library">
+    Open **File library** in the sidebar. The page title is Contract library.
+  </Step>
+  <Step title="Upload">
+    Select **Upload**, then **Choose files** or **Choose folder**.
+  </Step>
+  <Step title="Choose whether to keep the original">
+    **Keep the original file** is on by default. Only you and administrators can open the original.
+  </Step>
+  <Step title="Wait until it is Ready">
+    Orbid reads each file and splits it into clauses. Only documents that are Ready can be searched.
+  </Step>
+</Steps>
+
+{/* screenshot: library-document-list | Contract library list with five documents showing the statuses Queued, Parsing, Needs review, Ready and Failed; demo firm "Muster Rechtsanwälte" | role=lawyer | url=/orbid/counsel/library */}
+
+| Item | Limit |
+| --- | --- |
+| File types | DOCX, DOC, PDF, TXT, MD |
+| Size of one file | 50 MB |
+
+Unsupported or too large files are skipped. If a file is already in the library, Orbid says "Already in the library".
+
+## What do the statuses mean?
+
+| Status | Meaning |
+| --- | --- |
+| Queued | Waiting its turn |
+| Parsing | Orbid is reading the file |
+| Desensitizing | Personal details are being removed |
+| Classifying | Orbid is working out the document type |
+| Needs review | A person must check it |
+| Ready | You can search its clauses |
+| Failed | It did not work |
+
+## How do I search?
+
+Select **Search clauses**. Describe the clause you need, in any language. You can also pick a clause type. No result does not prove that nothing relevant exists.
+
+## Can I save a delivered file to the library?
+
+Yes. On a delivered file, select **Save to contract library**. Only delivered contracts can be saved. The matter stays unchanged. You can save up to 20 files at once.
+
+## How long are files kept?
+
+Only firm administrators can change how long documents are kept.
+
+- Choose to keep documents for 1, 2, 3, 5, 7 or 10 years, or **Indefinitely**.
+- The time is counted from the day a document was uploaded, or from the last time it was used in drafting.
+- Before you save, a preview shows how many documents will be deleted.
+- Deletion runs overnight. Deleted documents cannot be brought back.
+- Licensed documents are not affected.
+
+## If something goes wrong
+
+| What you see | What to do |
+| --- | --- |
+| Status “Failed” | Upload the file again, or try another copy. |
+| Status “Needs review” | Open it and finish the review. |
+| “Skipped (unsupported type or over 50 MB)” | Convert or shrink the file. |
+| You cannot download the original | Only the uploader and administrators can. Ask one of them. |
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Matter workbench" icon="folder-open" href="/law-firms/matter-workspace">
+    Use library clauses in your work.
+  </Card>
+  <Card title="Team and roles" icon="users" href="/admin/team-and-roles">
+    Control who manages the library.
+  </Card>
+</CardGroup>

@@ -1,0 +1,51 @@
+---
+icon: "clock-rotate-left"
+title: "Review and export the audit log"
+description: "See who changed what in your Orbid AI organization, and export up to 5,000 rows to a CSV file."
+sidebarTitle: "Audit log"
+keywords: ["audit log", "CSV export", "activity history", "compliance", "Orbid"]
+---
+
+The **Audit log** shows who changed what in your organization. Administrators can filter it and export up to 5,000 rows to CSV.
+
+## Before you start
+
+- You must be an administrator.
+
+<Steps>
+  <Step title="Open the Audit log">
+    In your settings, select **Audit log**.
+  </Step>
+  <Step title="Filter">
+    Use **Event**, **From** and **To**. Select **Load more** to see older rows.
+  </Step>
+  {/* screenshot: settings-audit-log | Audit log filtered to "Member invited" for the last 30 days, with several rows and the "Export CSV" button; demo firm "Muster Rechtsanwälte" | role=admin | url=/orbid/settings/audit */}
+  <Step title="Export">
+    Select **Export CSV**.
+  </Step>
+</Steps>
+
+| Limit | Value |
+| --- | --- |
+| Rows per CSV file | 5,000 |
+
+It records events such as members invited, removed or changed, settings changes, matter access, payments, deliveries and downloads.
+
+## If something goes wrong
+
+| What you see | What to do |
+| --- | --- |
+| “The start date is after the end date” | Fix the dates. |
+| You need more than 5,000 rows | Narrow the dates and export in parts. |
+| “Only an admin can see this” | Ask an administrator. |
+
+## Related
+
+<CardGroup cols={2}>
+  <Card title="Team and roles" icon="users" href="/admin/team-and-roles">
+    Manage who has access.
+  </Card>
+  <Card title="Settings overview" icon="gear" href="/admin/settings-overview">
+    All settings sections.
+  </Card>
+</CardGroup>

@@ -1,23 +1,303 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
+  "theme": "maple",
   "name": "Orbid AI",
-  "description": "Orbid AI product documentation for client intake, legal matters, counsel review, and delivery.",
+  "description": "Orbid AI Help Center: guides for clients and law firms on submitting matters, identity checks, quotes, payment, document delivery and team administration.",
   "colors": {
     "primary": "#8B1E1E",
-    "light": "#A82828",
-    "dark": "#6B1616"
+    "light": "#E06B6B",
+    "dark": "#8B1E1E"
   },
   "favicon": "/favicon.svg",
   "redirects": [
     {
-      "source": "/",
-      "destination": "/product/index",
+      "source": "/product/index",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/product/overview",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/product/rules",
+      "destination": "/getting-started/for-law-firms",
+      "permanent": true
+    },
+    {
+      "source": "/product/workflows",
+      "destination": "/getting-started/for-clients",
+      "permanent": true
+    },
+    {
+      "source": "/product/intake",
+      "destination": "/clients/submit-a-matter",
+      "permanent": true
+    },
+    {
+      "source": "/product/engagements",
+      "destination": "/law-firms/review-engagements",
+      "permanent": true
+    },
+    {
+      "source": "/product/client",
+      "destination": "/clients/track-your-matter",
+      "permanent": true
+    },
+    {
+      "source": "/product/counsel",
+      "destination": "/law-firms/matter-workspace",
+      "permanent": true
+    },
+    {
+      "source": "/product/files",
+      "destination": "/law-firms/firm-library",
+      "permanent": true
+    },
+    {
+      "source": "/product/settings",
+      "destination": "/admin/settings-overview",
+      "permanent": true
+    },
+    {
+      "source": "/product/glossary",
+      "destination": "/help/glossary",
+      "permanent": true
+    },
+    {
+      "source": "/product/sources",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/product/open-questions",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/product/knowledge",
+      "destination": "/",
       "permanent": true
     },
     {
       "source": "/index",
-      "destination": "/product/index",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/operating-regions",
+      "destination": "/",
+      "permanent": true
+    },
+    {
+      "source": "/zh-TW/product/index",
+      "destination": "/zh-TW/",
+      "permanent": true
+    },
+    {
+      "source": "/zh-TW/product/overview",
+      "destination": "/zh-TW/",
+      "permanent": true
+    },
+    {
+      "source": "/zh-TW/product/rules",
+      "destination": "/zh-TW/getting-started/for-law-firms",
+      "permanent": true
+    },
+    {
+      "source": "/zh-TW/product/workflows",
+      "destination": "/zh-TW/getting-started/for-clients",
+      "permanent": true
+    },
+    {
+      "source": "/zh-TW/product/intake",
+      "destination": "/zh-TW/clients/submit-a-matter",
+      "permanent": true
+    },
+    {
+      "source": "/zh-TW/product/engagements",
+      "destination": "/zh-TW/law-firms/review-engagements",
+      "permanent": true
+    },
+    {
+      "source": "/zh-TW/product/client",
+      "destination": "/zh-TW/clients/track-your-matter",
+      "permanent": true
+    },
+    {
+      "source": "/zh-TW/product/counsel",
+      "destination": "/zh-TW/law-firms/matter-workspace",
+      "permanent": true
+    },
+    {
+      "source": "/zh-TW/product/files",
+      "destination": "/zh-TW/law-firms/firm-library",
+      "permanent": true
+    },
+    {
+      "source": "/zh-TW/product/settings",
+      "destination": "/zh-TW/admin/settings-overview",
+      "permanent": true
+    },
+    {
+      "source": "/zh-TW/product/glossary",
+      "destination": "/zh-TW/help/glossary",
+      "permanent": true
+    },
+    {
+      "source": "/zh-TW/product/sources",
+      "destination": "/zh-TW/",
+      "permanent": true
+    },
+    {
+      "source": "/zh-TW/product/open-questions",
+      "destination": "/zh-TW/",
+      "permanent": true
+    },
+    {
+      "source": "/zh-TW/product/knowledge",
+      "destination": "/zh-TW/",
+      "permanent": true
+    },
+    {
+      "source": "/de/product/index",
+      "destination": "/de",
+      "permanent": true
+    },
+    {
+      "source": "/de/product/overview",
+      "destination": "/de",
+      "permanent": true
+    },
+    {
+      "source": "/de/product/rules",
+      "destination": "/de/getting-started/for-law-firms",
+      "permanent": true
+    },
+    {
+      "source": "/de/product/workflows",
+      "destination": "/de/getting-started/for-clients",
+      "permanent": true
+    },
+    {
+      "source": "/de/product/intake",
+      "destination": "/de/clients/submit-a-matter",
+      "permanent": true
+    },
+    {
+      "source": "/de/product/engagements",
+      "destination": "/de/law-firms/review-engagements",
+      "permanent": true
+    },
+    {
+      "source": "/de/product/client",
+      "destination": "/de/clients/track-your-matter",
+      "permanent": true
+    },
+    {
+      "source": "/de/product/counsel",
+      "destination": "/de/law-firms/matter-workspace",
+      "permanent": true
+    },
+    {
+      "source": "/de/product/files",
+      "destination": "/de/law-firms/firm-library",
+      "permanent": true
+    },
+    {
+      "source": "/de/product/settings",
+      "destination": "/de/admin/settings-overview",
+      "permanent": true
+    },
+    {
+      "source": "/de/product/glossary",
+      "destination": "/de/help/glossary",
+      "permanent": true
+    },
+    {
+      "source": "/de/product/sources",
+      "destination": "/de",
+      "permanent": true
+    },
+    {
+      "source": "/de/product/open-questions",
+      "destination": "/de",
+      "permanent": true
+    },
+    {
+      "source": "/de/product/knowledge",
+      "destination": "/de",
+      "permanent": true
+    },
+    {
+      "source": "/zh-CN/product/index",
+      "destination": "/zh-CN",
+      "permanent": true
+    },
+    {
+      "source": "/zh-CN/product/overview",
+      "destination": "/zh-CN",
+      "permanent": true
+    },
+    {
+      "source": "/zh-CN/product/rules",
+      "destination": "/zh-CN/getting-started/for-law-firms",
+      "permanent": true
+    },
+    {
+      "source": "/zh-CN/product/workflows",
+      "destination": "/zh-CN/getting-started/for-clients",
+      "permanent": true
+    },
+    {
+      "source": "/zh-CN/product/intake",
+      "destination": "/zh-CN/clients/submit-a-matter",
+      "permanent": true
+    },
+    {
+      "source": "/zh-CN/product/engagements",
+      "destination": "/zh-CN/law-firms/review-engagements",
+      "permanent": true
+    },
+    {
+      "source": "/zh-CN/product/client",
+      "destination": "/zh-CN/clients/track-your-matter",
+      "permanent": true
+    },
+    {
+      "source": "/zh-CN/product/counsel",
+      "destination": "/zh-CN/law-firms/matter-workspace",
+      "permanent": true
+    },
+    {
+      "source": "/zh-CN/product/files",
+      "destination": "/zh-CN/law-firms/firm-library",
+      "permanent": true
+    },
+    {
+      "source": "/zh-CN/product/settings",
+      "destination": "/zh-CN/admin/settings-overview",
+      "permanent": true
+    },
+    {
+      "source": "/zh-CN/product/glossary",
+      "destination": "/zh-CN/help/glossary",
+      "permanent": true
+    },
+    {
+      "source": "/zh-CN/product/sources",
+      "destination": "/zh-CN",
+      "permanent": true
+    },
+    {
+      "source": "/zh-CN/product/open-questions",
+      "destination": "/zh-CN",
+      "permanent": true
+    },
+    {
+      "source": "/zh-CN/product/knowledge",
+      "destination": "/zh-CN",
       "permanent": true
     }
   ],
@@ -28,10 +308,6 @@
         "default": true,
         "navbar": {
           "links": [
-            {
-              "label": "Product",
-              "href": "https://orbid.dev/"
-            },
             {
               "label": "Book Demo",
               "href": "https://orbid.dev/book"
@@ -49,45 +325,100 @@
         },
         "groups": [
           {
-            "group": "Start here",
+            "group": "Get started",
             "pages": [
-              "product/index",
-              "product/overview",
-              "product/rules",
-              "product/workflows"
-            ]
+              "index",
+              "getting-started/for-clients",
+              "getting-started/for-law-firms"
+            ],
+            "icon": "rocket"
           },
           {
-            "group": "Client and counsel",
+            "group": "For clients",
             "pages": [
-              "product/intake",
-              "product/engagements",
-              "product/client",
-              "product/counsel",
-              "product/files",
-              "product/knowledge",
-              "product/settings"
-            ]
+              "clients/submit-a-matter",
+              "clients/identity-documents",
+              "clients/quotes-and-payment",
+              "clients/track-your-matter",
+              "clients/receive-documents",
+              "clients/resubmit-a-declined-matter"
+            ],
+            "icon": "user"
           },
           {
-            "group": "Reference and evidence",
+            "group": "For law firms",
             "pages": [
-              "product/glossary",
-              "product/sources",
-              "product/open-questions"
-            ]
+              "law-firms/review-engagements",
+              "law-firms/send-a-quote",
+              "law-firms/matter-workspace",
+              "law-firms/deliver-documents",
+              "law-firms/firm-library"
+            ],
+            "icon": "scale-balanced"
+          },
+          {
+            "group": "Administration",
+            "pages": [
+              "admin/team-and-roles",
+              "admin/matter-access",
+              "admin/notifications",
+              "admin/audit-log",
+              "admin/settings-overview"
+            ],
+            "icon": "gear"
+          },
+          {
+            "group": "Help",
+            "pages": [
+              "help/faq",
+              "help/glossary"
+            ],
+            "icon": "life-ring"
           }
-        ]
+        ],
+        "footer": {
+          "socials": {
+            "website": "https://orbid.dev"
+          },
+          "links": [
+            {
+              "header": "Orbid AI",
+              "items": [
+                {
+                  "label": "Website",
+                  "href": "https://orbid.dev/"
+                },
+                {
+                  "label": "Pricing",
+                  "href": "https://orbid.dev/pricing"
+                },
+                {
+                  "label": "Book a demo",
+                  "href": "https://orbid.dev/book"
+                }
+              ]
+            },
+            {
+              "header": "Help",
+              "items": [
+                {
+                  "label": "FAQ",
+                  "href": "/help/faq"
+                },
+                {
+                  "label": "Glossary",
+                  "href": "/help/glossary"
+                }
+              ]
+            }
+          ]
+        }
       },
       {
         "language": "de",
         "default": false,
         "navbar": {
           "links": [
-            {
-              "label": "Produkt",
-              "href": "https://orbid.dev/"
-            },
             {
               "label": "Demo vereinbaren",
               "href": "https://orbid.dev/book"
@@ -107,43 +438,98 @@
           {
             "group": "Einstieg",
             "pages": [
-              "de/product/index",
-              "de/product/overview",
-              "de/product/rules",
-              "de/product/workflows"
-            ]
+              "de/index",
+              "de/getting-started/for-clients",
+              "de/getting-started/for-law-firms"
+            ],
+            "icon": "rocket"
           },
           {
-            "group": "Mandanten und Rechtsbeistand",
+            "group": "Für Mandanten",
             "pages": [
-              "de/product/intake",
-              "de/product/engagements",
-              "de/product/client",
-              "de/product/counsel",
-              "de/product/files",
-              "de/product/knowledge",
-              "de/product/settings"
-            ]
+              "de/clients/submit-a-matter",
+              "de/clients/identity-documents",
+              "de/clients/quotes-and-payment",
+              "de/clients/track-your-matter",
+              "de/clients/receive-documents",
+              "de/clients/resubmit-a-declined-matter"
+            ],
+            "icon": "user"
           },
           {
-            "group": "Referenz und Nachweise",
+            "group": "Für Kanzleien",
             "pages": [
-              "de/product/glossary",
-              "de/product/sources",
-              "de/product/open-questions"
-            ]
+              "de/law-firms/review-engagements",
+              "de/law-firms/send-a-quote",
+              "de/law-firms/matter-workspace",
+              "de/law-firms/deliver-documents",
+              "de/law-firms/firm-library"
+            ],
+            "icon": "scale-balanced"
+          },
+          {
+            "group": "Verwaltung",
+            "pages": [
+              "de/admin/team-and-roles",
+              "de/admin/matter-access",
+              "de/admin/notifications",
+              "de/admin/audit-log",
+              "de/admin/settings-overview"
+            ],
+            "icon": "gear"
+          },
+          {
+            "group": "Hilfe",
+            "pages": [
+              "de/help/faq",
+              "de/help/glossary"
+            ],
+            "icon": "life-ring"
           }
-        ]
+        ],
+        "footer": {
+          "socials": {
+            "website": "https://orbid.dev"
+          },
+          "links": [
+            {
+              "header": "Orbid AI",
+              "items": [
+                {
+                  "label": "Website",
+                  "href": "https://orbid.dev/"
+                },
+                {
+                  "label": "Preise",
+                  "href": "https://orbid.dev/pricing"
+                },
+                {
+                  "label": "Demo vereinbaren",
+                  "href": "https://orbid.dev/book"
+                }
+              ]
+            },
+            {
+              "header": "Hilfe",
+              "items": [
+                {
+                  "label": "Häufige Fragen",
+                  "href": "/de/help/faq"
+                },
+                {
+                  "label": "Glossar",
+                  "href": "/de/help/glossary"
+                }
+              ]
+            }
+          ]
+        }
       },
       {
         "language": "zh-Hant",
         "default": false,
         "navbar": {
           "links": [
-            {
-              "label": "產品",
-              "href": "https://orbid.dev/"
-            },
             {
               "label": "預約示範",
               "href": "https://orbid.dev/book"
@@ -161,45 +547,100 @@
         },
         "groups": [
           {
-            "group": "從這裡開始",
+            "group": "開始使用",
             "pages": [
-              "zh-TW/product/index",
-              "zh-TW/product/overview",
-              "zh-TW/product/rules",
-              "zh-TW/product/workflows"
-            ]
+              "zh-TW/index",
+              "zh-TW/getting-started/for-clients",
+              "zh-TW/getting-started/for-law-firms"
+            ],
+            "icon": "rocket"
           },
           {
-            "group": "客戶與律師",
+            "group": "客戶",
             "pages": [
-              "zh-TW/product/intake",
-              "zh-TW/product/engagements",
-              "zh-TW/product/client",
-              "zh-TW/product/counsel",
-              "zh-TW/product/files",
-              "zh-TW/product/knowledge",
-              "zh-TW/product/settings"
-            ]
+              "zh-TW/clients/submit-a-matter",
+              "zh-TW/clients/identity-documents",
+              "zh-TW/clients/quotes-and-payment",
+              "zh-TW/clients/track-your-matter",
+              "zh-TW/clients/receive-documents",
+              "zh-TW/clients/resubmit-a-declined-matter"
+            ],
+            "icon": "user"
           },
           {
-            "group": "參考資料與依據",
+            "group": "律師事務所",
             "pages": [
-              "zh-TW/product/glossary",
-              "zh-TW/product/sources",
-              "zh-TW/product/open-questions"
-            ]
+              "zh-TW/law-firms/review-engagements",
+              "zh-TW/law-firms/send-a-quote",
+              "zh-TW/law-firms/matter-workspace",
+              "zh-TW/law-firms/deliver-documents",
+              "zh-TW/law-firms/firm-library"
+            ],
+            "icon": "scale-balanced"
+          },
+          {
+            "group": "管理",
+            "pages": [
+              "zh-TW/admin/team-and-roles",
+              "zh-TW/admin/matter-access",
+              "zh-TW/admin/settings-overview",
+              "zh-TW/admin/notifications",
+              "zh-TW/admin/audit-log"
+            ],
+            "icon": "gear"
+          },
+          {
+            "group": "說明",
+            "pages": [
+              "zh-TW/help/faq",
+              "zh-TW/help/glossary"
+            ],
+            "icon": "life-ring"
           }
-        ]
+        ],
+        "footer": {
+          "socials": {
+            "website": "https://orbid.dev"
+          },
+          "links": [
+            {
+              "header": "Orbid AI",
+              "items": [
+                {
+                  "label": "官方網站",
+                  "href": "https://orbid.dev/"
+                },
+                {
+                  "label": "價格方案",
+                  "href": "https://orbid.dev/pricing"
+                },
+                {
+                  "label": "預約示範",
+                  "href": "https://orbid.dev/book"
+                }
+              ]
+            },
+            {
+              "header": "說明",
+              "items": [
+                {
+                  "label": "常見問題",
+                  "href": "/zh-TW/help/faq"
+                },
+                {
+                  "label": "術語表",
+                  "href": "/zh-TW/help/glossary"
+                }
+              ]
+            }
+          ]
+        }
       },
       {
         "language": "zh-Hans",
         "default": false,
         "navbar": {
           "links": [
-            {
-              "label": "产品",
-              "href": "https://orbid.dev/"
-            },
             {
               "label": "预约演示",
               "href": "https://orbid.dev/book"
@@ -217,35 +658,94 @@
         },
         "groups": [
           {
-            "group": "从这里开始",
+            "group": "开始使用",
             "pages": [
-              "zh-CN/product/index",
-              "zh-CN/product/overview",
-              "zh-CN/product/rules",
-              "zh-CN/product/workflows"
-            ]
+              "zh-CN/index",
+              "zh-CN/getting-started/for-clients",
+              "zh-CN/getting-started/for-law-firms"
+            ],
+            "icon": "rocket"
           },
           {
-            "group": "客户与律师",
+            "group": "客户",
             "pages": [
-              "zh-CN/product/intake",
-              "zh-CN/product/engagements",
-              "zh-CN/product/client",
-              "zh-CN/product/counsel",
-              "zh-CN/product/files",
-              "zh-CN/product/knowledge",
-              "zh-CN/product/settings"
-            ]
+              "zh-CN/clients/submit-a-matter",
+              "zh-CN/clients/identity-documents",
+              "zh-CN/clients/quotes-and-payment",
+              "zh-CN/clients/track-your-matter",
+              "zh-CN/clients/receive-documents",
+              "zh-CN/clients/resubmit-a-declined-matter"
+            ],
+            "icon": "user"
           },
           {
-            "group": "参考资料与依据",
+            "group": "律所",
             "pages": [
-              "zh-CN/product/glossary",
-              "zh-CN/product/sources",
-              "zh-CN/product/open-questions"
-            ]
+              "zh-CN/law-firms/review-engagements",
+              "zh-CN/law-firms/send-a-quote",
+              "zh-CN/law-firms/matter-workspace",
+              "zh-CN/law-firms/deliver-documents",
+              "zh-CN/law-firms/firm-library"
+            ],
+            "icon": "scale-balanced"
+          },
+          {
+            "group": "管理",
+            "pages": [
+              "zh-CN/admin/team-and-roles",
+              "zh-CN/admin/matter-access",
+              "zh-CN/admin/notifications",
+              "zh-CN/admin/audit-log",
+              "zh-CN/admin/settings-overview"
+            ],
+            "icon": "gear"
+          },
+          {
+            "group": "帮助",
+            "pages": [
+              "zh-CN/help/faq",
+              "zh-CN/help/glossary"
+            ],
+            "icon": "life-ring"
           }
-        ]
+        ],
+        "footer": {
+          "socials": {
+            "website": "https://orbid.dev"
+          },
+          "links": [
+            {
+              "header": "Orbid AI",
+              "items": [
+                {
+                  "label": "官方网站",
+                  "href": "https://orbid.dev/"
+                },
+                {
+                  "label": "价格方案",
+                  "href": "https://orbid.dev/pricing"
+                },
+                {
+                  "label": "预约演示",
+                  "href": "https://orbid.dev/book"
+                }
+              ]
+            },
+            {
+              "header": "帮助",
+              "items": [
+                {
+                  "label": "常见问题",
+                  "href": "/zh-CN/help/faq"
+                },
+                {
+                  "label": "术语表",
+                  "href": "/zh-CN/help/glossary"
+                }
+              ]
+            }
+          ]
+        }
       }
     ]
   },
@@ -254,46 +754,62 @@
     "dark": "/logo/dark.svg",
     "href": "https://orbid.dev/"
   },
-  "navbar": {
-    "links": [
-      {
-        "label": "Product",
-        "href": "https://orbid.dev/"
-      },
-      {
-        "label": "Book Demo",
-        "href": "https://orbid.dev/book"
-      },
-      {
-        "label": "Pricing",
-        "href": "https://orbid.dev/pricing"
-      }
-    ],
-    "primary": {
-      "type": "button",
-      "label": "Open Orbid AI",
-      "href": "https://orbid.dev"
-    }
-  },
   "contextual": {
     "options": [
       "copy",
       "view",
       "chatgpt",
       "claude",
-      "perplexity",
-      "mcp",
-      "cursor",
-      "vscode"
-    ]
+      "perplexity"
+    ],
+    "display": "toc"
   },
-  "footer": {
-    "socials": {}
+  "seo": {
+    "indexing": "navigable",
+    "metatags": {
+      "og:site_name": "Orbid AI Help Center",
+      "twitter:card": "summary_large_image"
+    }
   },
-  "seo": {},
   "integrations": {
     "ga4": {
       "measurementId": "G-YK5SB959CT"
     }
+  },
+  "fonts": {
+    "heading": {
+      "family": "Inter",
+      "weight": 650
+    },
+    "body": {
+      "family": "Inter",
+      "weight": 400
+    }
+  },
+  "background": {
+    "decoration": "gradient",
+    "color": {
+      "light": "#FFFFFF",
+      "dark": "#0E0B0B"
+    }
+  },
+  "appearance": {
+    "default": "system",
+    "strict": false
+  },
+  "styling": {
+    "eyebrows": "breadcrumbs",
+    "codeblocks": "system"
+  },
+  "icons": {
+    "library": "fontawesome"
+  },
+  "interaction": {
+    "drilldown": false
+  },
+  "thumbnails": {
+    "preset": "headline",
+    "appearance": "light",
+    "surface": "brand"
   }
 }
